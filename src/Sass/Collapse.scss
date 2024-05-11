@@ -1,0 +1,45 @@
+.collapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease; /* Animation d'ouverture et de fermeture de 0.5 seconde */
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+      &:last-child {
+        margin-bottom: 0;
+        border-bottom: none;
+      }
+
+      a {
+        color: #fff;
+        font-family: monospace;
+        font-size: x-large;
+        text-decoration: none;
+        font-weight: 300;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #fbbf24;
+        }
+      }
+    }
+  }
+
+  &.open {
+    max-height: 1000px; /* Ou la hauteur souhaitée pour l'ouverture complète */
+   
+   // transition-delay: 0.5s; /* Délai de 1 seconde avant que la transition ne commence */
+  }
+
+  &.close {
+    max-height: 1000px; /* Maintenir le collapse ouvert pour un court laps de temps */
+   // transition-delay: 1s; /* Délai de 1 seconde avant que la transition ne commence */
+  }
+}

@@ -1,0 +1,118 @@
+// NavBar.scss
+.navbar {
+  padding: 1rem 2rem;
+  background-image: linear-gradient(to right, #9f18a7, #9414ac, #7f0ab5, #6b04bc);
+  border-top: 1px solid rgba(255, 255, 255, 0.7); // Bordure solide en haut
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  transition: background-color 0.3s ease; // Transition pour la transparence
+
+  @media (max-width: 768px) {
+    /* Dégradé de bas en haut en version mobile */
+    background-image: linear-gradient(to top, #9f18a7, #9414ac, #7f0ab5, #6b04bc);
+  }
+
+  &.open {
+    background-color: rgba(155, 21, 167, 0.7); // Plus transparent une fois ouvert
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+    border-bottom: 1px solid transparent; // Bordure du bas transparente
+  }
+
+  .navbar-desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin-right: 1rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+          color: #fff;
+          text-decoration: none;
+          font-weight: bold;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: #fbbf24;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-mobile {
+    display: none; /* Par défaut, masqué en version desktop */
+  }
+
+  @media (max-width: 768px) {
+    .navbar-desktop {
+      display: none; /* Masqué en version mobile */
+    }
+
+    .navbar-mobile {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+      
+      button.mobile-menu-button {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.2rem;
+        cursor: pointer;
+        outline: none;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        margin-bottom: 1rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        a {
+          color: #fff;
+          text-decoration: none;
+          font-family: monospace;
+          font-weight: bold;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: #fbbf24;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px){
+  #mobileMenuButton {
+    display: none;
+  }
+}

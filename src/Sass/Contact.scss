@@ -1,0 +1,104 @@
+// Déclaration des variables pour les couleurs
+$violetPrincipal: #ec4899; // Violet principal
+$violetFonce: #7c3aed; // Violet foncé
+$fondFonce: #0D1224; // Fond plus foncé
+$blanc: #ffffff; // Blanc
+$grisFonce: #333333; // Gris foncé
+
+// Styles pour le composant Contact
+.contact-container {
+  background-color: $fondFonce; // Fond plus foncé
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: $blanc;
+  text-align: center;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: $blanc;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  form {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // Ajout du contour coloré dégradé pour les inputs
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 0.8rem;
+      margin-bottom: 1.5rem;
+      border: none;
+      border-radius: 15px; // Border-radius arrondi
+      background-color: rgba(255, 255, 255, 0.2);
+      color: $violetPrincipal;
+      font-size: 1rem;
+      text-align: center;
+      width: 100%;
+      box-sizing: border-box;
+
+      &::placeholder {
+        color: $grisFonce;
+      }
+
+      // Contour dégradé
+      border: 1px solid transparent; // Bordure transparente
+      box-shadow:  linear-gradient(to right, $violetPrincipal, $violetFonce);
+     // transition: box-shadow 0.3s ease; // Transition sur le contour dégradé
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 1px #ec4899, 0 0 0 1px #ff69b4, 0 0 0 1px #7c3aed; // Contour dégradé au focus
+      }
+    }
+
+    textarea {
+      height: 150px;
+    }
+
+    // Réduction de la largeur du bouton submit et centrage
+    button {
+      padding: 0.7rem 1.5rem;
+      margin-top: 1rem;
+      background-color: $violetFonce; // Violet foncé pour le bouton
+      color: $blanc;
+      border: none;
+      border-radius: 20px; // Border-radius arrondi
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      width: fit-content;
+      align-self: center;
+
+      // Dégradé sur le bouton avec effet hover
+      background-image: linear-gradient(to right, $violetPrincipal, $violetFonce);
+      background-size: 200% auto;
+      transition: background-position 0.5s;
+
+      &:hover {
+        background-position: right center;
+      }
+
+      // Suppression du contour
+      border: none;
+
+      // Animation pour les lettres du bouton
+      span {
+        display: inline-block;
+        transition: transform 0.3s ease-out;
+      }
+
+      &:hover span {
+        transform: translateX(5px);
+      }
+    }
+  }
+}

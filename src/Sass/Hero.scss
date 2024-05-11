@@ -1,0 +1,68 @@
+/* Styles for the hero section */
+.hero {
+    background-color: #0d1224; /* Couleur de fond du héros */
+    padding: 2rem; /* Rembourrage intérieur */
+    color: #d3d8e8; /* Couleur du texte */
+}
+
+/* Styles for the content inside the hero section */
+.hero-content {
+    max-width: 800px; /* Largeur maximale du contenu */
+    margin: 0 auto; /* Centrage horizontal */
+}
+
+/* Styles for the image portrait */
+.imgPortrait {
+    margin-top: 2rem; /* Marge supérieure */
+}
+
+/* Styles for the code block */
+.code-block {
+    color: #d3d8e8; /* Couleur du texte du bloc de code */
+    font-family: 'Courier New', monospace; /* Police de caractère monospace */
+    background-color: #1b2c68a0; /* Couleur de fond du bloc de code */
+    padding: 1rem; /* Rembourrage intérieur */
+    border-radius: 0; /* Bordure sans arrondi pour former un carré */
+    overflow: hidden; /* Masquer tout contenu dépassant de la zone */
+    width: 200px; /* Largeur réduite pour former un carré */
+    height: 200px; /* Hauteur égale à la largeur pour former un carré */
+    border: 2px solid; /* Contour */
+    border-image: linear-gradient(to right, #ff6b6b, #ff66cc, #a86bfe, #6a0572); /* Dégradé de couleur pour le contour */
+    border-image-slice: 1; /* Pour spécifier que le dégradé s'applique sur tout le contour */
+}
+
+/* Styles for the blink effect */
+.blink {
+    animation: blink-animation 1s infinite; /* Animation du clignotement */
+}
+
+@keyframes blink-animation {
+    50% {
+        opacity: 0; /* Disparition à mi-chemin */
+    }
+}
+
+/* Ajout des styles pour les couleurs spécifiques */
+.text-pink-500 {
+    color: #ff6b6b; /* Exemple de couleur rose */
+}
+
+.text-amber-300 {
+    color: #fbbf24; /* Exemple de couleur ambre */
+}
+
+.text-orange-400 {
+    color: #f97316; /* Exemple de couleur orange */
+}
+
+.text-cyan-400 {
+    color: #22d3ee; /* Exemple de couleur cyan */
+}
+
+.text-white {
+    color: #ffffff; /* Exemple de couleur blanche */
+}
+
+.text-gray-400 {
+    color: #9ca3af; /* Exemple de couleur grise */
+}
