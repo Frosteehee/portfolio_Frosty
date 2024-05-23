@@ -1,6 +1,20 @@
-{
-    "welcome": "Welcome to my portfolio!",
-    "about": "About",
-    "contact": "Contact"
+
+  {
+    "hero": {
+      "name": "Marine Allavoine",
+      "description": "[Generate by ChatGpt in replacement LoremBlabla]Artist of code lines, I sculpt web experiences as inspiring as they are inclusive. With a passion for aesthetics and expertise in front-end development, I shape an internet where creativity and accessibility harmoniously meet."
+    },
+    "navbar": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "about": {
+        "about": "About",
+        "aboutContent": "As a web developer passionate about accessibility, I strive to combine my strong technical skills with a deep human sensitivity. With a background in Visual Arts, I have a keen eye for the importance of aesthetics and inclusivity in web design. My current training in front-end development allows me to realize this vision, using my artistic background to creatively think about accessibility solutions. I believe that technology should serve everyone, and I am committed to creating online experiences that are accessible, intuitive, and aesthetically pleasing for all users.",
+        "cvButton": "My CV",
+        "githubButton": "GitHub"
+      }
   }
   

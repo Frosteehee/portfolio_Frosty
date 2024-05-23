@@ -1,22 +1,32 @@
-import  { createContext, useState, useContext } from 'react';
+import { createContext, useState, useContext } from 'react';
+import PropTypes from 'prop-types';
+import en from '../Locales/en.json';
+import fr from '../Locales/fr.json';
 
-// Crée un contexte pour la langue
 const LanguageContext = createContext();
 
-// Crée un fournisseur de contexte pour la langue
+const translations = { en, fr };
+
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState('en'); // Langue par défaut: anglais
+  const [language, setLanguage] = useState('en');
 
   const toggleLanguage = (lang) => {
     setLanguage(lang);
   };
 
+  const translate = (key) => {
+    return key.split('.').reduce((acc, part) => acc && acc[part], translations[language]);
+  };
+
   return (
-    <LanguageContext.Provider value={{ language, toggleLanguage }}>
+    <LanguageContext.Provider value={{ language, toggleLanguage, translate }}>
       {children}
     </LanguageContext.Provider>
   );
 };
 
-// Hook pour utiliser le contexte de la langue
+LanguageProvider.propTypes = {
+  children: PropTypes.node.isRequired
+};
+
 export const useLanguage = () => useContext(LanguageContext);
