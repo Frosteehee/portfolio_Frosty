@@ -1,0 +1,67 @@
+// Modal.scss
+
+$project-card-bg-color: black; // Couleur de fond de la carte de projet
+$project-card-border-radius: 20px; // Rayon de bordure de la carte de projet
+$project-card-text-color: #ffffff; // Couleur du texte de la carte de projet
+$modal-bg-color: rgba(0, 0, 0, 0.5); // Couleur de fond de la modale
+$modal-image-max-width: 80%; // Largeur maximale de l'image dans la modale
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $modal-bg-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.modal-content {
+  background-color: $project-card-bg-color;
+  padding: 20px;
+  border-radius: $project-card-border-radius;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: $project-card-text-color;
+}
+
+.project-details {
+  text-align: center;
+}
+
+.project-details h2 {
+  margin-bottom: 10px;
+  color: $project-card-text-color;
+}
+
+.project-details p {
+  margin-bottom: 20px;
+  color: $project-card-text-color;
+}
+
+.project-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.project-images img {
+ width: 300px;
+  height: auto;
+  margin: 0 10px;
+}
+

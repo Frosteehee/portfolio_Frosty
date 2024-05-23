@@ -3,13 +3,11 @@ import '../Sass/Hero.scss';
 function Hero() {
     return (
         <section className="hero">
-            <div className="hero-content">
-                <h1>Bienvenue sur mon portfolio</h1>
-                <p>Je suis une développeuse FrontEnd passionnée, en mission pour rendre le web plus accessible</p>
+            <div className="hero-content encadre-contraste ">
+                <h1>Marine Allavoine</h1>
+                <p>Artiste des lignes de code (lol), je sculpte des expériences web aussi inspirantes qu&apos;inclusives. Avec une passion pour l&apos;esthétique et un savoir-faire en développement front-end, je façonne un internet où la créativité et l&apos;accessibilité se rencontrent harmonieusement.</p>
 
-                <div className="imgPortrait">
-                    <span className="imgPortrait__img"> ici ma photo de moé</span>
-                </div>
+           
             </div>
 
             <div className="code-block">

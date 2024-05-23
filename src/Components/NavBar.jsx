@@ -1,4 +1,3 @@
-// NavBar.jsx
 import { useState, useEffect } from 'react';
 import Collapse from './Collapse';
 import '../Sass/NavBar.scss';
@@ -12,7 +11,7 @@ function NavBar() {
     if (isMobileMenuOpen) {
       timeoutId = setTimeout(() => {
         setIsMobileMenuOpen(false);
-      }, 3000); // Ferme le collapse automatiquement après 1s (1000ms)
+      }, 3000); // Ferme le collapse automatiquement après 3s
     }
 
     return () => {
@@ -24,14 +23,22 @@ function NavBar() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const scrollTo = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' }); //test pour scroll smooth 
+    }
+  };
+
   return (
     <nav className={`navbar ${isMobileMenuOpen ? 'open' : ''}`}>
       {/* Navbar desktop */}
       <div className="navbar-desktop">
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#home" onClick={() => scrollTo('home')}>Home</a></li>
+          <li><a href="#about" onClick={() => scrollTo('about')}>About</a></li>
+          <li><a href="#projects" onClick={() => scrollTo('projects')}>Projects</a></li>
+          <li><a href="#contact" onClick={() => scrollTo('contact')}>Contact</a></li>
         </ul>
       </div>
 

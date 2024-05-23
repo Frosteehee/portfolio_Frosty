@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import '../Sass/Collapse.scss';
 
@@ -6,9 +5,10 @@ function Collapse({ isOpen, onClose, animationDuration }) {
   return (
     <div className={`collapse ${isOpen ? 'open' : ''}`} style={{ transitionDuration: `${animationDuration}ms` }}>
       <ul>
-        <li><Link to="/" onClick={onClose}>Home</Link></li>
-        <li><Link to="/about" onClick={onClose}>About</Link></li>
-        <li><Link to="/contact" onClick={onClose}>Contact</Link></li>
+        <li><a href="#home" onClick={onClose}>Home</a></li>
+        <li><a href="#about" onClick={onClose}>About</a></li>
+        <li><a href="#projects" onClick={onClose}>Projects</a></li>
+        <li><a href="#contact" onClick={onClose}>Contact</a></li>
       </ul>
     </div>
   );

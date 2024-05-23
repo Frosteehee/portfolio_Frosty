@@ -5,6 +5,8 @@ import Home from './Pages/Home';
 import Error from './Pages/Error';
 import Header from "./Components/Header";
 import Contact from "./Components/Contact";
+import ScrollToTopButton from "./Components/ScrollToTopButton";
+
 
 const App = () => { //changement function App() par const App = () => { ?
   return (
@@ -16,6 +18,7 @@ const App = () => { //changement function App() par const App = () => { ?
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Error />} />
         </Routes>
+        <ScrollToTopButton />
         <Footer />
       </BrowserRouter>
  

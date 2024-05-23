@@ -1,0 +1,42 @@
+// SliderModal.scss
+
+.slider-modal {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px; // Ajustez la hauteur selon vos besoins
+    overflow: hidden;
+  
+    .slider-image {
+      max-width: 100%; // Assurez-vous que l'image ne dépasse pas la taille du conteneur
+      height: auto; // Ajuste la hauteur automatiquement pour conserver les proportions
+      object-fit: contain; // Ajuste la taille de l'image sans déformer
+    }
+  
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.5); // Fond semi-transparent
+      border: none;
+      color: black;
+      font-size: 1.5rem;
+      padding: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.8); // Fond plus opaque au survol
+      }
+  
+      &.prev {
+        left: 10px;
+      }
+  
+      &.next {
+        right: 10px;
+      }
+    }
+  }
+  
