@@ -29,7 +29,7 @@
     background-color: #000a16; /* Couleur de fond */
     padding: 2rem; /* Rembourrage intérieur */
     border-radius: 12px; /* Bordure arrondie */
-    border: 1px solid; /* Contour */
+    border: 0.4px solid; /* Contour */
     border-image: linear-gradient(to right, #ff6b6b, #ff66cc, #a86bfe, #6a0572); /* Dégradé de couleur pour le contour */
     border-image-slice: 1;
     width: 80%;
@@ -52,8 +52,6 @@
 /* Styles for the content inside the hero section */
 .hero-content {
     max-width: 800px; /* Largeur maximale du contenu */
-    display: flex;
-    flex-direction: column;
     align-items: start;
     padding: 2rem;
     width: 50%;
@@ -74,7 +72,7 @@
     overflow: hidden; /* Masquer tout contenu dépassant de la zone */
     width: 200px; /* Largeur réduite pour former un carré */
     height: 200px; /* Hauteur égale à la largeur pour former un carré */
-    border: 2px solid; /* Contour */
+    border: 0.3px solid; /* Contour */
     border-image: linear-gradient(to right, #ff6b6b, #ff66cc, #a86bfe, #6a0572); /* Dégradé de couleur pour le contour */
     border-image-slice: 1; /* Pour spécifier que le dégradé s'applique sur tout le contour */
 }
