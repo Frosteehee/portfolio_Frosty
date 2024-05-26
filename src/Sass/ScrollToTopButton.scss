@@ -1,0 +1,47 @@
+.scrollToTopButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #03091f;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.scrollToTopButton::before {
+  content: "";
+  position: absolute;
+  inset: 30%;
+  transform: translateY(20%) rotate(-45deg);
+  border-top: 5px solid #c0c0c0; /* Couleur du texte */
+  border-right: 5px solid #c0c0c0; /* Couleur du texte */
+}
+
+.scrollToTopButton:hover {
+  background-color: #252f48; /* Couleur de fond */
+  box-shadow: 0 0 10px rgba(3, 9, 31, 0.5); /* Ombre au survol */
+}
+
+.scrollToTopButton:active {
+  background-image: linear-gradient(to right, #ff6b6b,  #6a0572);
+}
+
+.scrollToTopButton.animating {
+  animation: buttonClickAnimation 1s ease forwards;
+}
+
+@keyframes buttonClickAnimation {
+  0% {
+    background-image: linear-gradient(to right, #ff6b6b, #ff66cc, #a86bfe, #6a0572);
+  }
+  100% {
+    background-color: #252f48; /* Couleur de fond */
+    box-shadow: 0 0 10px rgba(3, 9, 31, 0.5); /* Ombre au survol */
+  }
+}

@@ -1,19 +1,65 @@
 /* Styles for the hero section */
 .hero {
-    background-color: #0d1224; /* Couleur de fond du héros */
+    background-color: #000712; /* Couleur de fond du héros */
+   padding-top: 4rem; /* Rembourrage intérieur */
+    color: #c0c0c0; /* Couleur du texte */
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column; /* Inversion de l'axe principal pour les écrans de petite taille */
+        text-align: start; /* Centrage du texte */
+        margin:0;
+    }
+}
+
+.heroSection {
+    display: flex;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    width: 100%;
+}
+
+.encadre-contraste {
+    background-color: #000a16; /* Couleur de fond */
     padding: 2rem; /* Rembourrage intérieur */
-    color: #d3d8e8; /* Couleur du texte */
+    border-radius: 12px; /* Bordure arrondie */
+    border: 0.4px solid; /* Contour */
+    border-image: linear-gradient(to right, #ff6b6b, #ff66cc, #a86bfe, #6a0572); /* Dégradé de couleur pour le contour */
+    border-image-slice: 1;
+    width: 80%;
+}
+
+/* Ajoutons également un style pour le texte à l'intérieur de l'encadré */
+.encadre-contraste h1 {
+    color: #c0c0c0; /* Couleur du texte */
+    font-size: 2rem; /* Taille de police */
+    margin-bottom: 1rem; /* Marge inférieure */
+}
+
+.encadre-contraste p {
+    color: #c0c0c0; /* Couleur du texte */
+    font-size: 1.2rem; /* Taille de police */
+    line-height: 1.5; /* Hauteur de ligne */
+    margin-bottom: 1.5rem; /* Marge inférieure */
 }
 
 /* Styles for the content inside the hero section */
 .hero-content {
     max-width: 800px; /* Largeur maximale du contenu */
-    margin: 0 auto; /* Centrage horizontal */
-}
+    align-items: start;
+    padding: 2rem;
+    width: 50%;
 
-/* Styles for the image portrait */
-.imgPortrait {
-    margin-top: 2rem; /* Marge supérieure */
+    @media screen and (max-width: 768px) {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 /* Styles for the code block */
@@ -26,7 +72,7 @@
     overflow: hidden; /* Masquer tout contenu dépassant de la zone */
     width: 200px; /* Largeur réduite pour former un carré */
     height: 200px; /* Hauteur égale à la largeur pour former un carré */
-    border: 2px solid; /* Contour */
+    border: 0.3px solid; /* Contour */
     border-image: linear-gradient(to right, #ff6b6b, #ff66cc, #a86bfe, #6a0572); /* Dégradé de couleur pour le contour */
     border-image-slice: 1; /* Pour spécifier que le dégradé s'applique sur tout le contour */
 }

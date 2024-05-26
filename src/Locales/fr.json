@@ -1,0 +1,125 @@
+
+  
+  {
+    "hero": {
+      "name": "Marine Allavoine",
+      "description": "[Texte genéré par chatGPT pour remplacer LoremBlabla]Artiste des lignes de code, je sculpte des expériences web aussi inspirantes qu'inclusives. Avec une passion pour l'esthétique et un savoir-faire en développement front-end, je façonne un internet où la créativité et l'accessibilité se rencontrent harmonieusement."
+    },
+    "navbar": {
+      "home": "Accueil",
+      "about": "À propos",
+      "projects": "Projets",
+      "contact": "Contact"
+    },
+    "about" : {
+    "about": "À propos",
+    "aboutContent": "En tant que développeuse web passionnée par l'accessibilité, je m'efforce d'allier mes solides compétences techniques à une profonde sensibilité humaine. Forte de mon parcours en Arts Visuel, je porte un regard attentif sur l'importance de l'esthétique et de l'inclusivité dans la conception web. Ma formation actuelle en développement front-end me permet de concrétiser cette vision, en utilisant mon bagage artistique pour réfléchir de manière créative aux solutions d'accessibilité. Je suis convaincue que la technologie doit être au service de tous, et je m'engage à créer des expériences en ligne accessibles, intuitives et esthétiquement plaisantes pour chacun des utilisateurs.",
+    "cvButton": "Mon CV",
+    "githubButton": "GitHub"
+  },
+  
+    "projects": {
+      "1": {
+        "title": "Booki",
+        "description": "Page Vitrine du site Booki une entreprise de location de vacances en ligne, responsive.",
+        "images": [
+          "src/assets/images/Booki/Desktop.png",
+          "src/assets/images/Booki/Tablette.png"
+        ],
+        "githubLink": "https://github.com/your-username/portfolio-website"
+      },
+      "2": {
+        "title": "Oh My Food",
+        "description": "Application web de réservation de menus de restaurants gastronomiques.",
+        "images": [
+          "src/assets/images/OhMyFood/test_OMF_Home.png",
+          "chemin/vers/image5.jpg",
+          "chemin/vers/image6.jpg"
+        ],
+        "githubLink": "https://github.com/Frosteehee/projet-ohmyfood"
+      },
+      "3": {
+        "title": "Sophie Bluel",
+        "description": "Site de l'architecte d'interieur Sophie Bluel.",
+        "images": [
+          "chemin/vers/image7.jpg",
+          "chemin/vers/image8.jpg",
+          "chemin/vers/image9.jpg"
+        ],
+        "githubLink": "https://github.com/Frosteehee/Portfolio-architecte-sophie-bluel"
+      },
+      "4": {
+        "title": "Menu Maker",
+        "description": "Application web de création de menus de restaurants gastronomiques.",
+        "images": [
+          "chemin/vers/image7.jpg",
+          "chemin/vers/image8.jpg",
+          "chemin/vers/image9.jpg"
+        ],
+        "githubLink": "https://github.com/Frosteehee/Portfolio-architecte-sophie-bluel"
+      },
+      "5": {
+        "title": "Kasa",
+        "description": "Location de vacances.",
+        "images": [
+          "chemin/vers/image7.jpg",
+          "chemin/vers/image8.jpg",
+          "chemin/vers/image9.jpg"
+        ],
+        "githubLink": "https://github.com/Frosteehee/Portfolio-architecte-sophie-bluel"
+      },
+      "6": {
+        "title": "ArgentBank",
+        "description": "Banque.",
+        "images": [
+          "chemin/vers/image7.jpg",
+          "chemin/vers/image8.jpg",
+          "chemin/vers/image9.jpg"
+        ],
+        "githubLink": "https://github.com/Frosteehee/Portfolio-architecte-sophie-bluel"
+      },
+      "7": {
+        "title": "Todo List",
+        "description": "Application web de gestion de tâches.",
+        "images": [
+          "chemin/vers/image7.jpg",
+          "chemin/vers/image8.jpg",
+          "chemin/vers/image9.jpg"
+        ],
+        "githubLink": "https://github.com/Frosteehee/projet-ohmyfood"
+      },
+      "8": {
+        "title": "GameOn",
+        "description": "Application web de réservation de jeux.",
+        "images": [
+          "chemin/vers/image7.jpg",
+          "chemin/vers/image8.jpg",
+          "chemin/vers/image9.jpg"
+        ],
+        "githubLink": "https://github.com/Frosteehee/Portfolio-architecte-sophie-bluel"
+      },
+      "9": {
+        "title": "Game2",
+        "description": "Application web de réservation de jeux.",
+        "images": [
+          "chemin/vers/image7.jpg",
+          "chemin/vers/image8.jpg",
+          "chemin/vers/image9.jpg"
+        ],
+        "githubLink": "https://github.com/Frosteehee/projet-ohmyfood"
+      },
+      "10": {
+        "title": "Game3",
+        "description": "Application web de réservation de jeux.",
+        "images": [
+          "chemin/vers/image7.jpg",
+          "chemin/vers/image8.jpg",
+          "chemin/vers/image9.jpg"
+        ],
+        "githubLink": "https://github.com/Frosteehee/Portfolio-architecte-sophie-bluel"
+      }
+    }
+  }
+  
+  
+  

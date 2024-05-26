@@ -1,10 +1,11 @@
-// NavBar.jsx
 import { useState, useEffect } from 'react';
 import Collapse from './Collapse';
+import { useLanguage } from '../context/LanguageContext';
 import '../Sass/NavBar.scss';
 
 function NavBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { translate } = useLanguage();
 
   useEffect(() => {
     let timeoutId;
@@ -12,7 +13,7 @@ function NavBar() {
     if (isMobileMenuOpen) {
       timeoutId = setTimeout(() => {
         setIsMobileMenuOpen(false);
-      }, 3000); // Ferme le collapse automatiquement après 1s (1000ms)
+      }, 3000); // Ferme le collapse automatiquement après 3s
     }
 
     return () => {
@@ -24,14 +25,21 @@ function NavBar() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const scrollTo = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' }); //test pour scroll smooth 
+    }
+  };
+
   return (
     <nav className={`navbar ${isMobileMenuOpen ? 'open' : ''}`}>
-      {/* Navbar desktop */}
       <div className="navbar-desktop">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+      <ul>
+          <li><a href="#home" onClick={() => scrollTo('home')}>{translate('navbar.home')}</a></li>
+          <li><a href="#about" onClick={() => scrollTo('about')}>{translate('navbar.about')}</a></li>
+          <li><a href="#projects" onClick={() => scrollTo('projects')}>{translate('navbar.projects')}</a></li>
+          <li><a href="#contact" onClick={() => scrollTo('contact')}>{translate('navbar.contact')}</a></li>
         </ul>
       </div>
 
@@ -47,3 +55,8 @@ function NavBar() {
 }
 
 export default NavBar;
+
+
+
+  
+ 

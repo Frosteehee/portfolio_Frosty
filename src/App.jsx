@@ -1,28 +1,31 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import { BrowserRouter, Routes, Route,  } from "react-router-dom";
 import Footer from './Components/Footer';
-import Home from './Pages/Home';
-import Error from './Pages/Error';
 import Header from "./Components/Header";
-import Contact from "./Components/Contact";
+import Home from './Pages/Home';
 
-const App = () => { //changement function App() par const App = () => { ?
+import Error from './Pages/Error';
+import ScrollToTopButton from "./Components/ScrollToTopButton";
+import { LanguageProvider } from './context/LanguageContext';
+import LanguageSwitcher from './Components/LanguageSwitcher'; // Importer le composant LanguageSwitcher
+
+const App = () => {
   return (
-   
-      <BrowserRouter>
+    <BrowserRouter>
+      <LanguageProvider>
         <Header />
+        <LanguageSwitcher /> {/* Placer le bouton de changement de langue où tu veux dans l'arborescence de composants */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
+        
           <Route path="*" element={<Error />} />
         </Routes>
+        <ScrollToTopButton />
         <Footer />
-      </BrowserRouter>
- 
-  )
-}
+    </LanguageProvider>
+    </BrowserRouter>
+  );
+};
 
 export default App;
 
-//<Route path="/Contact" element={<Contact />} />
-//import Contact from "./Pages/Contact";
+

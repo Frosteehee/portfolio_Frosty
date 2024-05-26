@@ -1,0 +1,14 @@
+.footer{
+    padding: 1rem 2rem;
+  background-image: linear-gradient(to left,  #7c3aed, rgba(236, 72, 153, 0.9)); /*#9f18a7, #9414ac, #7f0ab5, #6b04bc)*/
+  border-top: 1px solid rgba(255, 255, 255, 0.7); // Bordure solide en haut
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  transition: background-color 0.3s ease; // Transition pour la transparence
+
+  @media (max-width: 768px) {
+    /* Dégradé de bas en haut en version mobile */
+    background-image: //linear-gradient(to top, #9f18a7, #9414ac, #7f0ab5, #6b04bc);
+    linear-gradient(to bottom , #7c3aed, rgba(236, 72, 153, 0.9))  }; // COULEUR EN COURS DE VERIFICATION
+
+  }

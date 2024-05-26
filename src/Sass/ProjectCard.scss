@@ -1,0 +1,128 @@
+.projectCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+  margin-top:20px;
+}
+
+.project-card {
+  background: black;
+  border-radius: 20px; // Bordures arrondies
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4); // Ombre légèrement prononcée
+  width: 250px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  overflow: hidden; // Masquer tout contenu débordant
+  
+  // Définir le contour coloré arrondi avec un dégradé linéaire
+ // border: 2px solid;
+ box-shadow: 
+ 0 0 0 0.7px #ff6b6b,
+ 0 0 0 0.8px  #ff66cc,
+  0 0 0 1px #a86bfe,
+ 0 0 0 3px #6a0572;
+
+ transition: transform 0.3s ease; /* Animation de transformation au survol */
+ position: relative; /* Pour positionner correctement l'élément superposé */
+ transition: background-color 0.3s ease; /* Animation de transition fluide */
+
+&:hover {
+  transform: translateY(-5px); /* Translation vers le haut au survol */
+  background-color: rgba(0, 0, 0, 0.5); /* Superposition semi-transparente */
+ opacity: 1; /*à revoir*/
+}
+
+  .project-card-img {
+    width: 100%; // Image occupant toute la largeur de la carte
+    height: auto; // Hauteur ajustée automatiquement
+    border-radius: 20px; // Bordures arrondies sur l'image
+    object-fit: cover;
+        /* Réduire l'opacité de l'image au survol */
+        transition: opacity 0.3s ease; /* Animation de transition fluide */
+      }
+    
+      &:hover {
+        /* Superposition semi-transparente */
+        background-color: rgba(0, 0, 0, 0.5); /* Superposition semi-transparente */
+    
+        .project-card-img {
+          opacity: 0; /* Réduire l'opacité de l'image */
+        }
+  }
+
+  .project-card-content {
+    flex-grow: 1; // Permettre au contenu de prendre tout l'espace disponible
+    padding: 1rem;
+    color: #ffffff; // Couleur du texte blanc
+    text-align: center; // Centrer le texte
+  }
+
+  .project-card-title {
+    font-size: 1.5rem; // Taille de police légèrement augmentée
+    margin-bottom: 1rem; // Marge inférieure pour séparer le titre du contenu
+  }
+}
+
+
+/*.project-card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  .project-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .project-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .project-card-title {
+    color: #ffffff;
+    font-size: 1.2rem;
+    transition: font-size 0.3s ease;
+  }
+
+  .project-card-description {
+    color: #ffffff;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  &.hovered {
+    .project-card-overlay {
+      opacity: 1;
+    }
+
+    .project-card-title {
+      font-size: 1.5rem;
+    }
+  }
+
+  &.hovered .project-card-img {
+    filter: brightness(0.3);
+  }
+}
+*/

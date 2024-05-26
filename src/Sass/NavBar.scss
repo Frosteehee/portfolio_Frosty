@@ -1,19 +1,43 @@
 // NavBar.scss
+/* Déclaration des variables pour les couleurs
+$violetPrincipal: #ec4899; // Violet principal
+$violetFonce: #7c3aed; // Violet foncé
+$fondFonce: #0D1224; // Fond plus foncé
+$blanc: #ffffff; // Blanc
+$grisFonce: #333333; // Gris foncé
+*/
+/*
 .navbar {
   padding: 1rem 2rem;
-  background-image: linear-gradient(to right, #9f18a7, #9414ac, #7f0ab5, #6b04bc);
-  border-top: 1px solid rgba(255, 255, 255, 0.7); // Bordure solide en haut
+ // background-image: linear-gradient(to left,  #7c3aed, rgba(236, 72, 153, 0.9)); /*#9f18a7, #9414ac, #7f0ab5, #6b04bc)*/
+  //border-top: 1px solid rgba(255, 255, 255, 0.7); // Bordure solide en haut
+  //border-bottom-right-radius: 8px;
+  //border-bottom-left-radius: 8px;
+ // transition: background-color 0.3s ease; // Transition pour la transparence
+  //background-color:  #0d1224; /* Couleur de fond du héros */
+ // ;
+
+//&.hover{
+  //background-image: linear-gradient(to left,  #7c3aed, rgba(236, 72, 153, 0.9))
+//}
+
+.navbar {
+  padding: 1rem 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.7); /* Bordure solide en haut */
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
-  transition: background-color 0.3s ease; // Transition pour la transparence
+  background-color: #000712; /* Couleur de fond du héros */
+  transition: background-color 0.3s ease; /* Transition pour la transparence */
+
 
   @media (max-width: 768px) {
     /* Dégradé de bas en haut en version mobile */
-    background-image: linear-gradient(to top, #9f18a7, #9414ac, #7f0ab5, #6b04bc);
-  }
+    background-image: //linear-gradient(to top, #9f18a7, #9414ac, #7f0ab5, #6b04bc);
+    linear-gradient(to bottom , #7c3aed, rgba(236, 72, 153, 0.9))  }; // COULEUR EN COURS DE VERIFICATION
+
 
   &.open {
-    background-color: rgba(155, 21, 167, 0.7); // Plus transparent une fois ouvert
+   // background-color: rgba(155, 21, 167, 0.7); // Plus transparent une fois ouvert
     border-bottom-right-radius: 35px;
     border-bottom-left-radius: 35px;
     border-bottom: 1px solid transparent; // Bordure du bas transparente
@@ -28,7 +52,9 @@
       list-style: none;
       display: flex;
       margin: 0;
-      padding: 0;
+      padding: 10px 20px;
+   
+    
 
       li {
         margin-right: 1rem;
@@ -42,9 +68,12 @@
           text-decoration: none;
           font-weight: bold;
           transition: color 0.3s ease;
+          padding:15px 25px;
 
           &:hover {
-            color: #fbbf24;
+            background-image: linear-gradient(to right, #7c3aed, rgba(236, 72, 153, 0.9));
+            border-radius: 15px;
+           
           }
         }
       }
@@ -58,6 +87,10 @@
   @media (max-width: 768px) {
     .navbar-desktop {
       display: none; /* Masqué en version mobile */
+
+      ul{
+        display: none;
+      }
     }
 
     .navbar-mobile {
@@ -109,10 +142,11 @@
       }
     }
   }
-}
+
 
 @media screen and (min-width: 768px){
   #mobileMenuButton {
     display: none;
   }
+}
 }

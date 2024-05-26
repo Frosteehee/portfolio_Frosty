@@ -1,0 +1,157 @@
+.about {
+    background-color: #000712;
+    color: #ffffff;
+    padding-left:20px;
+    padding-right: 20px;
+    padding-bottom:260px;
+    padding-top:50px;
+  
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap; // Permet le retour à la ligne des éléments sur les petits écrans
+
+        .profile-picture {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #7c3aed; /* Violet */
+            margin-left: 15%;
+            margin-bottom: 20px; // Ajout d'un espace entre la photo de profil et le texte sur les grands écrans
+            animation: fadeInLeft 1s ease; // Animation d'apparition depuis la gauche
+        }
+
+        .info {
+            flex: 1;
+            margin-left: 15%; /* Ajustement de la marge */
+            margin-right: 10%;
+
+            .button-container {
+                width: 100%; // Ajustement de la largeur pour les petits écrans
+                display: flex;
+                flex-wrap: wrap; // Permet le retour à la ligne des boutons sur les petits écrans
+                justify-content: center; // Centrer les boutons horizontalement
+
+                button {
+                    padding: 0.7rem 1.5rem;
+                    background-color: #7c3aed; /* Violet foncé pour le bouton */
+                    color: #ffffff;
+                    border: none;
+                    border-radius: 20px; /* Border-radius arrondi */
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                    cursor: pointer;
+                    font-size: 1rem;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    width: fit-content;
+                    margin: 10px; // Ajout d'un espace entre les boutons
+                    // Dégradé sur le bouton avec effet hover
+                    background-image: linear-gradient(to right, #ec4899, #7c3aed);
+                    background-size: 200% auto;
+                    transition: background-position 0.5s;
+
+                    &:hover {
+                        background-position: right center;
+                    }
+                }
+            }
+        }
+
+        .animate-text {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            background-image: linear-gradient(to right, #EC4899, #7C3AED); /* Linear gradient */
+            -webkit-background-clip: text; /* Clip the text to the background */
+            color: transparent; /* Make the text transparent */
+            opacity: 0; /* Initially hidden */
+            animation: animateText 4s ease forwards, appearText 1s ease forwards; /* Combinaison des animations */
+        }
+
+        .animated-lines {
+            opacity: 0;
+            animation: animateLines 4s ease forwards;
+            margin-bottom: 10px;
+            
+            p {
+                font-size: 1.2rem;
+                line-height: 2; // Pour un espacement vertical entre les lignes de texte
+                //color: #333; // Couleur du texte
+                margin-bottom: 1rem; // Espacement sous le paragraphe
+                //structure du texte
+            
+              
+                a {
+                   // Couleur des liens
+                   color:white;
+                  text-decoration: none; // Supprime le soulignement des liens
+                //  color:  #ab80f7;
+                &:hover {
+                    // text-decoration: underline; // Active un soulignement lorsqu'un lien est survolé
+                    color: transparent; // Rend le texte transparent
+                    background-image: linear-gradient(to right, #EC4899, #7C3AED); // Définit un dégradé linéaire comme arrière-plan
+                    -webkit-background-clip: text; // Applique le dégradé sur le texte uniquement
+                    background-clip: text; // Assure la compatibilité avec les autres navigateurs
+                }
+                
+                }
+              }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .content {
+            flex-direction: column;
+          
+            .profile-picture {
+                margin-left: auto; // Centrer la photo de profil sur les petits écrans
+                margin-right: auto;
+            }
+
+            .info {
+               margin:0;
+                padding: 0; // Supprimer la marge intérieure pour les petits écrans
+            }
+        }
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px); // Animation de déplacement depuis la gauche
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes animateText {
+    from {
+        background-size: 0% 100%; /* Initial size */
+    }
+    to {
+        background-size: 100% 100%; /* Final size */
+    }
+}
+
+@keyframes animateLines {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes appearText {
+    from {
+        opacity: 0;
+        transform: translateX(100%); /* Transformation de tout le texte */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+
