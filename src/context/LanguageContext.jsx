@@ -8,7 +8,7 @@ const LanguageContext = createContext();
 const translations = { en, fr };
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useState('fr'); // c'est mieux si c'est français par défaut ?
 
   const toggleLanguage = (lang) => {
     setLanguage(lang);

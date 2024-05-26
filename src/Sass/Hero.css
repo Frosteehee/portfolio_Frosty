@@ -1,0 +1,118 @@
+@charset "UTF-8";
+/* Styles for the hero section */
+.hero {
+  background-color: #000712; /* Couleur de fond du héros */
+  padding-top: 4rem; /* Rembourrage intérieur */
+  color: #c0c0c0; /* Couleur du texte */
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Inversion de l'axe principal pour les écrans de petite taille */
+    text-align: start; /* Centrage du texte */
+    margin: 0;
+  }
+}
+
+.heroSection {
+  display: flex;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  width: 100%;
+}
+
+.encadre-contraste {
+  background-color: #000a16; /* Couleur de fond */
+  padding: 2rem; /* Rembourrage intérieur */
+  border-radius: 12px; /* Bordure arrondie */
+  border: 0.4px solid; /* Contour */
+  -o-border-image: linear-gradient(to right, #ff6b6b, #ff66cc, #a86bfe, #6a0572);
+     border-image: linear-gradient(to right, #ff6b6b, #ff66cc, #a86bfe, #6a0572); /* Dégradé de couleur pour le contour */
+  border-image-slice: 1;
+  width: 80%;
+}
+
+/* Ajoutons également un style pour le texte à l'intérieur de l'encadré */
+.encadre-contraste h1 {
+  color: #c0c0c0; /* Couleur du texte */
+  font-size: 2rem; /* Taille de police */
+  margin-bottom: 1rem; /* Marge inférieure */
+}
+
+.encadre-contraste p {
+  color: #c0c0c0; /* Couleur du texte */
+  font-size: 1.2rem; /* Taille de police */
+  line-height: 1.5; /* Hauteur de ligne */
+  margin-bottom: 1.5rem; /* Marge inférieure */
+}
+
+/* Styles for the content inside the hero section */
+.hero-content {
+  max-width: 800px; /* Largeur maximale du contenu */
+  align-items: start;
+  padding: 2rem;
+  width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .hero-content {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Styles for the code block */
+.code-block {
+  color: #d3d8e8; /* Couleur du texte du bloc de code */
+  font-family: "Courier New", monospace; /* Police de caractère monospace */
+  background-color: rgba(27, 44, 104, 0.6274509804); /* Couleur de fond du bloc de code */
+  padding: 1rem; /* Rembourrage intérieur */
+  border-radius: 0; /* Bordure sans arrondi pour former un carré */
+  overflow: hidden; /* Masquer tout contenu dépassant de la zone */
+  width: 200px; /* Largeur réduite pour former un carré */
+  height: 200px; /* Hauteur égale à la largeur pour former un carré */
+  border: 0.3px solid; /* Contour */
+  -o-border-image: linear-gradient(to right, #ff6b6b, #ff66cc, #a86bfe, #6a0572);
+     border-image: linear-gradient(to right, #ff6b6b, #ff66cc, #a86bfe, #6a0572); /* Dégradé de couleur pour le contour */
+  border-image-slice: 1; /* Pour spécifier que le dégradé s'applique sur tout le contour */
+}
+
+/* Styles for the blink effect */
+.blink {
+  animation: blink-animation 1s infinite; /* Animation du clignotement */
+}
+
+@keyframes blink-animation {
+  50% {
+    opacity: 0; /* Disparition à mi-chemin */
+  }
+}
+/* Ajout des styles pour les couleurs spécifiques */
+.text-pink-500 {
+  color: #ff6b6b; /* Exemple de couleur rose */
+}
+
+.text-amber-300 {
+  color: #fbbf24; /* Exemple de couleur ambre */
+}
+
+.text-orange-400 {
+  color: #f97316; /* Exemple de couleur orange */
+}
+
+.text-cyan-400 {
+  color: #22d3ee; /* Exemple de couleur cyan */
+}
+
+.text-white {
+  color: #ffffff; /* Exemple de couleur blanche */
+}
+
+.text-gray-400 {
+  color: #9ca3af; /* Exemple de couleur grise */
+}/*# sourceMappingURL=Hero.css.map */

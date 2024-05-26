@@ -21,10 +21,10 @@
   // Définir le contour coloré arrondi avec un dégradé linéaire
  // border: 2px solid;
  box-shadow: 
- 0 0 0 0.5px #ff6b6b,
- 0 0 0 1px  #ff66cc,
-  0 0 0 1.5px #a86bfe,
- 0 0 0 2px #6a0572;
+ 0 0 0 0.7px #ff6b6b,
+ 0 0 0 0.8px  #ff66cc,
+  0 0 0 1px #a86bfe,
+ 0 0 0 3px #6a0572;
 
  transition: transform 0.3s ease; /* Animation de transformation au survol */
  position: relative; /* Pour positionner correctement l'élément superposé */
