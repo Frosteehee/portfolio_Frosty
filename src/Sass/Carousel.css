@@ -1,0 +1,74 @@
+@charset "UTF-8";
+.carousel-container {
+  width: 90%;
+  overflow-x: auto;
+  /* Activer le scroll horizontal */
+  display: flex;
+  align-items: center;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  position: relative;
+  margin-left: 60px;
+  /* Cacher la barre de défilement */
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-container .carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+  /* Animation fluide */
+  position: relative;
+  width: fit-content;
+  /* Adapter la largeur à la taille des cartes */
+}
+
+.carousel-container .slide {
+  flex: 0 0 12%;
+  /* Ajuster la taille pour afficher plus de cartes */
+  opacity: 0.8;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  cursor: pointer;
+  min-width: 250px;
+  /* Taille minimale des cartes */
+  padding-left: 2px;
+}
+
+.carousel-container .slide:last-child {
+  margin-right: calc((100% - (18% + 20px)) / 2);
+  /* Espacement à droite pour la dernière carte */
+}
+
+.carousel-container .prev,
+.carousel-container .next {
+  background-color: purple;
+  color: white;
+  /* Changer la couleur des boutons pour plus de visibilité */
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  /* Rendre les boutons circulaires */
+  padding: 8px;
+  /* Réduire la taille des boutons */
+  font-size: 20px;
+  transition: transform 0.5s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-container .prev:hover,
+.carousel-container .next:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-container .prev {
+  left: 10px;
+}
+
+.carousel-container .next {
+  right: 10px;
+}

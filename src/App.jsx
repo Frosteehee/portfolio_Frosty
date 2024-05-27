@@ -1,19 +1,21 @@
 import { BrowserRouter, Routes, Route,  } from "react-router-dom";
 import Footer from './Components/Footer';
 import Header from "./Components/Header";
+import ThemeSwitcher from './Components/ThemeSwitcher';
 import Home from './Pages/Home';
-
 import Error from './Pages/Error';
 import ScrollToTopButton from "./Components/ScrollToTopButton";
 import { LanguageProvider } from './context/LanguageContext';
-import LanguageSwitcher from './Components/LanguageSwitcher'; // Importer le composant LanguageSwitcher
+import LanguageSwitcher from './Components/LanguageSwitcher'; 
 
 const App = () => {
   return (
     <BrowserRouter>
+       
       <LanguageProvider>
+      <ThemeSwitcher />
         <Header />
-        <LanguageSwitcher /> {/* Placer le bouton de changement de langue où tu veux dans l'arborescence de composants */}
+        <LanguageSwitcher />
         <Routes>
           <Route path="/" element={<Home />} />
         

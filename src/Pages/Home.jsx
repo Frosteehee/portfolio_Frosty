@@ -20,18 +20,12 @@ function Home() {
 
   return (
     <div className="home">
-      <section className="hero">
-        <Hero />
-      </section>
     
+        <Hero />
       <Portfolio openModal={openModal} closeModal={closeModal} /> {/* Passer la fonction closeModal au composant Portfolio */}
-     
-      <section id="about" className="aboutMe">
         <AboutMe />
-      </section>
-       <section id="contact" className="contact">
-        <Contact />
-      </section>
+        <Contact /> {/* Pourquoi Contact n'est pas une section ? */}
+
       {selectedProjectId && (
         <Modal
           projectData={projectData.find((project) => project.id === selectedProjectId)} 

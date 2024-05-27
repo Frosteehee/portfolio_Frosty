@@ -42,14 +42,7 @@ h1, h2, h3, h4, h5, h6 {
       
 }
 
-button:hover {
-  border-color: #646cff;
-}
 
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
 /* Media queries pour les préférences de couleurs */
 @media (prefers-color-scheme: light) {
@@ -62,9 +55,7 @@ button:focus-visible {
     color: #747bff;
   }
 
-  button {
-    background-color: #f9f9f9;
-  }
+
 }
 
 /* Styles spécifiques pour la mise en page */

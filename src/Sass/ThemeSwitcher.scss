@@ -1,0 +1,74 @@
+@import 'Variables';
+
+body {
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body.light {
+    background-color: $light-background-color;
+    color: #333;
+
+
+    .hero{
+      color:$light-text-color;
+      .encadre-contraste{
+        background-color: transparent;
+        border: solid 5px;
+        border-image: linear-gradient(to right, $gradient-colors);
+        border-image-slice: $border-image-slice;
+        width: 80%;
+      }
+      h1{
+        color: $light-text-color;
+      }
+    }
+
+
+
+    .theme-switcher{
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+
+    }
+
+    .button{
+      background-color:$cyan-color;
+      &:hover{
+        background-position: right center;
+      }
+    }
+  }
+
+//////////////////////////////////////////////////////////////////////////DarkMode
+  
+  body.dark {
+    background-color: #0a0a0a;
+    color: #f0f0f0;
+  
+  
+  .theme-switcher {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: #fff;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .button{
+    background-image: linear-gradient(to right, $button-gradient);
+    background-size: 200% auto;
+    transition: background-position 0.5s;
+
+    &:hover {
+      background-position: right center;
+    }
+  }
+  
+  }

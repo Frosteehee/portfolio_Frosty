@@ -1,9 +1,17 @@
 import { useEffect, useRef, useState } from 'react';
+import Button from './Button';
 import '../Sass/AboutMe.scss';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
   const aboutRef = useRef(null);
+  const handleDownload1 = () => {
+    console.log('Download 1 clicked!');
+  };
+
+  const handleDownload2 = () => {
+    console.log('Download 2 clicked!');
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,7 +47,7 @@ const About = () => {
   }, [isVisible]);
 
   return (
-    <section className="about" ref={aboutRef}>
+    <section id="about" ref={aboutRef}>
       <div className="content">
         <div className="profile-picture"></div>
         <div className="info">
@@ -48,8 +56,8 @@ const About = () => {
             <p className={isVisible ? 'animate-lines' : ''}>En tant que développeuse web passionnée par <a href="https://www.monparcourshandicap.gouv.fr/accessibilite-numerique"> l&apos;accessibilité </a>, je m&apos;efforce d&apos;allier mes compétences techniques solides à une sensibilité humaine profonde. Forte de mon parcours en Arts Visuel, je porte un regard attentif sur l&apos;importance de l&apos;esthétique et de l&apos;inclusivité dans la conception web. Ma formation actuelle en développement front-end me permet de concrétiser cette vision, en utilisant mon bagage artistique pour réfléchir de manière créative aux solutions d&apos;accessibilité. Je suis convaincue que la technologie doit être au service de tous, et je m&apos;engage à créer des expériences en ligne accessibles, intuitives et esthétiquement plaisantes pour chacun des utilisateurs.</p>
         </div>
         <div className="button-container">
-            <button>Mon CV</button> 
-            <button>GitHub</button>
+        <Button onClick={handleDownload1} styleType="primary">Mon CV</Button> 
+            <Button onClick={handleDownload2} styleType="secondary">GitHub</Button>
           </div>
         </div>
       </div>

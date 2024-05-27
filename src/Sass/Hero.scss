@@ -1,8 +1,10 @@
-/* Styles for the hero section */
+@import 'Variables';
+
+
 .hero {
-    background-color: #000712; /* Couleur de fond du héros */
-   padding-top: 4rem; /* Rembourrage intérieur */
-    color: #c0c0c0; /* Couleur du texte */
+    padding-top: $padding-section;
+    padding-bottom:$padding-section;
+    color: $text-color;
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -12,48 +14,43 @@
     align-items: center;
 
     @media screen and (max-width: 768px) {
-        flex-direction: column; /* Inversion de l'axe principal pour les écrans de petite taille */
-        text-align: start; /* Centrage du texte */
-        margin:0;
+        flex-direction: column;
+        text-align: start;
+        margin: 0;
     }
 }
 
-.heroSection {
-    display: flex;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    width: 100%;
-}
+
 
 .encadre-contraste {
-    background-color: #000a16; /* Couleur de fond */
-    padding: 2rem; /* Rembourrage intérieur */
-    border-radius: 12px; /* Bordure arrondie */
-    border: 0.4px solid; /* Contour */
-    border-image: linear-gradient(to right, #ff6b6b, #ff66cc, #a86bfe, #6a0572); /* Dégradé de couleur pour le contour */
-    border-image-slice: 1;
+    background-color: $encadre-background-color;
+    padding: $padding-medium;
+    border-radius: $border-radius;
+    border: $border-size solid;
+    border-image: linear-gradient(to right, $gradient-colors);
+    border-image-slice: $border-image-slice;
     width: 80%;
+
+
+
+h1 {
+    color: $text-color;
+    font-size: $heading-font-size;
+    margin-bottom: $margin-small;
+
+ p {
+    color: $text-color;
+    font-size: $paragraph-font-size;
+    line-height: $line-height;
+    margin-bottom: $margin-medium;
+}
+}
 }
 
-/* Ajoutons également un style pour le texte à l'intérieur de l'encadré */
-.encadre-contraste h1 {
-    color: #c0c0c0; /* Couleur du texte */
-    font-size: 2rem; /* Taille de police */
-    margin-bottom: 1rem; /* Marge inférieure */
-}
-
-.encadre-contraste p {
-    color: #c0c0c0; /* Couleur du texte */
-    font-size: 1.2rem; /* Taille de police */
-    line-height: 1.5; /* Hauteur de ligne */
-    margin-bottom: 1.5rem; /* Marge inférieure */
-}
-
-/* Styles for the content inside the hero section */
 .hero-content {
-    max-width: 800px; /* Largeur maximale du contenu */
+    max-width: $max-content-width;
     align-items: start;
-    padding: 2rem;
+    padding: $padding-medium;
     width: 50%;
 
     @media screen and (max-width: 768px) {
@@ -64,51 +61,51 @@
 
 /* Styles for the code block */
 .code-block {
-    color: #d3d8e8; /* Couleur du texte du bloc de code */
-    font-family: 'Courier New', monospace; /* Police de caractère monospace */
-    background-color: #1b2c68a0; /* Couleur de fond du bloc de code */
-    padding: 1rem; /* Rembourrage intérieur */
-    border-radius: 0; /* Bordure sans arrondi pour former un carré */
-    overflow: hidden; /* Masquer tout contenu dépassant de la zone */
-    width: 200px; /* Largeur réduite pour former un carré */
-    height: 200px; /* Hauteur égale à la largeur pour former un carré */
-    border: 0.3px solid; /* Contour */
-    border-image: linear-gradient(to right, #ff6b6b, #ff66cc, #a86bfe, #6a0572); /* Dégradé de couleur pour le contour */
-    border-image-slice: 1; /* Pour spécifier que le dégradé s'applique sur tout le contour */
+    color: $code-text-color;
+    font-family: 'Courier New', monospace;
+    background-color: $code-background-color;
+    padding: $padding-small;
+    border-radius: 0;
+    overflow: hidden;
+    width: $code-block-width;
+    height: $code-block-height;
+    border: $border-size solid;
+    border-image: linear-gradient(to right, $gradient-colors);
+    border-image-slice: $border-image-slice;
 }
 
 /* Styles for the blink effect */
 .blink {
-    animation: blink-animation 1s infinite; /* Animation du clignotement */
+    animation: blink-animation 1s infinite;
 }
 
 @keyframes blink-animation {
     50% {
-        opacity: 0; /* Disparition à mi-chemin */
+        opacity: 0;
     }
 }
 
 /* Ajout des styles pour les couleurs spécifiques */
 .text-pink-500 {
-    color: #ff6b6b; /* Exemple de couleur rose */
+    color: $pink-color;
 }
 
 .text-amber-300 {
-    color: #fbbf24; /* Exemple de couleur ambre */
+    color: $amber-color;
 }
 
 .text-orange-400 {
-    color: #f97316; /* Exemple de couleur orange */
+    color: $orange-color;
 }
 
 .text-cyan-400 {
-    color: #22d3ee; /* Exemple de couleur cyan */
+    color: $cyan-color;
 }
 
 .text-white {
-    color: #ffffff; /* Exemple de couleur blanche */
+    color: $white-color;
 }
 
 .text-gray-400 {
-    color: #9ca3af; /* Exemple de couleur grise */
+    color: $gray-color;
 }

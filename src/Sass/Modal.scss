@@ -17,6 +17,12 @@ $modal-image-max-width: 80%; // Largeur maximale de l'image dans la modale
   justify-content: center;
   align-items: center;
   z-index: 1;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+
+  &.hide {
+    animation: fadeOut 0.3s forwards;
+  }
 }
 
 .modal-content {
@@ -27,6 +33,7 @@ $modal-image-max-width: 80%; // Largeur maximale de l'image dans la modale
   position: relative;
   width: 80%;
   max-width: 600px;
+  animation: slideIn 0.3s forwards;
 }
 
 .close {
@@ -36,20 +43,25 @@ $modal-image-max-width: 80%; // Largeur maximale de l'image dans la modale
   cursor: pointer;
   font-size: 20px;
   color: $project-card-text-color;
+  background: transparent;
+  border: none;
+  &:hover {
+    color: red;
+  }
 }
 
 .project-details {
   text-align: center;
-}
 
-.project-details h2 {
-  margin-bottom: 10px;
-  color: $project-card-text-color;
-}
+  h2 {
+    margin-bottom: 10px;
+    color: $project-card-text-color;
+  }
 
-.project-details p {
-  margin-bottom: 20px;
-  color: $project-card-text-color;
+  p {
+    margin-bottom: 20px;
+    color: $project-card-text-color;
+  }
 }
 
 .project-images {
@@ -57,11 +69,33 @@ $modal-image-max-width: 80%; // Largeur maximale de l'image dans la modale
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+
+  img {
+    width: 300px;
+    height: auto;
+    margin: 0 10px;
+  }
 }
 
-.project-images img {
- width: 300px;
-  height: auto;
-  margin: 0 10px;
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
