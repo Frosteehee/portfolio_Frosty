@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 7rem;
+  padding-top: 4rem;
   padding-bottom: 7rem;
   position: relative;
 
@@ -21,7 +21,7 @@
 
   .slide {
     flex: 0 0 auto; // Ajuster la taille automatiquement en fonction du contenu
-    min-width: 250px;
+    //min-width: 200px;
     padding: 40px;
     scroll-snap-align: center; // Assurer que chaque slide est aligné au centre
   }
@@ -34,6 +34,7 @@
   .next {
     display: none; // Masquer les boutons précédent et suivant en version mobile
   }
+}
 
   @media (min-width: 768px) {
     .carousel-container {
@@ -70,8 +71,8 @@
       .next {
         right: 10px;
       }
-    }
-
+    
+  
     .carousel-bullets {
       display: flex; // Afficher les bullets points en version desktop
       justify-content: center;
@@ -92,4 +93,5 @@
       }
     }
   }
-}
+
+  }

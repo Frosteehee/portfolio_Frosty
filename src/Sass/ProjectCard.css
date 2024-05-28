@@ -1,0 +1,77 @@
+@charset "UTF-8";
+.projectCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.project-card {
+  background: black;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 0 0.7px #ff6b6b, 0 0 0 0.8px  #ff66cc, 0 0 0 1px #a86bfe, 0 0 0 3px #6a0572;
+  transition: transform 0.3s ease;
+  /* Animation de transformation au survol */
+  position: relative;
+  /* Pour positionner correctement l'élément superposé */
+  transition: background-color 0.3s ease;
+  /* Animation de transition fluide */
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  /* Translation vers le haut au survol */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Superposition semi-transparente */
+  opacity: 1;
+  /*à revoir*/
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    width: 250px;
+    height: 350px;
+  }
+}
+
+.project-card .project-card-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  object-fit: cover;
+  /* Réduire l'opacité de l'image au survol */
+  transition: opacity 0.3s ease;
+  /* Animation de transition fluide */
+}
+
+.project-card:hover {
+  /* Superposition semi-transparente */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Superposition semi-transparente */
+}
+
+.project-card:hover .project-card-img {
+  opacity: 0;
+  /* Réduire l'opacité de l'image */
+}
+
+.project-card .project-card-content {
+  flex-grow: 1;
+  padding: 1rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.project-card .project-card-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}

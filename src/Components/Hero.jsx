@@ -1,14 +1,34 @@
 import '../Sass/Hero.scss';
 import { useLanguage } from '../context/LanguageContext';
-
+import { motion } from 'framer-motion'; //test animation 
 function Hero() {
   const { translate } = useLanguage();
 
+
+
+
   return (
+    /*test animation */
+    
+    
     <section className="hero">
       <div className="hero-content encadre-contraste">
-        <h1>{translate('hero.name')}</h1>
-        <p>{translate('hero.description')}</p>
+      <motion.h1
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+        {translate('hero.name')}
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1 }}
+        >
+          {translate('hero.description')}
+        </motion.p>
+      
+      
       </div>
       <div className="code-block">
         <code>
@@ -37,6 +57,7 @@ function Hero() {
         </code>
       </div>
     </section>
+
   );
 }
 

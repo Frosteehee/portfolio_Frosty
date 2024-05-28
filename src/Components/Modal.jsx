@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import SliderModal from './SliderModal';
 import '../Sass/Modal.scss';
+
 import { useLanguage } from '../context/LanguageContext';
 
 const Modal = ({ projectData, onClose }) => {

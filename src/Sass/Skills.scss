@@ -1,0 +1,75 @@
+@import 'Variables';
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#skills-heading{
+    color: $text-color;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  //  animation: fadeInUp 2s ease;
+    will-change: transform, opacity;
+}
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 1;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  will-change: transform, opacity;
+  
+  /* Ajout de délai pour chaque skill pour des animations échelonnées */
+  &:nth-child(1) { transition-delay: 0.1s; }
+  &:nth-child(2) { transition-delay: 0.2s; }
+  &:nth-child(3) { transition-delay: 0.3s; }
+  &:nth-child(4) { transition-delay: 0.4s; }
+  &:nth-child(5) { transition-delay: 0.5s; }
+  &:nth-child(6) { transition-delay: 0.6s; }
+  &:nth-child(7) { transition-delay: 0.7s; }
+  &:nth-child(8) { transition-delay: 0.8s; }
+  &:nth-child(9) { transition-delay: 0.9s; }
+}
+
+.skill.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-name {
+  font-size: 1rem;
+  color: $text-color;
+}
+
+/* Couleurs des compétences */
+.html .icon { color: #e34c26; } /* Couleur HTML5 */
+.css .icon { color: #1572b6; } /* Couleur CSS3 */
+.js .icon { color: #f0db4f; } /* Couleur JavaScript */
+.react .icon { color: #61dbfb; } /* Couleur React.js */
+.node .icon { color: #68a063; } /* Couleur Node.js */
+.database .icon { color: #00758f; } /* Couleur Bases de données */
+.cafe .icon { color: #a6814c; } /* Couleur Café */
+.dessin .icon { color: #2ecc71; } /* Couleur Dessin */
+.jeux-video .icon { color: #3498db; } /* Couleur Jeux vidéo */

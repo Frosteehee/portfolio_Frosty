@@ -8,6 +8,7 @@ const ProjectCard = ({ title, description, images }) => {
       <div className="project-card-content">
         <h2 className="project-card-title">{title}</h2>
         <p className="project-card-description">{description}</p>
+       {/* <span className='skill-card'>{skills}</span>*/}
       </div>
     </div>
   );
