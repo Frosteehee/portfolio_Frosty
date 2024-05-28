@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import '../Sass/Button.scss'; // Importez le fichier SCSS pour les styles
+import '../Sass/Button.scss'; 
 
-const Button = ({ children, onClick, type, styleType }) => {
+const Button = ({ children, onClick = null, type = 'button', styleType = 'primary' }) => {
   const handleClick = (e) => {
     if (onClick) {
       onClick(e);
@@ -20,12 +20,6 @@ Button.propTypes = {
   onClick: PropTypes.func,
   type: PropTypes.string,
   styleType: PropTypes.string,
-};
-
-Button.defaultProps = {
-  onClick: null,
-  type: 'button',
-  styleType: 'primary',
 };
 
 export default Button;

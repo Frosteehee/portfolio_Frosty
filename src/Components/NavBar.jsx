@@ -13,7 +13,7 @@ function NavBar() {
     if (isMobileMenuOpen) {
       timeoutId = setTimeout(() => {
         setIsMobileMenuOpen(false);
-      }, 3000); // Ferme le collapse automatiquement après 3s
+      }, 3000); // Ferme le collapse automatiquement après 3s, est ce que c'est assez?
     }
 
     return () => {
@@ -28,35 +28,43 @@ function NavBar() {
   const scrollTo = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' }); //test pour scroll smooth 
+      element.scrollIntoView({ behavior: 'smooth' }); // Test pour scroll smooth 
     }
   };
 
   return (
-    <nav className={`navbar ${isMobileMenuOpen ? 'open' : ''}`}>
+    <nav className={`navbar ${isMobileMenuOpen ? 'open' : ''}`} aria-label="Main navigation">
       <div className="navbar-desktop">
-      <ul>
-          <li><a href="#home" onClick={() => scrollTo('home')}>{translate('navbar.home')}</a></li>
-          <li><a href="#aboutMe" onClick={() => scrollTo('about')}>{translate('navbar.about')}</a></li>
-          <li><a href="#projects" onClick={() => scrollTo('projects')}>{translate('navbar.projects')}</a></li>
-          <li><a href="#contact" onClick={() => scrollTo('contact')}>{translate('navbar.contact')}</a></li>
+        <ul role="menubar">
+          <li role="none"><a role="menuitem" href="#home" onClick={() => scrollTo('home')}>{translate('navbar.home')}</a></li>
+         <li role="none"><a role="menuitem" href="#projects" onClick={() => scrollTo('projects')}>{translate('navbar.projects')}</a></li>
+         <li role="none"><a role="menuitem" href="#aboutMe" onClick={() => scrollTo('about')}>{translate('navbar.about')}</a></li>
+          <li role="none"><a role="menuitem" href="#contact" onClick={() => scrollTo('contact')}>{translate('navbar.contact')}</a></li>
         </ul>
       </div>
 
       {/* Bouton Menu pour afficher le Collapse en version mobile */}
-      <button id="mobileMenuButton" className="mobile-menu-button" onClick={toggleMobileMenu}>
+      <button
+        id="mobileMenuButton"
+        className="mobile-menu-button"
+        onClick={toggleMobileMenu}
+        aria-expanded={isMobileMenuOpen}
+        aria-controls="mobileMenu"
+        aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+      >
         Menu
       </button>
 
       {/* Navbar mobile */}
-      {isMobileMenuOpen && <Collapse isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />}
+      {isMobileMenuOpen && (
+        <Collapse
+          id="mobileMenu"
+          isOpen={isMobileMenuOpen}
+          onClose={() => setIsMobileMenuOpen(false)}
+        />
+      )}
     </nav>
   );
 }
 
 export default NavBar;
-
-
-
-  
- 

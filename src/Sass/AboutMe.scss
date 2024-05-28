@@ -41,12 +41,6 @@
         .animate-text {
             font-size: $heading-font-size;
             margin-bottom: $margin-medium;
-            background-image: linear-gradient(to right, $button-gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            opacity: 0;
-            animation: animateText 4s ease forwards, appearText 1s ease forwards;
         }
 
         .animated-lines {
@@ -59,17 +53,7 @@
                 line-height: $line-height;
                 margin-bottom: $margin-small;
                 
-                a {
-                    color: $white-color;
-                    text-decoration: none;
-
-                    &:hover {
-                        color: transparent;
-                        background-image: linear-gradient(to right, $button-gradient);
-                        -webkit-background-clip: text;
-                        background-clip: text;
-                    }
-                }
+                
             }
         }
     }

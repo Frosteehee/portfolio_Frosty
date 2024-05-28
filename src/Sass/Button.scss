@@ -1,5 +1,6 @@
 @import 'Variables';
-button {
+
+.button {
   padding: $padding-small $padding-medium;
   color: $white-color;
   border: none;
@@ -10,21 +11,19 @@ button {
   font-weight: bold;
   text-transform: uppercase;
   width: fit-content;
-  margin: $margin-small;
-
+  margin:10px;
+  
 
   &:hover {
-      background-position: right center;
-     
+    background-position: right center;
+  }
+
+  &:focus {
+    outline: 2px solid #ff6b6b; /* Couleur de focus pour accessibilité */
   }
 }
 
-/*
-   background-image: linear-gradient(to right, $pink-color, $navbar-link-hover-color);
-      background-size: 200% auto;
-      transition: background-position 0.5s;
-      
-      &:hover {
-        background-position: right center;
-      }
-      */
+.language-switcher button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

@@ -2,7 +2,7 @@
 
 
 .hero {
-    padding-top: $padding-section;
+    padding-top: rem;
     padding-bottom:$padding-section;
     color: $text-color;
     display: flex;
@@ -61,16 +61,16 @@ h1 {
 
 /* Styles for the code block */
 .code-block {
-    color: $code-text-color;
+  //  color: $code-text-color;
     font-family: 'Courier New', monospace;
-    background-color: $code-background-color;
+  //  background-color: $code-background-color;
     padding: $padding-small;
-    border-radius: 0;
+   // border-radius: 0;
     overflow: hidden;
     width: $code-block-width;
     height: $code-block-height;
     border: $border-size solid;
-    border-image: linear-gradient(to right, $gradient-colors);
+   // border-image: linear-gradient(to right, $gradient-colors);
     border-image-slice: $border-image-slice;
 }
 

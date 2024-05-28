@@ -71,45 +71,8 @@
             "chemin/vers/image9.jpg"
           ],
           "githubLink": "https://github.com/Frosteehee/Portfolio-architecte-sophie-bluel"
-        },
+        }
 
-        {
-            "id": 7,
-            "title": "Todo List",
-            "description": "Application web de gestion de tâches.",
-            "images": [
-              "chemin/vers/image7.jpg",
-              "chemin/vers/image8.jpg",
-              "chemin/vers/image9.jpg"
-            ],
-            "githubLink": "https://github.com/Frosteehee/projet-ohmyfood"
-          },
-
-          {
-              "id": 8,
-              "title": "GameOn",
-              "description": "Application web de réservation de jeux.",
-              "images": [
-                "chemin/vers/image7.jpg",
-                "chemin/vers/image8.jpg",
-                "chemin/vers/image9.jpg"
-              ],
-              "githubLink": "https://github.com/Frosteehee/Portfolio-architecte-sophie-bluel"
-
-            },
-
-            {
-                "id": 9,
-                "title": "Game2",
-                "description": "Application web de réservation de jeux.",
-                "images": [
-                  "chemin/vers/image7.jpg",
-                  "chemin/vers/image8.jpg",
-                  "chemin/vers/image9.jpg"
-                ],
-                "githubLink": "https://github.com/Frosteehee/projet-ohmyfood"
-
-              }
-      
+    
   ]
   

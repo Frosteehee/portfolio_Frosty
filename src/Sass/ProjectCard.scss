@@ -10,8 +10,8 @@
   background: black;
   border-radius: 20px; // Bordures arrondies
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4); // Ombre légèrement prononcée
-  width: 250px;
-  height: 350px;
+  width: 300px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -38,7 +38,7 @@
 
   .project-card-img {
     width: 100%; // Image occupant toute la largeur de la carte
-    height: auto; // Hauteur ajustée automatiquement
+   // height: auto; // Hauteur ajustée automatiquement
     border-radius: 20px; // Bordures arrondies sur l'image
     object-fit: cover;
         /* Réduire l'opacité de l'image au survol */

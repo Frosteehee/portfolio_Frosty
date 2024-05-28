@@ -5,7 +5,7 @@
   border-top: $border-size solid rgba(255, 255, 255, 0.7); /* Bordure solide en haut */
   border-bottom-right-radius: $border-radius;
   border-bottom-left-radius: $border-radius;
-  background-color: $background-color; /* Couleur de fond du héros */
+ // background-color: $background-color; /* Couleur de fond du héros */
   transition: background-color 0.3s ease; /* Transition pour la transparence */
 
   @media (max-width: 768px) {
@@ -23,6 +23,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
     ul {
       list-style: none;
@@ -45,7 +46,7 @@
           padding: $padding-small $padding-medium;
 
           &:hover {
-            background-image: linear-gradient(to right, $navbar-link-hover-color, rgba(236, 72, 153, 0.9));
+           // background-image: linear-gradient(to right, $navbar-link-hover-color, rgba(236, 72, 153, 0.9));
             border-radius: $border-radius;
           }
         }

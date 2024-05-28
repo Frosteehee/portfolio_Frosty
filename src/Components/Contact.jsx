@@ -24,7 +24,7 @@ function Contact() {
     // Rendu du composant Contact
     return (
         <section className="contact"> {/* Ajout de la classe contact-container */}
-            <h1>Contact Page</h1>
+            <h2 className='animate-text animated-lines'>Contact Page</h2>
             <form onSubmit={handleSubmit}>
                 <label>
                     Your name:

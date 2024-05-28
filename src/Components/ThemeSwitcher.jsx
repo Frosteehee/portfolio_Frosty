@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import '../Sass/ThemeSwitcher.scss';
 import Button from './Button';
+import { FaMoon } from "react-icons/fa";
+import { GoSun } from "react-icons/go";
+
 
 const ThemeSwitcher = () => {
   const [theme, setTheme] = useState('dark');
@@ -16,7 +19,11 @@ const ThemeSwitcher = () => {
   return (
     <div className="theme-switcher">
       <Button onClick={toggleTheme}>
-        Switch to {theme === 'light' ? 'Dark' : 'Light'} Theme
+     
+
+        {theme === 'light' ? <FaMoon /> :   <GoSun />}
+      
+
       </Button>
     </div>
   );

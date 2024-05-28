@@ -13,10 +13,26 @@ $gradient-colors: #ff6b6b, #ff66cc, #a86bfe, #6a0572;
 $background-color: #0a0a0a;
 
 //LightMode
-
-$light-background-color: #f3f4f6;
+/*
+$light-background-color: #ffffff;
 $light-text-color: blue;
-$light-color-section: grey;
+$light-color-section: grey; 
+$light-gradient-color:#9400BD,#6800BD, #600AFF, #2930FF;
+$light-button-gradient: #A30085, #2930FF;
+$light-text-color: #000;
+*/
+
+
+///Test LightMode Earthy Zen Style
+$light-background-color: #FFFEF8;
+$light-text-color: #000;
+$light-gradient-color:#325C00 ,#565C00,#705200,#993600;
+$light-button-gradient:#325C00,#705200,#993600;
+
+
+
+
+
 
 /// DarkMode
  
@@ -42,8 +58,8 @@ $line-height: 1.5;
 $margin-small: 1rem;
 $margin-medium: 1.5rem;
 $border-radius: 12px;
-$code-block-width: 200px;
-$code-block-height: 200px;
+$code-block-width: 250px;
+$code-block-height: 250px;
 $border-size: 0.3px;
 $border-image-slice: 1;
-$padding-section:15rem;
+$padding-section:10rem;
