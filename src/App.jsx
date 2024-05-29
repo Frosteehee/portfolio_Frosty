@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
@@ -11,7 +11,7 @@ import LanguageSwitcher from "./Components/LanguageSwitcher";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <Router>
       <LanguageProvider>
         <ThemeSwitcher />
         <Header />
@@ -31,7 +31,7 @@ const App = () => {
         <ScrollToTopButton />
         <Footer />
       </LanguageProvider>
-    </BrowserRouter>
+    </Router>
   );
 };
 
