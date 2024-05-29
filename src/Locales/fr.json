@@ -3,7 +3,7 @@
   {
     "hero": {
       "name": "Marine Allavoine",
-      "description": "[Texte genéré par chatGPT pour remplacer LoremBlabla]Artiste des lignes de code, je sculpte des expériences web aussi inspirantes qu'inclusives. Avec une passion pour l'esthétique et un savoir-faire en développement front-end, je façonne un internet où la créativité et l'accessibilité se rencontrent harmonieusement."
+      "description": "Developpeuse Front-End & Artiste, en mission pour rendre le web accessible."
     },
     "navbar": {
       "home": "Accueil",
@@ -13,7 +13,7 @@
     },
     "about" : {
     "about": "À propos",
-    "aboutContent": "En tant que développeuse web passionnée par l'accessibilité, je m'efforce d'allier mes solides compétences techniques à une profonde sensibilité humaine. Forte de mon parcours en Arts Visuel, je porte un regard attentif sur l'importance de l'esthétique et de l'inclusivité dans la conception web. Ma formation actuelle en développement front-end me permet de concrétiser cette vision, en utilisant mon bagage artistique pour réfléchir de manière créative aux solutions d'accessibilité. Je suis convaincue que la technologie doit être au service de tous, et je m'engage à créer des expériences en ligne accessibles, intuitives et esthétiquement plaisantes pour chacun des utilisateurs.",
+    "aboutContent": "Salut, moi c'est Marine. Je suis diplomée en Arts Visuels et formée en développement web. J'ai un grand parcours varié, où j'ai eu le loisir d'experimenter la pratique des Arts Visuels et leur enseignement, les sciences pures et les sciences de l'éducation. J'ai pu tirer le meilleur de chaque experience pour aujourdhui appliquer mon expertise à des questionnements actuels:  l'accessibilité, au sein de l'Art, au sein de l'apprentissage, et sur quelque chose qui fait le lien entre tous: le web. Je suis passionnée par la sculpture, les jeux vidéos, et j'ai une maitrise incroyable pour la préparation de café (Merci Tim's)  ",
     "cvButton": "Mon CV",
     "githubButton": "GitHub"
   },

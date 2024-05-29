@@ -1,7 +1,6 @@
-// SliderModal.jsx
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-import '../Sass/SliderModal.scss'; // Assurez-vous d'importer votre fichier SCSS
+import '../Sass/SliderModal.scss'; 
 
 const SliderModal = ({ images }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -16,12 +15,17 @@ const SliderModal = ({ images }) => {
 
   return (
     <div className="slider-modal">
-      {/* Affichage de l'image courante */}
-      <img src={images[currentSlide]} alt={`Slide ${currentSlide + 1}`} className="slider-image" />
+      {/* Affichage de l'image courante avec lazy loading */}
+      <img 
+        src={images[currentSlide]} 
+        alt={`Slide ${currentSlide + 1}`} 
+        className="slider-image" 
+        loading="lazy"
+      />
 
       {/* Boutons de navigation */}
-      <button className="prev" onClick={prevSlide}>&#10094;</button>
-      <button className="next" onClick={nextSlide}>&#10095;</button>
+      <button className="prev" onClick={prevSlide} aria-label="Previous slide" aria-keyshortcuts="ArrowLeft">&#10094;</button>
+      <button className="next" onClick={nextSlide} aria-label="Next slide" aria-keyshortcuts="ArrowRight">&#10095;</button>
     </div>
   );
 };

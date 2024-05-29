@@ -1,49 +1,67 @@
-import Button from './Button'; // Import du composant Button
-
-// Import des modules React
-import { useState } from 'react';
-
-
-
-// Import du fichier SCSS
+import  { useState } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
+import Button from './Button';
 import '../Sass/Contact.scss';
 
-// Composant Contact
 function Contact() {
-    // Définition des états pour les champs du formulaire
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
-    // Fonction de gestion de la soumission du formulaire
-    const handleSubmit = (e) => {
-        e.preventDefault();
-            console.log('ça fonctionne ! ');
-    };
+    const [state, handleSubmit] = useForm("xleqkqkn");
 
-    // Rendu du composant Contact
+    if (state.succeeded) {
+        return <p>Thanks for joining!</p>;
+    }
+
     return (
-        <section className="contact"> {/* Ajout de la classe contact-container */}
+        <section className="contact" id="contact">
             <h2 className='animate-text animated-lines'>Contact Page</h2>
             <form onSubmit={handleSubmit}>
-                <label>
-                    Your name:
-                    <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-                </label>
-                <label>
-                   Your email:
-                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                </label>
-                <label>
-                    Your message:
-                    <textarea value={message} onChange={(e) => setMessage(e.target.value)} />
-                </label>
-                
-                <Button type="submit" styleType="primary">Send</Button>
+                <label htmlFor="name">Your name:</label>
+                <input
+                    id="name"
+                    type="text"
+                    name="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                />
+                <label htmlFor="email">Your email:</label>
+                <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                />
+                <label htmlFor="message">Your message:</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                />
+
+                <ValidationError
+                    prefix="Name"
+                    field="name"
+                    errors={state.errors}
+                />
+                <ValidationError
+                    prefix="Email"
+                    field="email"
+                    errors={state.errors}
+                />
+                <ValidationError
+                    prefix="Message"
+                    field="message"
+                    errors={state.errors}
+                />
+
+                <Button type="submit" styleType="primary" disabled={state.submitting}>Send</Button>
             </form>
         </section>
     );
 }
 
-// Export du composant Contact
 export default Contact;
