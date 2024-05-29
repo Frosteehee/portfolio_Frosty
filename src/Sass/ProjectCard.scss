@@ -51,14 +51,15 @@
 
   .project-card-description {
     margin-bottom: 1rem; // Marge inférieure pour séparer la description du contenu
-   margin-top:-10px;
+    margin-top: -10px;
     font-size: 1rem; // Taille de police initiale
     transition: font-size 0.3s ease; // Transition de la taille de police
   }
+
   .project-card:hover .project-card-description,
-.project-card:focus .project-card-description {
-  font-size: 3rem; // Taille de police agrandie au survol ou au focus
-}
+  .project-card:focus .project-card-description {
+    font-size: 1.2rem; // Taille de police agrandie au survol ou au focus
+  }
 
   .skills-container {
     display: flex;
@@ -70,6 +71,21 @@
     font-size: 1.8rem; // Taille de l'icône augmentée
     margin: 0 0.5rem; // Marge entre les icônes de compétences
     margin-top: -4px;
-    
   }
+
+  @media (max-width: 768px) {
+    width: 270px;
+    height: 400px;
+    .project-card-title {
+      font-size: 1.2rem; // Réduire la taille du titre
+    }
+    .project-card-description {
+      font-size: 0.9rem; // Réduire la taille de la description
+    }
+    .skill_Icon {
+      font-size: 1.5rem; // Réduire la taille des icônes
+    }
+  }
+
+ 
 }
