@@ -40,6 +40,7 @@ const Modal = ({ projectData, onClose }) => {
           className="close"
           onClick={onClose}
           aria-label="Close modal"
+          aria-keyshortcuts="Escape"
         >
           &times;
         </button>

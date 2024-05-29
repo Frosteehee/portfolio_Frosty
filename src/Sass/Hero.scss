@@ -20,17 +20,22 @@
 }
 
 .encadre-contraste {
-  
     padding: $padding-medium;
     border-radius: $border-radius;
-    width: 80%;
+    width: 60%;
     overflow: hidden; 
-
+    @media screen and (max-width: 768px) {
+        width: 250px;
+    }
 
     h1 {
         color: $text-color;
         font-size: $heading-font-size;
         margin-bottom: $margin-small;
+        margin-top: -1rem;
+        opacity: 0; /* Initial opacity for animation */
+        transform: translateY(50px); /* Initial position for animation */
+        animation: fadeInUp 0.5s ease-out 0.1s forwards; /* Apply the animation */
     }
 
     p {
@@ -48,8 +53,7 @@
     width: 50%;
 
     @media screen and (max-width: 768px) {
-        margin: 0;
-        padding: 0;
+      width: 250px;
     }
 }
 
@@ -72,6 +76,18 @@
 @keyframes blink-animation {
     50% {
         opacity: 0;
+    }
+}
+
+/* Keyframes for the fadeInUp animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 

@@ -1,18 +1,24 @@
 import { useEffect, useRef, useState } from 'react';
 import Button from './Button';
 import '../Sass/AboutMe.scss';
+import { useLanguage } from '../context/LanguageContext'; 
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
   const aboutRef = useRef(null);
-  const handleDownload1 = () => {
-    console.log('Download 1 clicked!');
+  const { translate } = useLanguage(); //fonction de traduction du contexte de langue
+
+  // Téléchargement du CV
+  const handleDownloadCV = () => {
+    console.log('Téléchargement du CV');
   };
 
-  const handleDownload2 = () => {
-    console.log('Download 2 clicked!');
+  // Telechargement depuis GitHub
+  const handleDownloadFromGithub = () => {
+    console.log('Téléchargement depuis GitHub'); // c'est bien mais retravailler les conditions
   };
 
+  // Effet pour détecter si la section est visible à l'écran
   useEffect(() => {
     const handleScroll = () => {
       const aboutSection = aboutRef.current;
@@ -20,6 +26,7 @@ const About = () => {
       const windowHeight = window.innerHeight;
       const scrollPosition = window.scrollY;
 
+      // Vérifie si la section est visible
       if (scrollPosition >= sectionPosition - windowHeight / 2) {
         setIsVisible(true);
       } else {
@@ -29,35 +36,44 @@ const About = () => {
 
     window.addEventListener('scroll', handleScroll);
 
+    // Nettoyage de l'écouteur d'événements lors du démontage du composant
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
+  // Effet pour réinitialiser les animations lorsque la section devient visible
   useEffect(() => {
     if (isVisible) {
-      // Si la section est visible, réinitialisez les animations
       const elementsToAnimate = document.querySelectorAll('.animate-text, .animated-lines');
       elementsToAnimate.forEach((element) => {
         element.style.animation = 'none';
-        element.offsetHeight; // Pour forcer le repaint et réinitialiser l'animation
+        element.offsetHeight; // Force le repaint et réinitialise l'animation
         element.style.animation = null;
       });
     }
   }, [isVisible]);
 
   return (
-    <section id="about" ref={aboutRef}>
+    <section id="about" ref={aboutRef} aria-labelledby="about-heading">
       <div className="content">
         <div className="profile-picture"></div>
         <div className="info">
-          <h2 className={`animate-text ${isVisible ? 'appear' : ''}`}>A propos</h2>
-        <div className="animated-lines">
-            <p className={isVisible ? 'animate-lines' : ''}>En tant que développeuse web passionnée par <a href="https://www.monparcourshandicap.gouv.fr/accessibilite-numerique"> l&apos;accessibilité </a>, je m&apos;efforce d&apos;allier mes compétences techniques solides à une sensibilité humaine profonde. Forte de mon parcours en Arts Visuel, je porte un regard attentif sur l&apos;importance de l&apos;esthétique et de l&apos;inclusivité dans la conception web. Ma formation actuelle en développement front-end me permet de concrétiser cette vision, en utilisant mon bagage artistique pour réfléchir de manière créative aux solutions d&apos;accessibilité. Je suis convaincue que la technologie doit être au service de tous, et je m&apos;engage à créer des expériences en ligne accessibles, intuitives et esthétiquement plaisantes pour chacun des utilisateurs.</p>
-        </div>
-        <div className="button-container">
-        <Button onClick={handleDownload1} styleType="primary">Mon CV</Button> 
-            <Button onClick={handleDownload2} styleType="secondary">GitHub</Button>
+          <h2 id="about-heading" className={`animate-text ${isVisible ? 'appear' : ''}`}>
+            {translate('about.about')} 
+          </h2>
+          <div className="animated-lines">
+            <p className={isVisible ? 'animate-lines' : ''}>{translate('about.aboutContent')}</p>
+          </div>
+          <div className="button-container">
+            {/* Bouton pour télécharger le CV */}
+            <Button onClick={handleDownloadCV} styleType="primary" aria-label="Télécharger mon CV">
+              {translate('about.cvButton')}
+            </Button> 
+            {/* Bouton pour télécharger depuis GitHub */}
+            <Button onClick={handleDownloadFromGithub} styleType="secondary" aria-label="Télécharger depuis GitHub">
+              {translate('about.githubButton')}
+            </Button>
           </div>
         </div>
       </div>
@@ -66,8 +82,3 @@ const About = () => {
 };
 
 export default About;
-
-/*
-https://design-accessible.fr/checklist
-https://accessibilite.numerique.gouv.fr/obligations/
-*/

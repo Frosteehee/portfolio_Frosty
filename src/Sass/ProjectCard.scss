@@ -1,82 +1,75 @@
-.projectCards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 1rem;
-  margin-top:20px;
-}
-
 .project-card {
   background: black;
   border-radius: 20px; // Bordures arrondies
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4); // Ombre légèrement prononcée
+  box-shadow: 
+    0px 10px 20px rgba(0, 0, 0, 0.4), // Ombre légèrement prononcée
+    0 0 0 0.7px #ff6b6b, // Contour coloré
+    0 0 0 0.8px  #ff66cc,
+    0 0 0 1px #a86bfe,
+    0 0 0 3px #6a0572;
   width: 300px;
-  height: 400px;
+  height: 420px; /* side eye */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
   overflow: hidden; // Masquer tout contenu débordant
+  position: relative; // Pour positionner correctement l'élément superposé
+  transition: transform 0.3s ease, background-color 0.3s ease; // Animation de transformation et de transition fluide
   
-  // Définir le contour coloré arrondi avec un dégradé linéaire
- box-shadow: 
- 0 0 0 0.7px #ff6b6b,
- 0 0 0 0.8px  #ff66cc,
-  0 0 0 1px #a86bfe,
- 0 0 0 3px #6a0572;
+  &:hover {
+    transform: translateY(-10px); // Translation vers le haut au survol
+    background-color: rgba(0, 0, 0, 0.5); // Superposition semi-transparente au survol
+    box-shadow: 
+      0px 15px 30px rgba(203, 179, 207, 0.6), // Ombre légèrement prononcée
+      0 0 0 1px #ff6b6b, // Contour coloré
+      0 0 0 1.2px #ff66cc,
+      0 0 0 2px #a86bfe,
+      0 0 0 4px #6a0572;
+  }
 
- transition: transform 0.3s ease; /* Animation de transformation au survol */
- position: relative; /* Pour positionner correctement l'élément superposé */
- transition: background-color 0.3s ease; /* Animation de transition fluide */
-
-&:hover {
-  transform: translateY(-8px); /* Translation vers le haut au survol */
-  background-color: rgba(0, 0, 0, 0.5); /* Superposition semi-transparente */
- opacity: 1; /*à revoir*/
-}
-@media (max-width: 768px) {
-width: 250px;
-height: 350px;
-}
   .project-card-img {
-    width: 300px; 
-   height: 300px; 
-    border-radius: 20px 20px 0px 0px; // Bordures arrondies sur l'image
-    object-fit: cover; // Ajuster l'image pour couvrir tout le conteneur
-        /* Réduire l'opacité de l'image au survol */
-        transition: opacity 0.3s ease; /* Animation de transition fluide */
-      
-    
-      &:hover {
-        /* Superposition semi-transparente */
-        background-color: rgba(0, 0, 0, 0.5); /* Superposition semi-transparente */
-    
-        .project-card-img {
-          opacity: 0; /* Réduire l'opacité de l'image */
-        }
-  }
-  img{
     width: 100%;
-    height: 100%;
-    border-radius: 20px 20px 0px 0px; // Bordures arrondies sur l'image
+    height: 250px; // Taille de l'image
+    border-radius: 20px 20px 0 0; // Bordures arrondies sur l'image
     object-fit: cover; // Ajuster l'image pour couvrir tout le conteneur
-  
+    transition: opacity 0.3s ease; // Animation de transition fluide
   }
-  }
+
   .project-card-content {
     flex-grow: 1; // Permettre au contenu de prendre tout l'espace disponible
-    padding: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     color: #ffffff; // Couleur du texte blanc
-    text-align: center; // Centrer le texte
   }
 
   .project-card-title {
     font-size: 1.5rem; // Taille de police légèrement augmentée
     margin-bottom: 1rem; // Marge inférieure pour séparer le titre du contenu
+    text-align: center; // Centrer le texte
   }
+
+  .project-card-description {
+    margin-bottom: 1rem; // Marge inférieure pour séparer la description du contenu
+   margin-top:-10px;
+    font-size: 1rem; // Taille de police initiale
+    transition: font-size 0.3s ease; // Transition de la taille de police
+  }
+  .project-card:hover .project-card-description,
+.project-card:focus .project-card-description {
+  font-size: 3rem; // Taille de police agrandie au survol ou au focus
 }
 
-.skill_Icon {
-  font-size: 2rem; // Taille de l'icône augmentée
-  margin-bottom: 0.5rem; // Marge inférieure pour séparer l'icône du texte
+  .skills-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem; // Marge inférieure pour séparer les compétences du contenu
+  }
+
+  .skill_Icon {
+    font-size: 1.8rem; // Taille de l'icône augmentée
+    margin: 0 0.5rem; // Marge entre les icônes de compétences
+    margin-top: -4px;
+    
+  }
 }

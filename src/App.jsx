@@ -3,11 +3,12 @@ import { AnimatePresence } from "framer-motion";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import ThemeSwitcher from "./Components/ThemeSwitcher";
-import Home from "./Pages/Home";
-import Error from "./Pages/Error";
 import ScrollToTopButton from "./Components/ScrollToTopButton";
 import { LanguageProvider } from "./context/LanguageContext";
 import LanguageSwitcher from "./Components/LanguageSwitcher";
+import Home from "./Pages/Home";
+import Error from "./Pages/Error";
+import Contact from "./Components/Contact"; 
 
 const App = () => {
   return (
@@ -21,6 +22,10 @@ const App = () => {
             <Route
               path="/"
               element={<Home />}
+            />
+            <Route
+              path="/contact" // Test formulaire
+              element={<Contact />}
             />
             <Route
               path="*"

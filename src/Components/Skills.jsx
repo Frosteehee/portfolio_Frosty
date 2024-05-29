@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import '../Sass/Skills.scss';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaDatabase } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,14 +7,16 @@ import PropTypes from 'prop-types';
 
 const SkillsSection = () => {
   const skillsRef = useRef(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting && !hasAnimated) {
             entry.target.classList.add('visible');
             observer.unobserve(entry.target);
+            setHasAnimated(true); // Animation déclenchée une fois
           }
         });
       },
@@ -29,7 +31,7 @@ const SkillsSection = () => {
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [hasAnimated]); // Effect se déclenche lors de la modification de hasAnimated
 
   return (
     <section id="skills" aria-labelledby="skills-heading">
@@ -40,10 +42,10 @@ const SkillsSection = () => {
         <SkillItem icon={<FaJs />} skillName="JavaScript" skillClass="js" />
         <SkillItem icon={<FaReact />} skillName="React.js" skillClass="react" />
         <SkillItem icon={<FaNodeJs />} skillName="Node.js" skillClass="node" />
-        <SkillItem icon={<FaDatabase />} skillName="Bases de données" skillClass="database" />
+        <SkillItem icon={<FaDatabase />} skillName="DataBase" skillClass="database" />
         <SkillItem icon={<FontAwesomeIcon icon={faCoffee} />} skillName="Café" skillClass="cafe" />
-        <SkillItem icon={<FontAwesomeIcon icon={faPalette} />} skillName="Dessin" skillClass="dessin" />
-        <SkillItem icon={<FontAwesomeIcon icon={faGamepad} />} skillName="Jeux vidéo" skillClass="jeux-video" />
+        <SkillItem icon={<FontAwesomeIcon icon={faPalette} />} skillName="Art" skillClass="dessin" />
+        <SkillItem icon={<FontAwesomeIcon icon={faGamepad} />} skillName="Gaming" skillClass="jeux-video" />
         {/* autre chose ? */}
       </div>
     </section>

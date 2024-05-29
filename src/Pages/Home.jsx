@@ -20,14 +20,14 @@ function Home() {
   };
 
   return (
-    <div className="home">
+    <div className="home" id="home">
     
         <Hero />
         <AboutMe />
         <SkillsSection />
       <Portfolio openModal={openModal} closeModal={closeModal} /> {/* Passer la fonction closeModal au composant Portfolio */}
         
-        <Contact /> {/* Pourquoi Contact n'est pas une section ? */}
+        <Contact />
 
       {selectedProjectId && (
         <Modal
