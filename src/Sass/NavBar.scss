@@ -1,79 +1,53 @@
-// NavBar.scss
-/* Déclaration des variables pour les couleurs
-$violetPrincipal: #ec4899; // Violet principal
-$violetFonce: #7c3aed; // Violet foncé
-$fondFonce: #0D1224; // Fond plus foncé
-$blanc: #ffffff; // Blanc
-$grisFonce: #333333; // Gris foncé
-*/
-/*
-.navbar {
-  padding: 1rem 2rem;
- // background-image: linear-gradient(to left,  #7c3aed, rgba(236, 72, 153, 0.9)); /*#9f18a7, #9414ac, #7f0ab5, #6b04bc)*/
-  //border-top: 1px solid rgba(255, 255, 255, 0.7); // Bordure solide en haut
-  //border-bottom-right-radius: 8px;
-  //border-bottom-left-radius: 8px;
- // transition: background-color 0.3s ease; // Transition pour la transparence
-  //background-color:  #0d1224; /* Couleur de fond du héros */
- // ;
-
-//&.hover{
-  //background-image: linear-gradient(to left,  #7c3aed, rgba(236, 72, 153, 0.9))
-//}
+@import 'Variables';
 
 .navbar {
-  padding: 1rem 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.7); /* Bordure solide en haut */
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-  background-color: #000712; /* Couleur de fond du héros */
+  padding: $padding-small $padding-medium;
+  border-top: $border-size solid rgba(255, 255, 255, 0.7); /* Bordure solide en haut */
+  border-bottom-right-radius: $border-radius;
+  border-bottom-left-radius: $border-radius;
+ // background-color: $background-color; /* Couleur de fond du héros */
   transition: background-color 0.3s ease; /* Transition pour la transparence */
-
 
   @media (max-width: 768px) {
     /* Dégradé de bas en haut en version mobile */
-    background-image: //linear-gradient(to top, #9f18a7, #9414ac, #7f0ab5, #6b04bc);
-    linear-gradient(to bottom , #7c3aed, rgba(236, 72, 153, 0.9))  }; // COULEUR EN COURS DE VERIFICATION
-
+    background-image: linear-gradient(to right, $navbar-mobile-gradient);  }
 
   &.open {
-   // background-color: rgba(155, 21, 167, 0.7); // Plus transparent une fois ouvert
+    // background-color: rgba(155, 21, 167, 0.7); // Plus transparent une fois ouvert
     border-bottom-right-radius: 35px;
     border-bottom-left-radius: 35px;
-    border-bottom: 1px solid transparent; // Bordure du bas transparente
+    border-bottom: $border-size solid transparent; // Bordure du bas transparente
   }
 
   .navbar-desktop {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
     ul {
       list-style: none;
       display: flex;
       margin: 0;
-      padding: 10px 20px;
-   
-    
+      padding: $padding-small $padding-medium;
 
       li {
-        margin-right: 1rem;
+        margin-right: $margin-small;
 
         &:last-child {
           margin-right: 0;
         }
 
         a {
-          color: #fff;
+          color: $navbar-link-color;
           text-decoration: none;
           font-weight: bold;
           transition: color 0.3s ease;
-          padding:15px 25px;
+          padding: $padding-small $padding-medium;
 
           &:hover {
-            background-image: linear-gradient(to right, #7c3aed, rgba(236, 72, 153, 0.9));
-            border-radius: 15px;
-           
+           // background-image: linear-gradient(to right, $navbar-link-hover-color, rgba(236, 72, 153, 0.9));
+            border-radius: $border-radius;
           }
         }
       }
@@ -87,8 +61,7 @@ $grisFonce: #333333; // Gris foncé
   @media (max-width: 768px) {
     .navbar-desktop {
       display: none; /* Masqué en version mobile */
-
-      ul{
+      ul {
         display: none;
       }
     }
@@ -98,16 +71,16 @@ $grisFonce: #333333; // Gris foncé
       justify-content: space-between;
       flex-direction: column;
       align-items: center;
-      
+
       button.mobile-menu-button {
         background: none;
         border: none;
-        color: #fff;
+        color: $navbar-text-color;
         font-size: 1.2rem;
         cursor: pointer;
         outline: none;
-        padding: 0.5rem 1rem;
-        border-radius: 8px;
+        padding: $padding-small $padding-medium;
+        border-radius: $border-radius;
         transition: background-color 0.3s ease;
 
         &:hover {
@@ -122,31 +95,30 @@ $grisFonce: #333333; // Gris foncé
       }
 
       li {
-        margin-bottom: 1rem;
+        margin-bottom: $margin-small;
 
         &:last-child {
           margin-bottom: 0;
         }
 
         a {
-          color: #fff;
+          color: $navbar-text-color;
           text-decoration: none;
           font-family: monospace;
           font-weight: bold;
           transition: color 0.3s ease;
 
           &:hover {
-            color: #fbbf24;
+            color: $amber-color;
           }
         }
       }
     }
   }
 
-
-@media screen and (min-width: 768px){
-  #mobileMenuButton {
-    display: none;
+  @media screen and (min-width: 768px) {
+    #mobileMenuButton {
+      display: none;
+    }
   }
-}
 }

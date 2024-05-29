@@ -1,0 +1,65 @@
+///§//Couleurs////////////////////////////////////////////
+/// 
+/// Global
+$text-color: #c0c0c0;
+$pink-color: #ff6b6b;
+$amber-color: #fbbf24;
+$orange-color: #f97316;
+$cyan-color: #22d3ee;
+$white-color: #ffffff;
+$gray-color: #9ca3af;
+$button-gradient: #ec4899, #7c3aed;
+$gradient-colors: #ff6b6b, #ff66cc, #a86bfe, #6a0572;
+$background-color: #0a0a0a;
+
+//LightMode
+/*
+$light-background-color: #ffffff;
+$light-text-color: blue;
+$light-color-section: grey; 
+$light-gradient-color:#9400BD,#6800BD, #600AFF, #2930FF;
+$light-button-gradient: #A30085, #2930FF;
+$light-text-color: #000;
+*/
+
+
+///Test LightMode Earthy Zen Style
+$light-background-color: #FFFEF8;
+$light-text-color: #000;
+$light-gradient-color:#325C00 ,#565C00,#705200,#993600;
+$light-button-gradient:#325C00,#705200,#993600;
+
+
+
+
+
+
+/// DarkMode
+ 
+// Encadre
+$encadre-background-color: #000a16;
+$code-text-color: #d3d8e8;
+$code-background-color: #1b2c68a0;
+
+// Navbar
+$navbar-background-color: #0a0a0a;
+$navbar-text-color: #fff;
+$navbar-link-color: #fff;
+$navbar-link-hover-color: #7c3aed;
+$navbar-mobile-gradient: #7c3aed, #ec4899;
+
+// Tailles
+$padding-small: 1rem;
+$padding-medium: 2rem;
+$max-content-width: 800px;
+$heading-font-size: 3rem;
+$paragraph-font-size: 1.2rem;
+$line-height: 1.5;
+$margin-small: 1rem;
+$margin-medium: 1.5rem;
+$border-radius: 12px;
+$code-block-width: 250px;
+$code-block-height: 250px;
+$border-size: 0.3px;
+$border-image-slice: 1;
+$padding-section:10rem;

@@ -1,0 +1,221 @@
+@import 'Variables';
+
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light Mode */
+body.light {
+  background-color: $light-background-color;
+  color: #333;
+
+  /* Light Navbar */
+  .navbar {
+    background-color: $light-background-color;
+    color: $navbar-text-color;
+
+    .navbar-desktop a {
+      color: #0a0a0a;
+
+      &:hover {
+        background-image: linear-gradient(to right, $light-button-gradient);
+        opacity: 0.6;
+        color: #f0f0f0;
+      }
+
+      &:focus {
+        outline: 2px solid #600AFF; /* Couleur de focus pour accessibilité */
+      }
+    }
+  }
+
+  /* Light Hero Section */
+  .hero {
+    color: $light-text-color;
+
+    .encadre-contraste {
+      background-color: transparent;
+      border: solid 5px;
+      border-image: linear-gradient(to right, $light-gradient-color);
+      border-image-slice: $border-image-slice;
+      width: 80%;
+    }
+
+    h1 {
+      color: $light-text-color;
+    }
+
+    .code-block {
+     // border-image: linear-gradient(to right, $light-gradient-color);
+      border-image-slice: $border-image-slice;
+      border-radius: 25px;
+      background-color: #f0f0f0;
+    }
+  }
+
+  /* Light Buttons */
+  .theme-switcher {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .button {
+    background-image: linear-gradient(to right, $light-button-gradient);
+    background-size: 200% auto;
+    transition: background-position 0.5s;
+
+    &:hover {
+      background-position: right center;
+    }
+  }
+
+  /* Light AboutMe Section */
+  .animate-text {
+    background-image: linear-gradient(to right, $light-gradient-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    opacity: 0;
+    animation: animateText 4s ease forwards, appearText 1s ease forwards;
+
+    &:hover {
+      color: transparent;
+      background-image: $cyan-color;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+  }
+
+  .animated-lines {
+    opacity: 0;
+    animation: animateLines 4s ease forwards;
+
+    a {
+      color: $light-text-color;
+      text-decoration: none;
+
+      &:hover {
+        color: transparent;
+        background-image: linear-gradient(to right, $light-gradient-color);
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+    }
+
+    p {
+      color: $light-text-color;
+      text-decoration: none;
+    }
+  }
+}
+/////////////////////////////////////////////////////////////////////////////////////////
+/* Dark Mode */
+body.dark {
+  background-color: #0a0a0a;
+  color: #f0f0f0;
+
+  /* Dark Buttons */
+  .theme-switcher {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .button {
+    background-image: linear-gradient(to right, $button-gradient);
+    background-size: 200% auto;
+    transition: background-position 0.5s;
+
+    &:hover {
+      background-position: right center;
+    }
+  }
+
+  /* Dark Navbar */
+  .navbar {
+    background-color: $navbar-background-color;
+    color: $navbar-text-color;
+
+    .navbar-desktop a {
+      &:hover {
+        background-image: linear-gradient(to right, $navbar-link-hover-color, rgba(236, 72, 153, 0.9));
+   
+      }
+    }
+  }
+
+  /* Dark Hero Section */
+
+  .hero {
+    .encadre-contraste {
+      background-color: rgb(14, 13, 13);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      border: solid 3px #7c3aed; /* Définissez une couleur de bordure de secours */
+      border-image: linear-gradient(to right, $gradient-colors);
+      border-image-slice: $border-image-slice;
+      width: 80%;
+     // animation: rotateBorder 4s linear forwards;
+    }
+  
+    @keyframes rotateBorder {
+      0% {
+        border-image: $gradient-colors;
+        border: solid 5px;
+      }
+      100% {
+        border: hidden; /* Rend la bordure invisible à la fin de l'animation */
+      }
+    }
+  
+  
+    
+
+    h1 {
+      color: $white-color;
+    }
+.code-block{
+  border-image: linear-gradient(to right, $gradient-colors);
+  border-image-slice: $border-image-slice;
+  background-color: $code-background-color;
+}
+  }
+/* Dark Carousel */
+
+
+  /* Dark AboutMe Section */
+  .animate-text {
+    background-image: linear-gradient(to right, $button-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    opacity: 0;
+    animation: animateText 4s ease forwards, appearText 1s ease forwards;
+  }
+
+  .animated-lines {
+    opacity: 0;
+    animation: animateLines 4s ease forwards;
+
+    a {
+      color: $white-color;
+      text-decoration: none;
+
+      &:hover {
+        color: transparent;
+        background-image: linear-gradient(to right, $button-gradient);
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+    }
+
+    p {
+      color: $white-color;
+      text-decoration: none;
+    }
+  }
+}

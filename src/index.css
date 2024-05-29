@@ -3,7 +3,7 @@
   /* Définition des variables pour la police et les couleurs */
   --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
   --text-color: rgba(255, 255, 255, 0.87);
-  --background-color: #242424;
+
 }
 
 /* Utilisation des variables pour les styles généraux */
@@ -17,11 +17,11 @@ html, body {
   color: var(--text-color);
   /*background-color: var(--background-color);*/
  background-color: #000712; 
+
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
 }
-/* Styles pour les liens */
 
 
 
@@ -42,14 +42,7 @@ h1, h2, h3, h4, h5, h6 {
       
 }
 
-button:hover {
-  border-color: #646cff;
-}
 
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
 /* Media queries pour les préférences de couleurs */
 @media (prefers-color-scheme: light) {
@@ -62,9 +55,7 @@ button:focus-visible {
     color: #747bff;
   }
 
-  button {
-    background-color: #f9f9f9;
-  }
+
 }
 
 /* Styles spécifiques pour la mise en page */

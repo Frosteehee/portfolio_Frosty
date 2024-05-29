@@ -1,24 +1,29 @@
+@import 'Variables';
+
 .button {
-    padding: 0.7rem 1.5rem;
-    margin-top: 1rem;
-    background-color: $violetFonce; // Violet foncé pour le bouton
-    color: $blanc;
-    border: none;
-    border-radius: 20px; // Border-radius arrondi
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    width: fit-content;
-    align-self: center;
+  padding: $padding-small $padding-medium;
+  color: $white-color;
+  border: none;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: fit-content;
+  margin:10px;
+  
 
-    // Dégradé sur le bouton avec effet hover
-    background-image: linear-gradient(to right, $violetPrincipal, $violetFonce);
-    background-size: 200% auto;
-    transition: background-position 0.5s;
+  &:hover {
+    background-position: right center;
+  }
 
-    &:hover {
-      background-position: right center;
-    }
+  &:focus {
+    outline: 2px solid #ff6b6b; /* Couleur de focus pour accessibilité */
+  }
+}
+
+.language-switcher button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }

@@ -1,5 +1,9 @@
+import Button from './Button'; // Import du composant Button
+
 // Import des modules React
 import { useState } from 'react';
+
+
 
 // Import du fichier SCSS
 import '../Sass/Contact.scss';
@@ -14,13 +18,13 @@ function Contact() {
     // Fonction de gestion de la soumission du formulaire
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Ajoute ta logique pour gérer la soumission du formulaire ici
+            console.log('ça fonctionne ! ');
     };
 
     // Rendu du composant Contact
     return (
-        <div className="contact-container"> {/* Ajout de la classe contact-container */}
-            <h1>Contact Page</h1>
+        <section className="contact"> {/* Ajout de la classe contact-container */}
+            <h2 className='animate-text animated-lines'>Contact Page</h2>
             <form onSubmit={handleSubmit}>
                 <label>
                     Your name:
@@ -35,17 +39,9 @@ function Contact() {
                     <textarea value={message} onChange={(e) => setMessage(e.target.value)} />
                 </label>
                 
-                <button type="submit">
-                  <span>S</span>
-                  <span>u</span>
-                  <span>b</span>
-                  <span>m</span>
-                  <span>i</span>
-                  <span>t</span>
-                </button>
-
+                <Button type="submit" styleType="primary">Send</Button>
             </form>
-        </div>
+        </section>
     );
 }
 

@@ -1,17 +1,25 @@
 import PropTypes from 'prop-types';
-import '../Sass/Button.scss'; // Assurez-vous d'importer correctement votre fichier de style
+import '../Sass/Button.scss'; 
 
-const Button = ({ text, onClick }) => {
+const Button = ({ children, onClick = null, type = 'button', styleType = 'primary' }) => {
+  const handleClick = (e) => {
+    if (onClick) {
+      onClick(e);
+    }
+  };
+
   return (
-    <button className="button" onClick={onClick}>
-      {text}
+    <button className={`button ${styleType}`} type={type} onClick={handleClick}>
+      <span>{children}</span>
     </button>
   );
 };
 
 Button.propTypes = {
-  text: PropTypes.string.isRequired,
-  onClick: PropTypes.func, // La fonction onClick est facultative
+  children: PropTypes.node.isRequired,
+  onClick: PropTypes.func,
+  type: PropTypes.string,
+  styleType: PropTypes.string,
 };
 
 export default Button;
