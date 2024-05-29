@@ -27,7 +27,8 @@ const App = () => {
               path="/contact" // Test formulaire
               element={<Contact />}
             />
-            <Route
+           
+            <Route  
               path="*"
               element={<Error />}
             />

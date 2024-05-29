@@ -4,9 +4,9 @@
     "title": "Booki",
     "description": "Page Vitrine du site Booki une entreprise de location de vacances en ligne, responsive.",
     "images": [
-      "src/assets/images/Booki/Desktop-min.webp",
-      "src/assets/images/Booki/Tablette-min.webp",
-      "src/assets/images/Booki/Mobile-min.webp"
+      "./src/assets/images/Booki/Desktop-min.webp",
+      "./src/assets/images/Booki/Tablette-min.webp",
+      "./src/assets/images/Booki/Mobile-min.webp"
     ],
     "skills": [
       { 
