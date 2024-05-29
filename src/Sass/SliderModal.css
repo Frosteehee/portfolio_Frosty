@@ -1,0 +1,39 @@
+.slider-modal {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slider-modal .slider-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.slider-modal .prev, .slider-modal .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  color: black;
+  font-size: 1.5rem;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slider-modal .prev:hover, .slider-modal .next:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.slider-modal .prev.prev, .slider-modal .next.prev {
+  left: 10px;
+}
+
+.slider-modal .prev.next, .slider-modal .next.next {
+  right: 10px;
+}

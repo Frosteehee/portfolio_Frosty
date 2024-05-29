@@ -1,74 +1,87 @@
-@charset "UTF-8";
 .carousel-container {
-  width: 90%;
+  width: 100%;
   overflow-x: auto;
-  /* Activer le scroll horizontal */
   display: flex;
+  flex-direction: column;
   align-items: center;
-  padding-top: 7rem;
+  padding-top: 4rem;
   padding-bottom: 7rem;
   position: relative;
-  margin-left: 60px;
-  /* Cacher la barre de défilement */
-}
-
-.carousel-container::-webkit-scrollbar {
-  display: none;
 }
 
 .carousel-container .carousel {
   display: flex;
   transition: transform 0.5s ease;
-  /* Animation fluide */
-  position: relative;
-  width: fit-content;
-  /* Adapter la largeur à la taille des cartes */
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
 .carousel-container .slide {
-  flex: 0 0 12%;
-  /* Ajuster la taille pour afficher plus de cartes */
-  opacity: 0.8;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  cursor: pointer;
-  min-width: 250px;
-  /* Taille minimale des cartes */
-  padding-left: 2px;
+  flex: 0 0 auto;
+  padding: 40px;
+  scroll-snap-align: center;
 }
 
-.carousel-container .slide:last-child {
-  margin-right: calc((100% - (18% + 20px)) / 2);
-  /* Espacement à droite pour la dernière carte */
+.carousel-container .carousel-bullets {
+  display: none;
 }
 
 .carousel-container .prev,
 .carousel-container .next {
-  background-color: purple;
-  color: white;
-  /* Changer la couleur des boutons pour plus de visibilité */
-  border: none;
-  outline: none;
-  cursor: pointer;
-  border-radius: 50%;
-  /* Rendre les boutons circulaires */
-  padding: 8px;
-  /* Réduire la taille des boutons */
-  font-size: 20px;
-  transition: transform 0.5s ease;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  display: none;
 }
 
-.carousel-container .prev:hover,
-.carousel-container .next:hover {
-  transform: translateY(-50%) scale(1.1);
-}
-
-.carousel-container .prev {
-  left: 10px;
-}
-
-.carousel-container .next {
-  right: 10px;
+@media (min-width: 768px) {
+  .carousel-container {
+    overflow-x: hidden;
+  }
+  .carousel-container .carousel {
+    overflow-x: hidden;
+  }
+  .carousel-container .prev,
+  .carousel-container .next {
+    display: block;
+    background-color: purple;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 8px;
+    font-size: 20px;
+    transition: transform 0.5s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  .carousel-container .prev:hover,
+  .carousel-container .next:hover {
+    transform: translateY(-50%) scale(1.1);
+  }
+  .carousel-container .prev {
+    left: 10px;
+  }
+  .carousel-container .next {
+    right: 10px;
+  }
+  .carousel-container .carousel-bullets {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  .carousel-container .carousel-bullets .carousel-bullet {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: purple;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+  }
+  .carousel-container .carousel-bullets .carousel-bullet:hover {
+    transform: scale(1.2);
+  }
 }

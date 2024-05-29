@@ -1,9 +1,8 @@
 @import 'Variables';
 
-
 .hero {
-    padding-top: rem;
-    padding-bottom:$padding-section;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
     color: $text-color;
     display: flex;
     width: 100%;
@@ -20,31 +19,26 @@
     }
 }
 
-
-
 .encadre-contraste {
-    background-color: $encadre-background-color;
+  
     padding: $padding-medium;
     border-radius: $border-radius;
-    border: $border-size solid;
-    border-image: linear-gradient(to right, $gradient-colors);
-    border-image-slice: $border-image-slice;
     width: 80%;
+    overflow: hidden; 
 
 
+    h1 {
+        color: $text-color;
+        font-size: $heading-font-size;
+        margin-bottom: $margin-small;
+    }
 
-h1 {
-    color: $text-color;
-    font-size: $heading-font-size;
-    margin-bottom: $margin-small;
-
- p {
-    color: $text-color;
-    font-size: $paragraph-font-size;
-    line-height: $line-height;
-    margin-bottom: $margin-medium;
-}
-}
+    p {
+        color: $text-color;
+        font-size: $paragraph-font-size;
+        line-height: $line-height;
+        margin-bottom: $margin-medium;
+    }
 }
 
 .hero-content {
@@ -61,16 +55,12 @@ h1 {
 
 /* Styles for the code block */
 .code-block {
-  //  color: $code-text-color;
     font-family: 'Courier New', monospace;
-  //  background-color: $code-background-color;
     padding: $padding-small;
-   // border-radius: 0;
     overflow: hidden;
     width: $code-block-width;
     height: $code-block-height;
     border: $border-size solid;
-   // border-image: linear-gradient(to right, $gradient-colors);
     border-image-slice: $border-image-slice;
 }
 

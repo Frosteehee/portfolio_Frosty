@@ -6,6 +6,7 @@ import Portfolio from '../Components/Portfolio';
 import projectData from '../projectData.json';
 import Modal from '../Components/Modal'; // Importer le composant Modal
 import '../Sass/Home.scss'; 
+import SkillsSection from '../Components/Skills';
 
 function Home() {
   const [selectedProjectId, setSelectedProjectId] = useState(null);
@@ -22,8 +23,10 @@ function Home() {
     <div className="home">
     
         <Hero />
-      <Portfolio openModal={openModal} closeModal={closeModal} /> {/* Passer la fonction closeModal au composant Portfolio */}
         <AboutMe />
+        <SkillsSection />
+      <Portfolio openModal={openModal} closeModal={closeModal} /> {/* Passer la fonction closeModal au composant Portfolio */}
+        
         <Contact /> {/* Pourquoi Contact n'est pas une section ? */}
 
       {selectedProjectId && (
