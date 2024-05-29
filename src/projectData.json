@@ -1,80 +1,97 @@
 [
-    {
-      "id": 1,
-      "title": "Booki",
-      "description": "Page Vitrine du site Booki une entreprise de location de vacances en ligne, responsive.",
-      "images": [
-        "src/assets/images/Booki/Desktop-min.webp",
-        "src/assets/images/Booki/Tablette-min.webp",
-        "src/assets/images/Booki/Mobile-min.webp"
-      ],
-      "githubLink": ""
-    },
-    {
-      "id": 2,
-      "title": "Oh My Food",
-      "description": "Application web de réservation de menus de restaurants gastronomiques.",
-      "images": [
-        "src/assets/images/OhMyFood/HomepageDesktop.webp",
-        "src/assets/images/OhMyFood/MenuDesktop.webp",
-        "src/assets/images/OhMyFood/HomepageMobile.webp",
-        "src/assets/images/OhMyFood/MenuMobile.webp",
-        "src/assets/images/OhMyFood/Artefacts.webp"
-
-      ],
-      "githubLink": "https://github.com/Frosteehee/projet-ohmyfood"
-    },
-    {
-      "id": 3,
-      "title": "Sophie Bluel",
-      "description": "Site de l'architecte d'interieur Sophie Bluel.",
-      "images": [
-        "src/assets/images/Sophie_Bluel/Homepage_edit_1.webp",
-        "src/assets/images/Sophie_Bluel/Homepage_edit_2.webp",
-        "src/assets/images/Sophie_Bluel/Homepage_edit_3.webp",
-        "src/assets/images/Sophie_Bluel/Login.webp"
-      ],
-      "githubLink": "https://github.com/Frosteehee/Portfolio-architecte-sophie-bluel"
-    }
-    ,
-    {
-        "id": 4,
-        "title": "Menu Maker",
-        "description": "Application web de création de menus de restaurants gastronomiques.",
-        "images": [
-          "src/assets/images/Menu_Maker/Dashboard.webp",
-          "src/assets/images/Menu_Maker/LogIn.webp",
-          "src/assets/images/Menu_Maker/Notion.webp",
-          "src/assets/images/Menu_Maker/createMenu.webp"
-        ],
-        "githubLink": ""
+  {
+    "id": 1,
+    "title": "Booki",
+    "description": "Page Vitrine du site Booki une entreprise de location de vacances en ligne, responsive.",
+    "images": [
+      "src/assets/images/Booki/Desktop-min.webp",
+      "src/assets/images/Booki/Tablette-min.webp",
+      "src/assets/images/Booki/Mobile-min.webp"
+    ],
+    "skills": [
+      { 
+        "class": "html",
+        "name": "HTML5"
+      },
+      { 
+        "class": "css",
+        "name": "CSS3"
       }
-      ,
-    {
-        "id": 5,
-        "title": "Kasa",
-        "description": "Location de vacances.",
-        "images": [
-          "src/assets/images/Kasa/AboutDesktop.webp",
-          "src/assets/images/Kasa/404Desktop.webp",
-          "src/assets/images/Kasa/CardDesktop.webp",
-          "src/assets/images/Kasa/HomeDesktop.webp"
-        ],
-        "githubLink": "https://github.com/Frosteehee/react_kasa"
+    ],
+    "githubLink": ""
+  },
+  {
+    "id": 2,
+    "title": "Oh My Food",
+    "description": "Application web de réservation de menus de restaurants gastronomiques.",
+    "images": [
+      "src/assets/images/OhMyFood/HomepageDesktop.webp",
+      "src/assets/images/OhMyFood/MenuDesktop.webp",
+      "src/assets/images/OhMyFood/HomepageMobile.webp",
+      "src/assets/images/OhMyFood/MenuMobile.webp",
+      "src/assets/images/OhMyFood/Artefacts.webp"
+    ],
+    "skills": [
+      { 
+        "class": "html",
+        "name": "HTML5"
+      },
+      { 
+        "class": "css",
+        "name": "CSS3"
       }
-      ,
-      {
-          "id": 6,
-          "title": "ArgentBank",
-          "description": "Banque.",
-          "images": [
-            "src/assets/images/ArgentBank/HomeDesktop.webp",
-            "src/assets/images/ArgentBank/ProfileDesktop.webp",
-            "src/assets/images/ArgentBank/signIn.webp"
-          ],
-          "githubLink": "https://github.com/Frosteehee/ArgentBankWebsite"
-        }
-
-    
-  ]
-  
+    ],
+    "githubLink": "https://github.com/Frosteehee/projet-ohmyfood"
+  },
+  {
+    "id": 3,
+    "title": "Sophie Bluel",
+    "description": "Site de l'architecte d'interieur Sophie Bluel.",
+    "images": [
+      "src/assets/images/Sophie_Bluel/Homepage_edit_1.webp",
+      "src/assets/images/Sophie_Bluel/Homepage_edit_2.webp",
+      "src/assets/images/Sophie_Bluel/Homepage_edit_3.webp",
+      "src/assets/images/Sophie_Bluel/Login.webp"
+    ],
+    "skills": [],
+    "githubLink": "https://github.com/Frosteehee/Portfolio-architecte-sophie-bluel"
+  },
+  {
+    "id": 4,
+    "title": "Menu Maker",
+    "description": "Application web de création de menus de restaurants gastronomiques.",
+    "images": [
+      "src/assets/images/Menu_Maker/Dashboard.webp",
+      "src/assets/images/Menu_Maker/LogIn.webp",
+      "src/assets/images/Menu_Maker/Notion.webp",
+      "src/assets/images/Menu_Maker/createMenu.webp"
+    ],
+    "skills": [],
+    "githubLink": ""
+  },
+  {
+    "id": 5,
+    "title": "Kasa",
+    "description": "Location de vacances.",
+    "images": [
+      "src/assets/images/Kasa/AboutDesktop.webp",
+      "src/assets/images/Kasa/404Desktop.webp",
+      "src/assets/images/Kasa/CardDesktop.webp",
+      "src/assets/images/Kasa/HomeDesktop.webp"
+    ],
+    "skills": [],
+    "githubLink": "https://github.com/Frosteehee/react_kasa"
+  },
+  {
+    "id": 6,
+    "title": "ArgentBank",
+    "description": "Banque.",
+    "images": [
+      "src/assets/images/ArgentBank/HomeDesktop.webp",
+      "src/assets/images/ArgentBank/ProfileDesktop.webp",
+      "src/assets/images/ArgentBank/signIn.webp"
+    ],
+    "skills": [],
+    "githubLink": "https://github.com/Frosteehee/ArgentBankWebsite"
+  }
+]
