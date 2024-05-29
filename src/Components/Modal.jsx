@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import SliderModal from './SliderModal';
 import '../Sass/Modal.scss';
-
 import { useLanguage } from '../context/LanguageContext';
+import ICONS from './Icons'; // Importer les icônes
 
 const Modal = ({ projectData, onClose }) => {
   const { translate } = useLanguage();
@@ -45,6 +45,13 @@ const Modal = ({ projectData, onClose }) => {
         </button>
         <h2 id="modal-title">{translate(`projects.${projectData.id}.title`)}</h2>
         <p id="modal-description">{translate(`projects.${projectData.id}.description`)}</p>
+        <div className="skills-container">
+          {projectData.skills && projectData.skills.map(skill => (
+            <div key={skill.class} className="skill">
+              {ICONS[skill.class]}
+            </div>
+          ))}
+        </div>
         <SliderModal images={projectData.images} />
       </div>
     </div>
@@ -57,6 +64,12 @@ Modal.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     images: PropTypes.arrayOf(PropTypes.string).isRequired,
+    skills: PropTypes.arrayOf(
+      PropTypes.shape({
+        class: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+      })
+    ),
   }).isRequired,
   onClose: PropTypes.func.isRequired,
 };

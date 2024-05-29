@@ -101,6 +101,8 @@ const Carousel = ({ projects, openModal }) => {
               title={project.title}
               description={project.description}
               images={project.images}
+              skills={project.skills} // Passer les compétences comme prop
+              onClick={handleCardClick} // Passer la fonction de clic comme prop
             />
           </div>
         ))}
@@ -134,6 +136,10 @@ Carousel.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     images: PropTypes.arrayOf(PropTypes.string).isRequired,
+    skills: PropTypes.arrayOf(PropTypes.shape({
+      class: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+    })), // Propriété des compétences
   })).isRequired,
   openModal: PropTypes.func.isRequired,
 };
