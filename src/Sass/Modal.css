@@ -1,34 +1,25 @@
-// Modal.scss
-
-$project-card-bg-color: black; // Couleur de fond de la carte de projet
-$project-card-border-radius: 20px; // Rayon de bordure de la carte de projet
-$project-card-text-color: #ffffff; // Couleur du texte de la carte de projet
-$modal-bg-color: rgba(0, 0, 0, 0.5); // Couleur de fond de la modale
-$modal-image-max-width: 80%; // Largeur maximale de l'image dans la modale
-
 .modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
- background-color: $modal-bg-color;
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1;
   opacity: 0;
   animation: fadeIn 0.3s forwards;
+}
 
-  &.hide {
-    animation: fadeOut 0.3s forwards;
-  }
+.modal.hide {
+  animation: fadeOut 0.3s forwards;
 }
 
 .modal-content {
-//  background-color: $project-card-bg-color;
   padding: 20px;
-  border-radius: $project-card-border-radius;
+  border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   position: relative;
   width: 80%;
@@ -36,34 +27,31 @@ $modal-image-max-width: 80%; // Largeur maximale de l'image dans la modale
   animation: slideIn 0.3s forwards;
 }
 
-
-
 .close {
   position: absolute;
   top: 10px;
   right: 10px;
   cursor: pointer;
   font-size: 20px;
-  color: $project-card-text-color;
+  color: #ffffff;
   background: transparent;
   border: none;
-  &:hover {
-    color: red;
-  }
+}
+
+.close:hover {
+  color: red;
 }
 
 .project-details {
   text-align: center;
+}
 
-  h2 {
-    margin-bottom: 10px;
-   // color: $project-card-text-color;
-  }
+.project-details h2 {
+  margin-bottom: 10px;
+}
 
-  p {
-    margin-bottom: 20px;
-   // color: $project-card-text-color;
-  }
+.project-details p {
+  margin-bottom: 20px;
 }
 
 .project-images {
@@ -72,8 +60,6 @@ $modal-image-max-width: 80%; // Largeur maximale de l'image dans la modale
   align-items: center;
   flex-wrap: wrap;
 }
-
-
 
 @keyframes fadeIn {
   to {

@@ -26,11 +26,14 @@
       },
       "2": {
         "title": "Oh My Food",
-        "description": "Application web de réservation de menus de restaurants gastronomiques."
+        "description": "Application web de réservation de menus de restaurants gastronomiques.",
+        "githubLink": "https://frosteehee.github.io/projet-ohmyfood/"
+
       },
       "3": {
         "title": "Sophie Bluel",
-        "description": "Site de l'architecte d'interieur Sophie Bluel."
+        "description": "Site de l'architecte d'interieur Sophie Bluel.",
+        "githubLink": "https://github.com/Frosteehee/Portfolio-architecte-sophie-bluel"
        
       },
       "4": {
@@ -42,15 +45,16 @@
     
         "5":{
         "title": "Kasa",
-        "description": "Location de vacances."
+        "description": "Location de vacances.",
+        "githubLink": "https://frosteehee.github.io/projet_react/"
    
       }
       ,
       
           "6":{
           "title": "ArgentBank",
-          "description": "Banque."
-        
+          "description": "Banque.",
+          "githubLink": "https://github.com/Frosteehee/ArgentBankWebsite"
     }
   }
 }

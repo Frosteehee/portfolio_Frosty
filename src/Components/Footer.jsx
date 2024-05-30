@@ -3,8 +3,7 @@ import '../Sass/Footer.scss'
 const Footer = () => {
     return (
         <footer className='footer'>
-            {/* Your footer content goes here */}
-            <p>© 2021 Frosteehee</p>
+          <p>Made with <span className="heart">♥</span> by Frosteehee, 2024 </p>
         </footer>
     );
 };

@@ -16,7 +16,7 @@ function Contact() {
 
     return (
         <section className="contact" id="contact">
-            <h2 className='animate-text animated-lines'>Contact Page</h2>
+            <h2 className='animate-text animated-lines'>Envoyez moi un petit courriel</h2>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Your name:</label>
                 <input
