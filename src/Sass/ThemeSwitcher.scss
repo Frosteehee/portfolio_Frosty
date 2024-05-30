@@ -322,6 +322,18 @@ body.dark {
   background-color: $code-background-color;
 }
   }
+/* Dark Portfolio */
+.portfolio {
+  .animate-text {
+    background-image: linear-gradient(to right, $button-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    opacity: 0;
+    animation: animateText 4s ease forwards, appearText 1s ease forwards;
+  }
+}
+
 /* Dark Carousel */
 .carousel-container {
   .prev,
@@ -420,10 +432,20 @@ background-color: #7c3aed; // idem
 }
 
 /* Dark Skills Section */
+#skills-heading {
+  background-image: linear-gradient(to right, $button-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transform: translateY(50px); /* Initial position for animation */
+  animation: fadeInUp 0.5s ease-out 0.1s forwards; /* Apply the animation */
 
-.skill-name{
-  color: $text-color;
-
+  .skill-name{
+    color: $text-color;
+  
+  }
 }
+
 
 }
