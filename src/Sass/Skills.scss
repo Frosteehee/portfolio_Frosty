@@ -13,7 +13,7 @@
 }
 #skills-heading{
     color: $text-color;
-    font-size: 3rem;
+    font-size: 2.7rem;
     margin-bottom: 1rem;
     text-align: center;
   //  animation: fadeInUp 2s ease;
@@ -35,6 +35,8 @@
   transform: translateY(20px);
   transition: transform 0.5s ease, opacity 0.5s ease;
   will-change: transform, opacity;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   
   /* Ajout de délai pour chaque skill pour des animations échelonnées */
   &:nth-child(1) { transition-delay: 0.1s; }
@@ -46,6 +48,7 @@
   &:nth-child(7) { transition-delay: 0.7s; }
   &:nth-child(8) { transition-delay: 0.8s; }
   &:nth-child(9) { transition-delay: 0.9s; }
+  &:nth-child(10) { transition-delay: 1s; }
 }
 
 .skill.visible {

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import '../Sass/Skills.scss';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaDatabase } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaDatabase, FaGithub } from 'react-icons/fa'; // Importer FaGithub
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee, faPalette, faGamepad } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
@@ -46,7 +46,7 @@ const SkillsSection = () => {
         <SkillItem icon={<FontAwesomeIcon icon={faCoffee} />} skillName="Café" skillClass="cafe" />
         <SkillItem icon={<FontAwesomeIcon icon={faPalette} />} skillName="Art" skillClass="dessin" />
         <SkillItem icon={<FontAwesomeIcon icon={faGamepad} />} skillName="Gaming" skillClass="jeux-video" />
-        {/* autre chose ? */}
+        <SkillItem icon={<FaGithub />} skillName="GitHub" skillClass="github" /> {/* Ajouter GitHub */}
       </div>
     </section>
   );
