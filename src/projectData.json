@@ -4,11 +4,12 @@
     "title": "Booki",
     "description": "Page Vitrine du site Booki une entreprise de location de vacances en ligne, responsive.",
     "images": [
-      "../images/Booki/coverCard.webp",
-      "../images/Booki/Desktop.webp",
-      "../images/Booki/Tablette.webp",
-      "../images/Booki/Mobile.webp"
+      "./images/Booki/coverCard.webp",
+      "./images/Booki/Desktop.webp",
+      "./images/Booki/Tablette.webp",
+      "./images/Booki/Mobile.webp"
     ],
+    
     "skills": [
       { 
         "class": "html",
@@ -26,12 +27,12 @@
     "title": "Oh My Food",
     "description": "Application de réservation pour restaurants gastronomiques.",
     "images": [
-      "./src/assets/images/OhMyFood/coverCard.webp",
-      "src/assets/images/OhMyFood/HomepageDesktop.webp",
-      "src/assets/images/OhMyFood/MenuDesktop.webp",
-      "src/assets/images/OhMyFood/HomepageMobile.webp",
-      "src/assets/images/OhMyFood/MenuMobile.webp",
-      "src/assets/images/OhMyFood/Artefacts.webp"
+      "./images/OhMyFood/coverCard.webp",
+      "./images/OhMyFood/HomepageDesktop.webp",
+      "./images/OhMyFood/MenuDesktop.webp",
+      "./images/OhMyFood/HomepageMobile.webp",
+      "./images/OhMyFood/MenuMobile.webp",
+      "./images/OhMyFood/Artefacts.webp"
     ],
     "skills": [
       { 
@@ -50,10 +51,10 @@
     "title": "Sophie Bluel",
     "description": "Site de l'architecte d'interieur Sophie Bluel.",
     "images": [
-      "./src/assets/images/Sophie_Bluel/coverCard.webp",
-      "src/assets/images/Sophie_Bluel/Homepage_edit_1.webp",
-      "src/assets/images/Sophie_Bluel/Homepage_edit_2.webp",
-      "src/assets/images/Sophie_Bluel/Login.webp"
+      "./images/Sophie_Bluel/coverCard.webp",
+      "./images/Sophie_Bluel/Homepage_edit_1.webp",
+      "./images/Sophie_Bluel/Homepage_edit_2.webp",
+      "./images/Sophie_Bluel/Login.webp"
     ],
     "skills": [
       { 
@@ -72,11 +73,11 @@
     "title": "Menu Maker",
     "description": "Application web de création de menus de restaurants.",
     "images": [
-      "./src/assets/images/Menu_Maker/coverCard.webp",
-      "src/assets/images/Menu_Maker/Dashboard.webp",
-      "src/assets/images/Menu_Maker/LogIn.webp",
-      "src/assets/images/Menu_Maker/Notion.webp",
-      "src/assets/images/Menu_Maker/createMenu.webp"
+      "./images/Menu_Maker/coverCard.webp",
+      "./images/Menu_Maker/Dashboard.webp",
+      "./images/Menu_Maker/LogIn.webp",
+      "./images/Menu_Maker/Notion.webp",
+      "./images/Menu_Maker/createMenu.webp"
     ],
     "skills": [],
     "githubLink": ""
@@ -86,11 +87,11 @@
     "title": "Kasa",
     "description": "Application de locations de vacances.",
     "images": [
-      "./src/assets/images/Kasa/coverCard.webp",
-      "src/assets/images/Kasa/AboutDesktop.webp",
-      "src/assets/images/Kasa/404Desktop.webp",
-      "src/assets/images/Kasa/CardDesktop.webp",
-      "src/assets/images/Kasa/HomeDesktop.webp"
+      "./images/Kasa/coverCard.webp",
+      "./images/Kasa/AboutDesktop.webp",
+      "./images/Kasa/404Desktop.webp",
+      "./images/Kasa/CardDesktop.webp",
+      "./images/Kasa/HomeDesktop.webp"
     ],
     "skills": [
       { 
@@ -109,11 +110,11 @@
     "title": "ArgentBank",
     "description": "Banque.",
     "images": [
-     "../images/ArgentBank/coverCard.webp",
-      "./src/assets/images/ArgentBank/coverCard.webp",
-      "src/assets/images/ArgentBank/HomeDesktop.webp",
-      "src/assets/images/ArgentBank/ProfileDesktop.webp",
-      "src/assets/images/ArgentBank/signIn.webp"
+     "./images/ArgentBank/coverCard.webp",
+      "./images/ArgentBank/coverCard.webp",
+      "./images/ArgentBank/HomeDesktop.webp",
+      "./images/ArgentBank/ProfileDesktop.webp",
+      "./images/ArgentBank/signIn.webp"
     ],
     "skills": [
       { 
