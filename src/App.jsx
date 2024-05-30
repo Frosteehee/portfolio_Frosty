@@ -11,8 +11,9 @@ import Error from "./Pages/Error";
 import Contact from "./Components/Contact"; 
 
 const App = () => {
+  const basename = import.meta.env.MODE === "production" ? "/portfolio_Frosty" : "";
   return (
-    <BrowserRouter>
+    <BrowserRouter basename= {basename}>
       <LanguageProvider>
         <ThemeSwitcher />
         <Header />
