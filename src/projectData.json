@@ -4,10 +4,10 @@
     "title": "Booki",
     "description": "Page Vitrine du site Booki une entreprise de location de vacances en ligne, responsive.",
     "images": [
-      "./src/assets/images/Booki/coverCard.webp",
-      "./src/assets/images/Booki/Desktop.webp",
-      "./src/assets/images/Booki/Tablette.webp",
-      "./src/assets/images/Booki/Mobile.webp"
+      "../images/Booki/coverCard.webp",
+      "../images/Booki/Desktop.webp",
+      "../images/Booki/Tablette.webp",
+      "../images/Booki/Mobile.webp"
     ],
     "skills": [
       { 
@@ -109,7 +109,7 @@
     "title": "ArgentBank",
     "description": "Banque.",
     "images": [
-     "/public/images/ArgentBank/coverCard.webp",
+     "../images/ArgentBank/coverCard.webp",
       "./src/assets/images/ArgentBank/coverCard.webp",
       "src/assets/images/ArgentBank/HomeDesktop.webp",
       "src/assets/images/ArgentBank/ProfileDesktop.webp",
