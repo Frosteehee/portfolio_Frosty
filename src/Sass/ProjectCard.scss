@@ -1,12 +1,12 @@
 .project-card {
-  background: black;
+  //background: black;
   border-radius: 20px; // Bordures arrondies
-  box-shadow: 
-    0px 10px 20px rgba(0, 0, 0, 0.4), // Ombre légèrement prononcée
-    0 0 0 0.7px #ff6b6b, // Contour coloré
-    0 0 0 0.8px  #ff66cc,
-    0 0 0 1px #a86bfe,
-    0 0 0 3px #6a0572;
+  //box-shadow: 
+   // 0px 10px 20px rgba(0, 0, 0, 0.4), // Ombre légèrement prononcée
+    //0 0 0 0.7px #ff6b6b, // Contour coloré
+    //0 0 0 0.8px  #ff66cc,
+    //0 0 0 1px #a86bfe,
+    //0 0 0 3px #6a0572;
   width: 300px;
   height: 420px; /* side eye */
   display: flex;
@@ -20,12 +20,12 @@
   &:hover {
     transform: translateY(-10px); // Translation vers le haut au survol
     background-color: rgba(0, 0, 0, 0.5); // Superposition semi-transparente au survol
-    box-shadow: 
-      0px 15px 30px rgba(203, 179, 207, 0.6), // Ombre légèrement prononcée
-      0 0 0 1px #ff6b6b, // Contour coloré
-      0 0 0 1.2px #ff66cc,
-      0 0 0 2px #a86bfe,
-      0 0 0 4px #6a0572;
+   // box-shadow: 
+     // 0px 15px 30px rgba(203, 179, 207, 0.6), // Ombre légèrement prononcée
+     // 0 0 0 1px #ff6b6b, // Contour coloré
+    //  0 0 0 1.2px #ff66cc,
+    //  0 0 0 2px #a86bfe,
+    //  0 0 0 4px #6a0572;
   }
 
   .project-card-img {
@@ -40,7 +40,7 @@
     flex-grow: 1; // Permettre au contenu de prendre tout l'espace disponible
     padding-left: 1rem;
     padding-right: 1rem;
-    color: #ffffff; // Couleur du texte blanc
+   // color: #ffffff; // Couleur du texte blanc
   }
 
   .project-card-title {
@@ -50,7 +50,7 @@
   }
 
   .project-card-description {
-    margin-bottom: 1rem; // Marge inférieure pour séparer la description du contenu
+   // margin-bottom: 1rem; // Marge inférieure pour séparer la description du contenu
     margin-top: -10px;
     font-size: 1rem; // Taille de police initiale
     transition: font-size 0.3s ease; // Transition de la taille de police
@@ -64,17 +64,19 @@
   .skills-container {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 1rem; // Marge inférieure pour séparer les compétences du contenu
-  }
+   margin-top: 1rem; // Marge inférieure pour séparer les compétences du contenu
+  
 
   .skill_Icon {
     font-size: 1.8rem; // Taille de l'icône augmentée
     margin: 0 0.5rem; // Marge entre les icônes de compétences
-    margin-top: -4px;
+  //  margin-top: -4px;
+
   }
+}
 
   @media (max-width: 768px) {
-    width: 270px;
+    width: 250px;
     height: 400px;
     .project-card-title {
       font-size: 1.2rem; // Réduire la taille du titre
@@ -86,6 +88,4 @@
       font-size: 1.5rem; // Réduire la taille des icônes
     }
   }
-
- 
 }

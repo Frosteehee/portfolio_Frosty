@@ -4,9 +4,10 @@
     "title": "Booki",
     "description": "Page Vitrine du site Booki une entreprise de location de vacances en ligne, responsive.",
     "images": [
-      "./src/assets/images/Booki/Desktop-min.webp",
-      "./src/assets/images/Booki/Tablette-min.webp",
-      "./src/assets/images/Booki/Mobile-min.webp"
+      "./src/assets/images/Booki/coverCard.webp",
+      "./src/assets/images/Booki/Desktop.webp",
+      "./src/assets/images/Booki/Tablette.webp",
+      "./src/assets/images/Booki/Mobile.webp"
     ],
     "skills": [
       { 
@@ -23,8 +24,9 @@
   {
     "id": 2,
     "title": "Oh My Food",
-    "description": "Application web de réservation de menus de restaurants gastronomiques.",
+    "description": "Application de réservation pour restaurants gastronomiques.",
     "images": [
+      "./src/assets/images/OhMyFood/coverCard.webp",
       "src/assets/images/OhMyFood/HomepageDesktop.webp",
       "src/assets/images/OhMyFood/MenuDesktop.webp",
       "src/assets/images/OhMyFood/HomepageMobile.webp",
@@ -48,19 +50,29 @@
     "title": "Sophie Bluel",
     "description": "Site de l'architecte d'interieur Sophie Bluel.",
     "images": [
+      "./src/assets/images/Sophie_Bluel/coverCard.webp",
       "src/assets/images/Sophie_Bluel/Homepage_edit_1.webp",
       "src/assets/images/Sophie_Bluel/Homepage_edit_2.webp",
-      "src/assets/images/Sophie_Bluel/Homepage_edit_3.webp",
       "src/assets/images/Sophie_Bluel/Login.webp"
     ],
-    "skills": [],
+    "skills": [
+      { 
+        "class": "js",
+        "name": "JavaScript"
+      },
+      { 
+        "class": "css",
+        "name": "CSS3"
+      }
+    ],
     "githubLink": "https://github.com/Frosteehee/Portfolio-architecte-sophie-bluel"
   },
   {
     "id": 4,
     "title": "Menu Maker",
-    "description": "Application web de création de menus de restaurants gastronomiques.",
+    "description": "Application web de création de menus de restaurants.",
     "images": [
+      "./src/assets/images/Menu_Maker/coverCard.webp",
       "src/assets/images/Menu_Maker/Dashboard.webp",
       "src/assets/images/Menu_Maker/LogIn.webp",
       "src/assets/images/Menu_Maker/Notion.webp",
@@ -72,14 +84,24 @@
   {
     "id": 5,
     "title": "Kasa",
-    "description": "Location de vacances.",
+    "description": "Application de locations de vacances.",
     "images": [
+      "./src/assets/images/Kasa/coverCard.webp",
       "src/assets/images/Kasa/AboutDesktop.webp",
       "src/assets/images/Kasa/404Desktop.webp",
       "src/assets/images/Kasa/CardDesktop.webp",
       "src/assets/images/Kasa/HomeDesktop.webp"
     ],
-    "skills": [],
+    "skills": [
+      { 
+        "class": "react",
+        "name": "React"
+      },
+      { 
+        "class": "css",
+        "name": "CSS3"
+      }
+    ],
     "githubLink": "https://frosteehee.github.io/projet_react/"
   },
   {
@@ -87,11 +109,21 @@
     "title": "ArgentBank",
     "description": "Banque.",
     "images": [
+      "./src/assets/images/ArgentBank/coverCard.webp",
       "src/assets/images/ArgentBank/HomeDesktop.webp",
       "src/assets/images/ArgentBank/ProfileDesktop.webp",
       "src/assets/images/ArgentBank/signIn.webp"
     ],
-    "skills": [],
+    "skills": [
+      { 
+        "class": "react",
+        "name": "React"
+      },
+      { 
+        "class": "css",
+        "name": "CSS3"
+      }
+    ],
     "githubLink": "https://github.com/Frosteehee/ArgentBankWebsite"
   }
 ]

@@ -8,9 +8,7 @@ const ProjectCard = ({ title, description, images, skills, onClick }) => {
     <div className="project-card" onClick={onClick}>
        <img src={images[0]} loading="lazy" alt={`${title} project screenshot`} className="project-card-img" />
       <div className="project-card-content">
-     
         <h2 className="project-card-title">{title}</h2>
-
         <p className="project-card-description">{description}</p>
         <div className="skills-container">
           {skills && skills.map(skill => (

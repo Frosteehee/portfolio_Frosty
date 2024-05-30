@@ -1,7 +1,5 @@
 .project-card {
-  background: black;
   border-radius: 20px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4), 0 0 0 0.7px #ff6b6b, 0 0 0 0.8px #ff66cc, 0 0 0 1px #a86bfe, 0 0 0 3px #6a0572;
   width: 300px;
   height: 420px;
   /* side eye */
@@ -17,7 +15,6 @@
 .project-card:hover {
   transform: translateY(-10px);
   background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 15px 30px rgba(203, 179, 207, 0.6), 0 0 0 1px #ff6b6b, 0 0 0 1.2px #ff66cc, 0 0 0 2px #a86bfe, 0 0 0 4px #6a0572;
 }
 
 .project-card .project-card-img {
@@ -32,7 +29,6 @@
   flex-grow: 1;
   padding-left: 1rem;
   padding-right: 1rem;
-  color: #ffffff;
 }
 
 .project-card .project-card-title {
@@ -42,7 +38,6 @@
 }
 
 .project-card .project-card-description {
-  margin-bottom: 1rem;
   margin-top: -10px;
   font-size: 1rem;
   transition: font-size 0.3s ease;
@@ -56,18 +51,17 @@
 .project-card .skills-container {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
-.project-card .skill_Icon {
+.project-card .skills-container .skill_Icon {
   font-size: 1.8rem;
   margin: 0 0.5rem;
-  margin-top: -4px;
 }
 
 @media (max-width: 768px) {
   .project-card {
-    width: 270px;
+    width: 250px;
     height: 400px;
   }
   .project-card .project-card-title {

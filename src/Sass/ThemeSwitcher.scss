@@ -47,7 +47,7 @@ body.light {
       
         border-radius: 25px; /* Optionnel : pour arrondir les coins */
    
-      animation: shadow-animation 8s infinite alternate; /* Animation de l'ombre */
+      animation: shadow-animation 4s infinite alternate; /* Animation de l'ombre */
   }
   
   @keyframes shadow-animation {
@@ -156,6 +156,10 @@ body.light {
     transform: translateY(50px); /* Initial position for animation */
     animation: fadeInUp 0.5s ease-out 0.1s forwards; /* Apply the animation */
   
+    .skill-name{
+      color: $light-text-color;
+    
+    }
 }
 
 /*Light Carousel*/
@@ -172,21 +176,79 @@ body.light {
   }
 }
 
-/*Light Carousel*/
 .carousel-container {
- 
-  
   .prev,
   .next {
     background-color: green; // couleur à retravailler
   }
 }
 .carousel-bullets {
-
   .carousel-bullet {
 background-color: green; // idem
-
   }
+}
+
+/* Light ProjectCard */
+
+.project-card{
+  background-color: #515f3f5b; // à revoir 
+  box-shadow:
+    0px 10px 20px rgba(0, 0, 0, 0.6), // Ombre légèrement prononcée
+    0 0 0 0.7px #993600, // Contour coloré
+    0 0 0 1px #705200,
+    0 0 0 0.8px  #565C00,
+    0 0 0 3px #56920c;
+
+    &:hover {
+      box-shadow: 
+      0px 20px 40px rgba(48, 47, 48, 0.6), // Ombre légèrement prononcée
+      0 0 0 1px #325C00, // Contour coloré
+      0 0 0 1.2px #565C00,
+      0 0 0 2px #705200,
+      0 0 0 4px #993600;
+    }
+.project-card-content {
+  color: $light-text-color;
+}
+}
+
+/* Light Modal */
+
+.modal {
+ //background-color: $light-background-color;
+.modal-content{
+  background-color: $light-background-color;
+  
+  h2, p {
+    color: $light-text-color;
+  
+  }
+
+  .close {
+    color: $light-text-color;
+    &:hover {
+      color: red;
+    }
+  }
+}
+
+}
+
+/* Light Contact */
+
+.contact {
+  .animate-text, h2{
+  background-image: linear-gradient(to right, $light-gradient-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transform: translateY(50px); /* Initial position for animation */
+  animation: fadeInUp 0.5s ease-out 0.1s forwards; /* Apply the animation */
+  font-size: 35px;
+
+}
+
 }
 }
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -250,9 +312,6 @@ body.dark {
         border: hidden; /* Rend la bordure invisible à la fin de l'animation */
       }
     }
-  
-  
-    
 
     h1 {
       color: $white-color;
@@ -265,8 +324,6 @@ body.dark {
   }
 /* Dark Carousel */
 .carousel-container {
- 
-  
   .prev,
   .next {
     background-color:#7c3aed ; // couleur à retravailler
@@ -274,10 +331,53 @@ body.dark {
 }
 
 .carousel-bullets {
-
   .carousel-bullet {
 background-color: #7c3aed; // idem
+  }
+}
 
+/* Dark ProjectCard */
+.project-card{
+ background: black;
+ box-shadow: 
+   0px 10px 20px rgba(0, 0, 0, 0.4), // Ombre légèrement prononcée
+    0 0 0 0.7px #ff6b6b, // Contour coloré
+    0 0 0 0.8px  #ff66cc,
+    0 0 0 1px #a86bfe,
+    0 0 0 3px #6a0572;
+    &:hover {
+      box-shadow: 
+     0px 15px 30px rgba(203, 179, 207, 0.6), // Ombre légèrement prononcée
+      0 0 0 1px #ff6b6b, // Contour coloré
+      0 0 0 1.2px #ff66cc,
+     0 0 0 2px #a86bfe,
+     0 0 0 4px #6a0572;
+    }
+
+    .project-card-content {
+      color: #ffffff; // Couleur du texte blanc 
+    }
+}
+
+/* Dark Modal */
+
+.modal {
+ // background-color: $dark-background-color;
+  //color: $dark-text-color;
+
+  .modal-content {
+    background-color: $project-card-bg-color;
+
+    h2, p {
+      color:$text-color;
+    }
+
+    .close {
+      color: $text-color;
+      &:hover {
+        color: red;
+      }
+    }
   }
 }
 
@@ -318,4 +418,12 @@ background-color: #7c3aed; // idem
     }
   }
 }
+
+/* Dark Skills Section */
+
+.skill-name{
+  color: $text-color;
+
+}
+
 }

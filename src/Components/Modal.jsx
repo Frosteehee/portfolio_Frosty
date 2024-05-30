@@ -54,6 +54,7 @@ const Modal = ({ projectData, onClose }) => {
           ))}
         </div>
         <SliderModal images={projectData.images} />
+        <p id="modal-github">{translate(`projects.${projectData.id}.githubLink`)}</p>
       </div>
     </div>
   );
