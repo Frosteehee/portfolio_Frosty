@@ -109,6 +109,7 @@
     "title": "ArgentBank",
     "description": "Banque.",
     "images": [
+     "/public/images/ArgentBank/coverCard.webp",
       "./src/assets/images/ArgentBank/coverCard.webp",
       "src/assets/images/ArgentBank/HomeDesktop.webp",
       "src/assets/images/ArgentBank/ProfileDesktop.webp",
