@@ -9,6 +9,7 @@ const Carousel = ({ projects, openModal }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showButtons, setShowButtons] = useState(false);
   const carouselRef = useRef(null);
+  const language = ''; // Déclaration de la variable language
 
   useEffect(() => {
     const updateButtonVisibility = () => {
@@ -99,10 +100,11 @@ const Carousel = ({ projects, openModal }) => {
           >
             <ProjectCard
               title={project.title}
-              description={project.description}
               images={project.images}
-              skills={project.skills} // Passer les compétences comme prop
-              onClick={handleCardClick} // Passer la fonction de clic comme prop
+              description={translate(`projects.${project.id}.description`)} // Modification ici
+              skills={project.skills}
+              onClick={handleCardClick}
+              language={language} // Ajout de la prop language
             />
           </div>
         ))}
@@ -139,7 +141,7 @@ Carousel.propTypes = {
     skills: PropTypes.arrayOf(PropTypes.shape({
       class: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
-    })), // Propriété des compétences
+    })),
   })).isRequired,
   openModal: PropTypes.func.isRequired,
 };
