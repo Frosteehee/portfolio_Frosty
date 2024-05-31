@@ -13,7 +13,7 @@
     },
     "about" : {
     "about": "À propos",
-    "aboutContent": "Salut, moi c'est Marine. Je suis diplomée en Arts Visuels et formée en développement web. J'ai un grand parcours varié, où j'ai eu le loisir d'experimenter la pratique des Arts Visuels et leur enseignement, les sciences pures et les sciences de l'éducation. J'ai pu tirer le meilleur de chaque experience pour aujourdhui appliquer mon expertise à des questionnements actuels:  l'accessibilité, au sein de l'Art, au sein de l'apprentissage, et sur quelque chose qui fait le lien entre tous: le web. Je suis passionnée par la sculpture, les jeux vidéos, et j'ai une maitrise incroyable pour la préparation de café (Merci Tim's)  ",
+    "aboutContent": "Salut, je suis Marine ! Diplômée en Arts Visuels ayant une premiere carrière comme visual merchandiser, j'ai décidé de me réinventer dans le développement web et ai effectuée une formation de développeur FrontEnd. Mon objectif ? Mettre mon expertise au service de l'accessibilité pour tous. Mon parcours ? Un mélange éclectique d'art, de commerce et de technologie. J'ai découvert ma passion pour l'accessibilité numérique, une quête qui me motive chaque jour. Bienvenue dans mon univers, où l'esthétique et la fonctionnalité se rencontrent pour offrir des expériences web uniques et inclusives. ",
     "cvButton": "Mon CV",
     "githubButton": "GitHub"
   },
@@ -38,7 +38,7 @@
       },
       "4": {
         "title": "Menu Maker",
-        "description": "Application web de création de menus de restaurants gastronomiques."
+        "description": "Application web de création de menus de restaurants ."
       
       }
       ,

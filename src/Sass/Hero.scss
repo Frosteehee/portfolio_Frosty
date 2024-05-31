@@ -21,6 +21,7 @@
 
 .encadre-contraste {
     padding: $padding-medium;
+  
     border-radius: $border-radius;
     width: 60%;
     overflow: hidden; 
@@ -49,7 +50,7 @@
 .hero-content {
     max-width: $max-content-width;
     align-items: start;
-    padding: $padding-medium;
+
     width: 50%;
 
     @media screen and (max-width: 768px) {
