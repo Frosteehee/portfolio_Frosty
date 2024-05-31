@@ -67,6 +67,8 @@ const About = () => {
           </div>
           <div className="button-container">
             {/* Bouton pour télécharger le CV */}
+
+  <a href="https://Frosteehee.github.io/portfolio_Frosty/CV_Marine_Allavoine_2024.pdf" download></a> 
             <Button onClick={handleDownloadCV} styleType="primary" aria-label="Télécharger mon CV">
               {translate('about.cvButton')}
             </Button> 
