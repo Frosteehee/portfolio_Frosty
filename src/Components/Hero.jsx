@@ -29,6 +29,11 @@ function Hero() {
             {/* Code Block */}
       <div className="code-block" role="region" aria-labelledby="code-block-title">
         <h2 id="code-block-title" className="sr-only">Code Block</h2>
+        <div className="light-mode-style">
+        <span className=" dot light-red"></span>
+          <span className="dot light-yellow"></span>
+          <span className="dot light-green"></span>
+        </div>
         <code aria-label="Code example showing a JavaScript object representing a coder">
           const coder = &#123;
           <div className="blink">

@@ -54,7 +54,7 @@ body.light {
     color: $light-text-color;
 
     .encadre-contraste {
-      background-color: transparent;
+      background-color: white;
       border-radius: 25px; /* Optionnel : pour arrondir les coins */
       animation: shadow 4s infinite alternate; /* Animation de l'ombre */
   
@@ -90,8 +90,60 @@ body.light {
     .code-block {
       border-image-slice: $border-image-slice;
       border-radius: 25px;
-      background-color: #f0f0f0;
-    }
+      background-color: white;
+
+.text-cyan-400 {
+  color: #993600;
+}
+      .text-amber-300 {
+        color: #180202;
+      }
+      .text-gray-400 {
+        color:green;
+      }
+      .text-pink-500 {
+        color: green;
+      }
+      .light-mode-style {
+        width: 100%;
+        position: relative;
+        //height: 5px;
+        margin-top: -18px;
+        padding:18px;
+        margin-left: -18px;
+        background-color: rgb(230, 230, 230);
+        border-radius:25px 25px 0px 0px;
+        
+
+        .dot{
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+         position: absolute;
+         box-shadow: 0 0 1px black;
+         // top: 10px;
+         // left: 10px;
+         //background-color: red;
+        }
+       .light-red{
+         background-color: red;
+         position: absolute;
+         left:15px;
+        }
+
+       .light-yellow{
+          background-color:rgb(255, 230, 0);
+          left:30px;
+          position: absolute;
+        }
+       .light-green{
+          background-color:green;
+          left: 45px;
+          position: absolute;
+        }
+        
+
+  } }
   
 
   /* Light Buttons */
