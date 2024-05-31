@@ -68,7 +68,7 @@ body.light {
       
         border-radius: 25px; /* Optionnel : pour arrondir les coins */
       animation: shadow-animation 4s infinite alternate; /* Animation de l'ombre */
-  }
+  
   
   @keyframes shadow-animation {
       0% {
@@ -81,6 +81,7 @@ body.light {
           box-shadow: 0 0 10px #993600; /* Ombre finale */
       }
   }
+
   
     h1 {
       color: $light-text-color;
@@ -96,7 +97,7 @@ body.light {
       color: $light-text-color;
     font-size: $major-font-size;
     }
-
+  }
     .code-block {
      // border-image: linear-gradient(to right, $light-gradient-color);
       border-image-slice: $border-image-slice;
@@ -334,26 +335,52 @@ body.dark {
   /* Dark Hero Section */
 
   .hero {
-    .encadre-contraste {
-      background-color: rgb(14, 13, 13);
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-      border: solid 3px #7c3aed; /* Définissez une couleur de bordure de secours */
-      border-image: linear-gradient(to right, $gradient-colors);
-      border-image-slice: $border-image-slice;
-      border-radius: $border-radius;
-padding: $padding-medium;
+   // .encadre-contraste {
+     // background-color: rgb(14, 13, 13);
+      //box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      //border: solid 3px #7c3aed; /* Définissez une couleur de bordure de secours */
+      //border-image: linear-gradient(to right, $gradient-colors);
+      //border-image-slice: $border-image-slice;
+      //border-radius: $border-radius;
+//padding: $padding-medium;
      // animation: rotateBorder 4s linear forwards;
-    }
+
+     .encadre-contraste {
+      background-color: transparent;
+      //border: solid 5px;
+     // border-image: linear-gradient(to right, $light-gradient-color);
+      //border-image-slice: $border-image-slice;
+    //  width: 80%;
+     //   box-shadow: 
+      //  0 0 10px #993600,
+       // 0 0 15px #705200,
+        //0 0 20px #565C00,
+       //0 0 25px #325C00;
+      
+        border-radius: 25px; /* Optionnel : pour arrondir les coins */
+      animation: shadow-animation 4s infinite alternate; /* Animation de l'ombre */
   
-    @keyframes rotateBorder {
+  
+  @keyframes shadow-animation {
       0% {
-        border-image: $gradient-colors;
-        border: solid 5px;
+          box-shadow: 0 0 15px #ff6b6b; /* Ombre initiale */
+      }
+      30% {
+          box-shadow: 0 0 25px #ff66cc; /* Ombre à mi-chemin */
+      }
+
+      65% {
+          box-shadow: 0 0 35px #a86bfe; /* Ombre à mi-chemin */
       }
       100% {
-        border: hidden; /* Rend la bordure invisible à la fin de l'animation */
+          box-shadow: 0 0 45px #6a0572; /* Ombre finale */
       }
-    }
+  }
+     }
+     
+  
+  
+    
 
 
     h1 {
