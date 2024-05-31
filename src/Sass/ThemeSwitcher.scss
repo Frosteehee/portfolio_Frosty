@@ -9,25 +9,45 @@ body.light {
   background-color: $light-background-color;
   color: #333;
 
-  /* Light Navbar */
-  .navbar {
-    background-color: $light-background-color;
-    color: $navbar-text-color;
-
-    .navbar-desktop a {
+/* Light Navbar */
+.navbar {
+  background-color: $light-background-color;
+  color: $navbar-text-color;
+  
+  .navbar-desktop {
+    a {
       color: #0a0a0a;
+      text-decoration: none;
+      position: relative;
+      font-size: 1.2rem;
 
-      &:hover {
-        background-image: linear-gradient(to right, $light-button-gradient);
-        opacity: 0.6;
-        color: #f0f0f0;
+      /* Test soulignement en dégradé lors du survol */
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 8px; /* Épaisseur de la ligne de soulignement */
+        left: 0;
+        bottom: -2px; /* Positionnement de la ligne par rapport au texte */
+        background: linear-gradient(to right, $light-gradient-color); /* Dégradé linéaire */
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+        transform-origin: bottom right;
       }
+
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+        margin-top: 2px;
+            }
 
       &:focus {
         outline: 2px solid #600AFF; /* Couleur de focus pour accessibilité */
       }
     }
   }
+}
+
 
   /* Light Hero Section */
   .hero {
@@ -35,22 +55,10 @@ body.light {
 
     .encadre-contraste {
       background-color: transparent;
-      //border: solid 5px;
-     // border-image: linear-gradient(to right, $light-gradient-color);
-      //border-image-slice: $border-image-slice;
-    //  width: 80%;
-     //   box-shadow: 
-      //  0 0 10px #993600,
-       // 0 0 15px #705200,
-        //0 0 20px #565C00,
-       //0 0 25px #325C00;
-      
-        border-radius: 25px; /* Optionnel : pour arrondir les coins */
-   
-      animation: shadow-animation 4s infinite alternate; /* Animation de l'ombre */
-  }
+      border-radius: 25px; /* Optionnel : pour arrondir les coins */
+      animation: shadow 4s infinite alternate; /* Animation de l'ombre */
   
-  @keyframes shadow-animation {
+  @keyframes shadow {
       0% {
           box-shadow: 0 0 10px #325C00; /* Ombre initiale */
       }
@@ -61,6 +69,8 @@ body.light {
           box-shadow: 0 0 10px #993600; /* Ombre finale */
       }
   }
+}
+
   
     h1 {
       color: $light-text-color;
@@ -69,22 +79,20 @@ body.light {
       background-clip: text;
       color: transparent;
       opacity: 0;
-     // animation: animateText 4s ease forwards, appearText 1s ease forwards;
-     transform: translateY(50px); /* Initial position for animation */
-    animation: fadeInUp 0.5s ease-out 0.1s forwards; /* Apply the animation */
+      transform: translateY(50px); /* Initial position for animation */
+      animation: fadeInUp 0.5s ease-out 0.1s forwards; /* Apply the animation */
     }
     p {
-      color: $light-text-color;
+    color: $light-text-color;
     font-size: $major-font-size;
     }
-
+  }
     .code-block {
-     // border-image: linear-gradient(to right, $light-gradient-color);
       border-image-slice: $border-image-slice;
       border-radius: 25px;
       background-color: #f0f0f0;
     }
-  }
+  
 
   /* Light Buttons */
   .theme-switcher {
@@ -117,8 +125,6 @@ body.light {
     color: transparent;
     opacity: 0;
     animation: animateText 5s ease forwards, appearText 1s ease forwards;
-
- 
   }
 
   .animated-lines {
@@ -147,7 +153,6 @@ body.light {
 /* Light Skills Section */
 
 #skills-heading {
- 
     background-image: linear-gradient(to right, $light-gradient-color);
     -webkit-background-clip: text;
     background-clip: text;
@@ -158,7 +163,6 @@ body.light {
   
     .skill-name{
       color: $light-text-color;
-    
     }
 }
 
@@ -215,13 +219,12 @@ background-color: green; // idem
 /* Light Modal */
 
 .modal {
- //background-color: $light-background-color;
+ 
 .modal-content{
   background-color: $light-background-color;
   
   h2, p {
     color: $light-text-color;
-  
   }
 
   .close {
@@ -246,11 +249,10 @@ background-color: green; // idem
   transform: translateY(50px); /* Initial position for animation */
   animation: fadeInUp 0.5s ease-out 0.1s forwards; /* Apply the animation */
   font-size: 35px;
-
+}
+}
 }
 
-}
-}
 /////////////////////////////////////////////////////////////////////////////////////////
 /* Dark Mode */
 body.dark {
@@ -281,37 +283,63 @@ body.dark {
     background-color: $navbar-background-color;
     color: $navbar-text-color;
 
-    .navbar-desktop a {
-      &:hover {
-        background-image: linear-gradient(to right, $navbar-link-hover-color, rgba(236, 72, 153, 0.9));
-   
-      }
-    }
+    .navbar-desktop {
+      a {
+        color: white;
+        text-decoration: none;
+        position: relative;
+        font-size: 1.2rem;
+  
+        /* Test soulignement en dégradé lors du survol */
+        &::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 8px; /* Épaisseur de la ligne de soulignement */
+          left: 0;
+          bottom: -2px; /* Positionnement de la ligne par rapport au texte */
+          background: linear-gradient(to right, $gradient-colors); /* Dégradé linéaire */
+          transform: scaleX(0);
+          transition: transform 0.3s ease;
+          transform-origin: bottom right;
+  
+        }
+  
+        &:hover::after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+          margin-top: 2px;
+              }
+  }
+}
   }
 
   /* Dark Hero Section */
 
   .hero {
-    .encadre-contraste {
-      background-color: rgb(14, 13, 13);
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-      border: solid 3px #7c3aed; /* Définissez une couleur de bordure de secours */
-      border-image: linear-gradient(to right, $gradient-colors);
-      border-image-slice: $border-image-slice;
-      border-radius: $border-radius;
-
-     // animation: rotateBorder 4s linear forwards;
-    }
   
-    @keyframes rotateBorder {
+
+     .encadre-contraste {
+      background-color: transparent;
+      border-radius: 25px; /* Optionnel : pour arrondir les coins */
+      animation: shadow-animation 4s infinite alternate; /* Animation de l'ombre */
+  
+  
+  @keyframes shadow-animation {
       0% {
-        border-image: $gradient-colors;
-        border: solid 5px;
+          box-shadow: 0 0 15px #ff6b6b; /* Ombre initiale */
+      }
+      30% {
+          box-shadow: 0 0 25px #ff66cc; /* Ombre à mi-chemin */
+      }
+
+      65% {
+          box-shadow: 0 0 35px #a86bfe; /* Ombre à mi-chemin */
       }
       100% {
-        border: hidden; /* Rend la bordure invisible à la fin de l'animation */
+          box-shadow: 0 0 45px #6a0572; /* Ombre finale */
       }
-    }
+       } }
 
     h1 {
       color: $white-color;
@@ -320,8 +348,10 @@ body.dark {
   border-image: linear-gradient(to right, $gradient-colors);
   border-image-slice: $border-image-slice;
   background-color: $code-background-color;
+    }
 }
-  }
+
+
 /* Dark Portfolio */
 .portfolio {
   .animate-text {
@@ -374,8 +404,6 @@ background-color: #7c3aed; // idem
 /* Dark Modal */
 
 .modal {
- // background-color: $dark-background-color;
-  //color: $dark-text-color;
 
   .modal-content {
     background-color: $project-card-bg-color;
@@ -446,6 +474,4 @@ background-color: #7c3aed; // idem
   
   }
 }
-
-
 }

@@ -1,0 +1,67 @@
+//création du fichier mixins.scsspour une simplification du code
+//modifications sur tout le code en cours 
+
+
+
+@mixin theme($bg-color, $text-color, $gradient-color, $button-gradient) {
+  background-color: $bg-color;
+  color: $text-color;
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 8px;
+      left: 0;
+      bottom: -2px;
+      background: linear-gradient(to right, $gradient-color);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      transform-origin: bottom right;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+
+  .button {
+    background-image: linear-gradient(to right, $button-gradient);
+    background-size: 200% auto;
+    transition: background-position 0.5s;
+
+    &:hover {
+      background-position: right center;
+    }
+  }
+
+  .animate-text {
+    background-image: linear-gradient(to right, $gradient-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+@mixin box-shadow-animation($color1, $color2, $color3, $color4) {
+  @keyframes shadow-animation {
+    0% {
+      box-shadow: 0 0 15px $color1;
+    }
+    30% {
+      box-shadow: 0 0 25px $color2;
+    }
+    65% {
+      box-shadow: 0 0 35px $color3;
+    }
+    100% {
+      box-shadow: 0 0 45px $color4;
+    }
+  }
+  animation: shadow-animation 4s infinite alternate;
+}

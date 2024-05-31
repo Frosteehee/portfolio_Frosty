@@ -2,7 +2,6 @@
 
 
 import NavBar from './NavBar';
-import '../Sass/Header.scss';
 
 const Header = () => {
     return (

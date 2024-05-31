@@ -1,18 +1,32 @@
-import  { useState } from 'react';
+import  { useState, useEffect } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
+import Modal from 'react-modal';
 import Button from './Button';
 import '../Sass/Contact.scss';
+
+Modal.setAppElement('#root'); // Set the root element for accessibility
 
 function Contact() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const [modalIsOpen, setModalIsOpen] = useState(false);
 
     const [state, handleSubmit] = useForm("xleqkqkn");
 
-    if (state.succeeded) {
-        return <p>Thanks for joining!</p>;
-    }
+    useEffect(() => {
+        if (state.succeeded) {
+            setModalIsOpen(true);
+        }
+    }, [state.succeeded]);
+
+    const closeModal = () => {
+        setModalIsOpen(false);
+        // Reset form fields
+        setName('');
+        setEmail('');
+        setMessage('');
+    };
 
     return (
         <section className="contact" id="contact">
@@ -60,6 +74,18 @@ function Contact() {
 
                 <Button type="submit" styleType="primary" disabled={state.submitting}>Send</Button>
             </form>
+            
+            <Modal
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+                contentLabel="Confirmation Modal"
+                className="confirmation-modal"
+                overlayClassName="confirmation-overlay"
+            >
+                <h2>Merci pour votre message !</h2>
+                <p>Votre message a été envoyé avec succès.</p>
+                <Button onClick={closeModal} styleType="primary">Fermer</Button>
+            </Modal>
         </section>
     );
 }
