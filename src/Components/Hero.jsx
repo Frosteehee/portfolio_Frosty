@@ -6,11 +6,10 @@ function Hero() {
   const { translate } = useLanguage();
 
   return (
-      /*test animation */
-    
-    
       <section className="hero">
       <div className="hero-content encadre-contraste">
+
+        {/*animation Hero*/}
       <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -25,8 +24,9 @@ function Hero() {
         >
           {translate('hero.description')}
         </motion.p>
-      
             </div>
+
+            {/* Code Block */}
       <div className="code-block" role="region" aria-labelledby="code-block-title">
         <h2 id="code-block-title" className="sr-only">Code Block</h2>
         <code aria-label="Code example showing a JavaScript object representing a coder">
@@ -53,7 +53,6 @@ function Hero() {
             <span className="text-gray-400">{"', '"}</span>     
             <span className="text-amber-300">Empathetic</span>
             <span className="text-gray-400">{`]'`}</span>
-          
           </div>
         </code>
       </div>
