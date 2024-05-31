@@ -19,26 +19,11 @@ $modal-bg-color: rgba(0, 0, 0, 0.5); // Couleur de fond de la modale
 $modal-image-max-width: 80%; // Largeur maximale de l'image dans la modale
 
 
-//LightMode
-/*
-$light-background-color: #ffffff;
-$light-text-color: blue;
-$light-color-section: grey; 
-$light-gradient-color:#9400BD,#6800BD, #600AFF, #2930FF;
-$light-button-gradient: #A30085, #2930FF;
-$light-text-color: #000;
-*/
-
-
 ///Test LightMode Earthy Zen Style
 $light-background-color: #FFFEF8;
 $light-text-color: #000;
 $light-gradient-color:#325C00 ,#565C00,#705200,#993600;
 $light-button-gradient:#325C00,#705200,#993600;
-
-
-
-
 
 
 /// DarkMode
@@ -69,5 +54,7 @@ $border-radius: 12px;
 $code-block-width: 250px;
 $code-block-height: 250px;
 $border-size: 0.3px;
-$border-image-slice: 1;
+$border-image-slice: 0.8;
 $padding-section:5rem;
+
+

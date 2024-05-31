@@ -21,18 +21,18 @@
 }
 
 .encadre-contraste {
-    padding: $padding-medium;
+    padding: 5rem;
     border-radius: $border-radius;
     width: 60%;
     overflow: hidden; 
     @media screen and (max-width: 768px) {
         width: 250px;
-     
+     padding:2rem;
        
     }
 
     h1 {
-        color: $text-color;
+      //  color: $text-color;
         font-size: $heading-font-size;
         margin-bottom: $margin-small;
         margin-top: -1rem;
@@ -43,7 +43,7 @@
 
     p {
         color: $text-color;
-        font-size: $paragraph-font-size;
+        font-size:20px;
         line-height: $line-height;
         margin-bottom: $margin-medium;
     }
@@ -99,6 +99,14 @@
         transform: translateY(0);
     }
 }
+
+.currentStatus {
+  
+    line-height: $line-height;
+   margin-bottom: $margin-medium;
+  margin-top: $margin-medium;
+}
+
 
 /* Ajout des styles pour les couleurs spécifiques */
 .text-pink-500 {

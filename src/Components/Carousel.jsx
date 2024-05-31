@@ -61,10 +61,7 @@ const Carousel = ({ projects, openModal }) => {
     openModal(projectId);
   };
 
-  const goToSlide = (index) => {
-    setCurrentSlide(index);
-    scrollToSlide(index);
-  };
+
 
   const shiftedProjects = [...projects.slice(currentSlide), ...projects.slice(0, currentSlide)];
 
@@ -118,16 +115,7 @@ const Carousel = ({ projects, openModal }) => {
           &#10095;
         </button>
       )}
-      <div className="carousel-bullets">
-        {projects.map((_, index) => (
-          <button
-            key={index}
-            className={`carousel-bullet ${index === currentSlide ? 'active' : ''}`}
-            onClick={() => goToSlide(index)}
-            aria-label={translate('carousel.goto', { number: index + 1 })}
-          />
-        ))}
-      </div>
+  {/* echec des bullets points fonctionnel, revoir méthode */}
     </div>
   );
 };
