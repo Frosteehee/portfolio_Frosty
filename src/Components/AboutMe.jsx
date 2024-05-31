@@ -68,9 +68,9 @@ const About = () => {
           <div className="button-container">
             {/* Bouton pour télécharger le CV */}
 
-
+            
             <Button onClick={handleDownloadCV} styleType="primary" aria-label="Télécharger mon CV">
-              {translate('about.cvButton')}  <a href="https://Frosteehee.github.io/portfolio_Frosty/CV_Marine_Allavoine_2024.pdf" download></a> 
+              {translate('about.cvButton')}  <a href="https://github.com/Frosteehee/portfolio_Frosty/CV_Marine_Allavoine_2024.pdf" download></a>  {/* pourquoi ça ne fonctionne pas ? */}
             </Button> 
             {/* Bouton pour télécharger depuis GitHub */}
             <Button onClick={handleDownloadFromGithub} styleType="secondary" aria-label="Télécharger depuis GitHub">

@@ -32,25 +32,28 @@ function Hero() {
         <code aria-label="Code example showing a JavaScript object representing a coder">
           const coder = &#123;
           <div className="blink">
-            <span className="mr-2 text-pink-500">name:</span>
-            <span className="text-gray-400">{`'`}</span>
-            <span className="text-amber-300">{translate('hero.name')}</span>
-            <span className="text-gray-400">{`',`}</span>
+          <span className="text-cyan-400">[Hireable]</span>  
           </div>
           <div>
-            <span className="mr-2 text-pink-500">skills:</span>
+            <div>
+          <span className="mr-2 text-pink-500">name:</span>
+            <span className="text-gray-400">{`'`}</span>
+            <span className="text-amber-300">Frosteehee</span>
+            <span className="text-gray-400">{`';`}</span>
+            </div>
+            <span className="mr-2 text-pink-500">softskills:</span>
             <span className="text-gray-400">{`['`}</span>
-            <span className="text-amber-300">HTML</span>
+            <span className="text-amber-300">HardWorking</span>
             <span className="text-gray-400">{"', '"}</span>
-            <span className="text-amber-300">SASS</span>
+            <span className="text-amber-300">Curious</span>
             <span className="text-gray-400">{"', '"}</span>
-            <span className="text-amber-300">React</span>
+            <span className="text-amber-300">Energetic</span>
             <span className="text-gray-400">{"', '"}</span>
-            <span className="text-amber-300">Redux</span>
-            <span className="text-gray-400">{"', '"}</span>
-            <span className="text-amber-300">MongoDB</span>
+            <span className="text-amber-300">Coffee addict</span>
+            <span className="text-gray-400">{"', '"}</span>     
+            <span className="text-amber-300">Empathetic</span>
             <span className="text-gray-400">{`]'`}</span>
-            <span className="text-gray-400">[rédaction en cours]</span>
+          
           </div>
         </code>
       </div>
