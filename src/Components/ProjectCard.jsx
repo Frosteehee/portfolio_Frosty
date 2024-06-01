@@ -1,7 +1,7 @@
 
 import PropTypes from 'prop-types';
-import '../Sass/ProjectCard.scss'; // Assurez-vous que le chemin d'importation est correct
-import ICONS from './Icons'; // Importez les icônes
+import '../Sass/ProjectCard.scss'; 
+import ICONS from './Icons'; 
 //import { useLanguage } from '../context/LanguageContext'; // Importation du  contexte de langue
 
 const ProjectCard = ({ title, description, images, skills, onClick }) => {
