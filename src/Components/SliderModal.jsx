@@ -1,9 +1,27 @@
 import PropTypes from 'prop-types';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import '../Sass/SliderModal.scss'; 
 
 const SliderModal = ({ images, onImageClick }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [scrollEnabled, setScrollEnabled] = useState(false);
+  const sliderRef = useRef(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (sliderRef.current) {
+        const { scrollWidth, clientWidth } = sliderRef.current;
+        setScrollEnabled(scrollWidth > clientWidth);
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const nextSlide = () => {
     setCurrentSlide((currentSlide + 1) % images.length);
@@ -15,6 +33,7 @@ const SliderModal = ({ images, onImageClick }) => {
 
   useEffect(() => {
     const handleKeyDown = (event) => {
+      if (scrollEnabled) return; // Empêche la navigation au clavier si le défilement horizontal est activé
       if (event.keyCode === 37) { // Flèche gauche
         prevSlide();
       } else if (event.keyCode === 39) { // Flèche droite
@@ -27,10 +46,10 @@ const SliderModal = ({ images, onImageClick }) => {
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [currentSlide]);
+  }, [currentSlide, scrollEnabled]);
 
   return (
-    <div className="slider-modal">
+    <div className={`slider-modal ${scrollEnabled ? 'scroll-enabled' : ''}`} ref={sliderRef}>
       <div className="image-container">
         <img 
           src={images[currentSlide]} 

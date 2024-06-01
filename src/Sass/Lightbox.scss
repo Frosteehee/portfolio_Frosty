@@ -1,6 +1,6 @@
 $lightbox-bg-color: rgba(0, 0, 0, 0.9); // Couleur de fond de la lightbox
-$lightbox-content-max-width: 90%; // Largeur maximale du contenu de la lightbox
-$lightbox-content-max-height: 90%; // Hauteur maximale du contenu de la lightbox
+$lightbox-content-max-width: 95%; // Largeur maximale du contenu de la lightbox
+$lightbox-content-max-height: 95%; // Hauteur maximale du contenu de la lightbox
 
 .lightbox {
   position: fixed;
@@ -41,14 +41,9 @@ $lightbox-content-max-height: 90%; // Hauteur maximale du contenu de la lightbox
     }
   }
 
-  .lightbox-horizontal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-      max-width: 100%;
-      max-height: 100%;
-    }
+  .lightbox-horizontal img {
+    max-width: 100%; // Limite la largeur de l'image à 100% de la fenêtre
+    max-height: 85vh; // Limite la hauteur de l'image à 80% de la hauteur de la vue
+    object-fit: contain; // Ajuste la taille de l'image sans déformer
   }
 }

@@ -1,42 +1,60 @@
 import PropTypes from 'prop-types';
 import '../Sass/Lightbox.scss';
-import { useEffect } from 'react';
+import { useEffect, useCallback, useRef, useState } from 'react';
 
 const Lightbox = ({ images, currentImage, onClose }) => {
   const isMobile = window.innerWidth <= 768;
+  const lightboxRef = useRef(null);
+  const [fullImageLoaded, setFullImageLoaded] = useState(false);
 
   useEffect(() => {
-    const handleEscape = (event) => {
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
+  const handleKeyDown = useCallback(
+    (event) => {
       if (event.key === 'Escape') {
         onClose();
+      } else if (!isMobile && !['ArrowLeft', 'ArrowRight'].includes(event.key)) {
+        event.stopPropagation(); // Empêche la propagation de l'événement si une touche de navigation clavier est pressée
       }
-    };
-    document.addEventListener('keydown', handleEscape);
-    return () => {
-      document.removeEventListener('keydown', handleEscape);
-    };
-  }, [onClose]);
+    },
+    [isMobile, onClose]
+  );
 
   const handleClickOutside = (event) => {
-    if (event.target.className === 'lightbox') {
+    if (event.target === lightboxRef.current) {
       onClose();
     }
   };
 
+  const handleImageLoad = () => {
+    setFullImageLoaded(true);
+  };
+
   return (
-    <div className="lightbox" onClick={handleClickOutside}>
+    <div className="lightbox" onClick={handleClickOutside} ref={lightboxRef} role="dialog" aria-label="Lightbox">
       <button className="close" onClick={onClose} aria-label="Close lightbox">&times;</button>
-      {isMobile ? (
-        <div className="lightbox-vertical">
-          {images.map((src, index) => (
-            <img key={index} src={src} alt={`Lightbox view ${index + 1}`} />
-          ))}
-        </div>
-      ) : (
-        <div className="lightbox-horizontal">
-          <img src={images[currentImage]} alt={`Lightbox view ${currentImage + 1}`} />
-        </div>
-      )}
+      <div className="lightbox-content">
+        {isMobile ? (
+          <div className="lightbox-vertical">
+            {images.map((src, index) => (
+              <img key={index} src={src} alt={`Lightbox view ${index + 1}`} />
+            ))}
+          </div>
+        ) : (
+          <div className="lightbox-horizontal">
+            {fullImageLoaded ? (
+              <img src={images[currentImage]} alt={`Lightbox view ${currentImage + 1}`} onLoad={handleImageLoad} />
+            ) : (
+              <img src={images[currentImage]} alt={`Lightbox view ${currentImage + 1}`} style={{ visibility: 'hidden' }} onLoad={handleImageLoad} />
+            )}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
