@@ -4,6 +4,8 @@
     color: $white-color;
     padding: $padding-section $padding-medium;
 
+
+
     .content {
         display: flex;
         justify-content: center;
@@ -48,9 +50,7 @@
             font-size: $heading-font-size;
             margin-bottom: $margin-medium;
 
-            @media (max-width: 767px) {
-                font-size: 1.5rem; // Adjust font size for mobile
-            }
+         
         }
 
         .animated-lines {

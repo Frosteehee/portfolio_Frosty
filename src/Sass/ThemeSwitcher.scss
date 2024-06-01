@@ -4,6 +4,13 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
+.theme-switcher{
+  position: fixed;
+  top: 0;
+  right: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
 /* Light Mode */
 body.light {
   background-color: $light-background-color;
@@ -14,6 +21,10 @@ body.light {
   background-color: $light-background-color;
   color: $navbar-text-color;
   
+  @media (max-width: 768px) { 
+    background-image: linear-gradient(to top, $light-navbar-gradient );
+   
+  }
   .navbar-desktop {
     a {
       color: #0a0a0a;
@@ -48,7 +59,7 @@ body.light {
   }
 
   .navbar-mobile {
-    background-image: linear-gradient(to right, $light-gradient-color);
+    background-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -339,6 +350,12 @@ body.dark {
   .navbar {
     background-color: $navbar-background-color;
     color: $navbar-text-color;
+
+
+    @media (max-width: 768px) {
+      background-image: linear-gradient(to right, $navbar-mobile-gradient);
+    }
+  
 
     .navbar-desktop {
       a {
