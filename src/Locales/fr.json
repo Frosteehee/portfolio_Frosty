@@ -21,31 +21,35 @@
     "projects": {
       "1": {
         "title": "Booki",
-        "description": "Page Vitrine du site Booki une entreprise de location de vacances en ligne, responsive."
-        
+        "description": "Page Vitrine du site Booki une entreprise de location de vacances en ligne. Voir plus >",
+        "modalDescription": "Description détaillée de Booki dans la modal."
       },
       "2": {
         "title": "Oh My Food",
-        "description": "Application web de réservation de menus de restaurants gastronomiques.",
+        "description": "Application web de réservation de menus de restaurants gastronomiques. Voir plus >",
+        "modalDescription": "Description détaillée de Booki dans la modal.",
         "githubLink": "https://frosteehee.github.io/projet-ohmyfood/"
 
       },
       "3": {
         "title": "Sophie Bluel",
-        "description": "Site de l'architecte d'interieur Sophie Bluel.",
+        "description": "Site de l'architecte d'interieur Sophie Bluel. Voir plus >",
+        "modalDescription": "Description détaillée de Booki dans la modal.",
+
         "githubLink": "https://github.com/Frosteehee/Portfolio-architecte-sophie-bluel"
        
       },
       "4": {
         "title": "Menu Maker",
-        "description": "Application web de création de menus de restaurants ."
-      
+        "description": "Application web de création de menus de restaurants.  Voir plus >",
+        "modalDescription": "Description détaillée de Booki dans la modal."
       }
       ,
     
         "5":{
         "title": "Kasa",
-        "description": "Location de vacances.",
+        "description": "Location de vacances. Voir plus >",
+        "modalDescription": "Description détaillée de Booki dans la modal.",
         "githubLink": "https://frosteehee.github.io/projet_react/"
    
       }
@@ -53,7 +57,8 @@
       
           "6":{
           "title": "ArgentBank",
-          "description": "Banque.",
+          "description": "Banque. Voir plus >",
+          "modalDescription": "Description détaillée de Booki dans la modal.",
           "githubLink": "https://github.com/Frosteehee/ArgentBankWebsite"
     }
   }

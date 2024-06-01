@@ -4,7 +4,8 @@ import SliderModal from './SliderModal';
 import Lightbox from './Lightbox';
 import '../Sass/Modal.scss';
 import { useLanguage } from '../context/LanguageContext';
-import Button from './Button'; // Importer le composant Button
+import Button from './Button'; 
+
 
 const GitHubIcon = () => (
   <svg
@@ -77,7 +78,8 @@ const Modal = ({ projectData, onClose }) => {
           </button>
           <h3 id="modal-title">{translate(`projects.${projectData.id}.title`)}</h3>
           <SliderModal images={projectData.images} onImageClick={openLightbox} />
-          <p id="modal-description">{translate(`projects.${projectData.id}.description`)}</p>
+          {/* Utilisez la description spécifique à la modal */}
+          <p id="modal-description">{translate(`projects.${projectData.id}.modalDescription`)}</p>
           {projectData.githubLink && (
             <div id="modal-github">
               <Button href={projectData.githubLink} styleType="primary" icon={<GitHubIcon />}>
@@ -103,6 +105,7 @@ Modal.propTypes = {
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    modalDescription: PropTypes.string.isRequired, //  nouvelle propriété modalDescription test
     githubLink: PropTypes.string,
     images: PropTypes.arrayOf(PropTypes.string).isRequired,
     skills: PropTypes.arrayOf(

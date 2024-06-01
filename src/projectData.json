@@ -3,6 +3,7 @@
     "id": 1,
     "title": "Booki",
     "description": "Page Vitrine du site Booki une entreprise de location de vacances en ligne, responsive.",
+    "modalDescription": "Description détaillée de Booki dans la modal.",
     "images": [
       "./images/Booki/coverCard.webp",
       "./images/Booki/Desktop.webp",
@@ -26,6 +27,7 @@
     "id": 2,
     "title": "Oh My Food",
     "description": "Application de réservation pour restaurants gastronomiques.",
+    "modalDescription": "Description détaillée de Booki dans la modal.",
     "images": [
       "./images/OhMyFood/coverCard.webp",
       "./images/OhMyFood/HomepageDesktop.webp",
@@ -50,6 +52,7 @@
     "id": 3,
     "title": "Sophie Bluel",
     "description": "Site de l'architecte d'interieur Sophie Bluel.",
+    "modalDescription": "Description détaillée de Booki dans la modal.",
     "images": [
       "./images/Sophie_Bluel/coverCard.webp",
       "./images/Sophie_Bluel/Homepage_edit_1.webp",
@@ -72,6 +75,7 @@
     "id": 4,
     "title": "Menu Maker",
     "description": "Application web de création de menus de restaurants.",
+    "modalDescription": "Description détaillée de Booki dans la modal.",
     "images": [
       "./images/Menu_Maker/coverCard.webp",
       "./images/Menu_Maker/Dashboard.webp",
@@ -86,6 +90,7 @@
     "id": 5,
     "title": "Kasa",
     "description": "Application de locations de vacances.",
+    "modalDescription": "Description détaillée de Booki dans la modal.",
     "images": [
       "./images/Kasa/coverCard.webp",
       "./images/Kasa/AboutDesktop.webp",
@@ -109,6 +114,7 @@
     "id": 6,
     "title": "ArgentBank",
     "description": "Banque.",
+    "modalDescription": "Description détaillée de Booki dans la modal.",
     "images": [
      "./images/ArgentBank/coverCard.webp",
       "./images/ArgentBank/coverCard.webp",
