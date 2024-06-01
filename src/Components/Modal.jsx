@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import SliderModal from './SliderModal';
+import Lightbox from './Lightbox';
 import '../Sass/Modal.scss';
 import { useLanguage } from '../context/LanguageContext';
 import Button from './Button'; // Importer le composant Button
@@ -24,6 +25,18 @@ const GitHubIcon = () => (
 
 const Modal = ({ projectData, onClose }) => {
   const { translate } = useLanguage();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxImage, setLightboxImage] = useState(null);
+
+  const openLightbox = (image) => {
+    setLightboxImage(image);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+    setLightboxImage(null);
+  };
 
   useEffect(() => {
     const handleEscape = (event) => {
@@ -44,35 +57,44 @@ const Modal = ({ projectData, onClose }) => {
   };
 
   return (
-    <div
-      className="modal"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="modal-title"
-      aria-describedby="modal-description"
-      onClick={handleClickOutside}
-    >
-      <div className="modal-content">
-        <button
-          className="close"
-          onClick={onClose}
-          aria-label="Close modal"
-          aria-keyshortcuts="Escape"
-        >
-          &times;
-        </button>
-        <h2 id="modal-title">{translate(`projects.${projectData.id}.title`)}</h2>
-        <p id="modal-description">{translate(`projects.${projectData.id}.description`)}</p>
-        <SliderModal images={projectData.images} />
-        {projectData.githubLink && (
-          <div id="modal-github">
-            <Button href={projectData.githubLink} styleType="primary" icon={<GitHubIcon />}>
-         GitHub
-            </Button>
-          </div>
-        )}
+    <>
+      <div
+        className="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+        aria-describedby="modal-description"
+        onClick={handleClickOutside}
+      >
+        <div className="modal-content">
+          <button
+            className="close"
+            onClick={onClose}
+            aria-label="Close modal"
+            aria-keyshortcuts="Escape"
+          >
+            &times;
+          </button>
+          <h3 id="modal-title">{translate(`projects.${projectData.id}.title`)}</h3>
+          <SliderModal images={projectData.images} onImageClick={openLightbox} />
+          <p id="modal-description">{translate(`projects.${projectData.id}.description`)}</p>
+          {projectData.githubLink && (
+            <div id="modal-github">
+              <Button href={projectData.githubLink} styleType="primary" icon={<GitHubIcon />}>
+                GitHub
+              </Button>
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+      {lightboxOpen && (
+        <Lightbox 
+          images={projectData.images} 
+          currentImage={projectData.images.indexOf(lightboxImage)} 
+          onClose={closeLightbox} 
+        />
+      )}
+    </>
   );
 };
 
