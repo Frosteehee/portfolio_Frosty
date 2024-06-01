@@ -1,68 +1,90 @@
-
-  
-  {
-    "hero": {
-      "name": "Marine Allavoine",
-      "description": "Developpeuse Front-End en mission pour rendre le web plus accessible."
-    },
-    "navbar": {
-      "home": "Accueil",
-      "about": "À propos",
-      "projects": "Projets",
-      "contact": "Contact"
-    },
-    "about" : {
+{
+  "hero": {
+    "name": "Marine Allavoine",
+    "description": "Développeuse Front-End en mission pour rendre le web plus accessible."
+  },
+  "navbar": {
+    "home": "Accueil",
     "about": "À propos",
-    "aboutContent": "Salut, je suis Marine ! Diplômée en Arts Visuels et ayant une premiere carrière comme visual merchandiser, j'ai décidé de me réinventer dans le développement web et ai effectuée une formation de développeur FrontEnd. Mon objectif est de mettre mes compétences acquises au cours de mon parcours au service de l'accessibilité pour tous. Mon parcours ? Un mélange éclectique d'art, de commerce et de technologie. J'ai découvert ma passion pour l'accessibilité numérique, une quête qui me motive chaque jour. Bienvenue dans mon univers, où l'esthétique et la fonctionnalité se rencontrent pour offrir des expériences web uniques et inclusives. ",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "about": {
+    "about": "À propos",
+    "aboutContent1": "Salut, je suis Marine ! Diplômée en Arts Visuels et ayant une première carrière comme visual merchandiser, j'ai décidé de me réinventer dans le développement web et ai effectué une formation de développeur Front-End.",
+    "aboutContent2": "Mon objectif est de mettre mes compétences acquises au cours de mon parcours au service de l'accessibilité pour tous.",
+    "aboutContent3": "Mon parcours ? Un mélange éclectique d'art, de commerce et de technologie. J'ai découvert ma passion pour l'accessibilité numérique, une quête qui me motive chaque jour.",
+    "aboutContent4": "Bienvenue dans mon univers, où l'esthétique et la fonctionnalité se rencontrent pour offrir des expériences web uniques et inclusives.",
     "cvButton": "Mon CV",
     "githubButton": "GitHub"
   },
   
-    "projects": {
-      "1": {
-        "title": "Booki",
-        "description": "Page Vitrine du site Booki une entreprise de location de vacances en ligne. Voir plus >",
-        "modalDescription": "Description détaillée de Booki dans la modal."
-      },
-      "2": {
-        "title": "Oh My Food",
-        "description": "Application web de réservation de menus de restaurants gastronomiques. Voir plus >",
-        "modalDescription": "Description détaillée de Booki dans la modal.",
-        "githubLink": "https://frosteehee.github.io/projet-ohmyfood/"
-
-      },
-      "3": {
-        "title": "Sophie Bluel",
-        "description": "Site de l'architecte d'interieur Sophie Bluel. Voir plus >",
-        "modalDescription": "Description détaillée de Booki dans la modal.",
-
-        "githubLink": "https://github.com/Frosteehee/Portfolio-architecte-sophie-bluel"
-       
-      },
-      "4": {
-        "title": "Menu Maker",
-        "description": "Application web de création de menus de restaurants.  Voir plus >",
-        "modalDescription": "Description détaillée de Booki dans la modal."
-      }
-      ,
-    
-        "5":{
-        "title": "Kasa",
-        "description": "Location de vacances. Voir plus >",
-        "modalDescription": "Description détaillée de Booki dans la modal.",
-        "githubLink": "https://frosteehee.github.io/projet_react/"
-   
-      }
-      ,
-      
-          "6":{
-          "title": "ArgentBank",
-          "description": "Banque. Voir plus >",
-          "modalDescription": "Description détaillée de Booki dans la modal.",
-          "githubLink": "https://github.com/Frosteehee/ArgentBankWebsite"
+  "portfolio": {
+    "heading": "Mes projets"
+  
+},
+  "projects": {
+    "1": {
+      "title": "Booki",
+      "description": "Page Vitrine du site Booki une entreprise de location de vacances en ligne. Voir plus >",
+      "modalDescription": "Description détaillée de Booki dans la modal."
+    },
+    "2": {
+      "title": "Oh My Food",
+      "description": "Application web de réservation de menus de restaurants gastronomiques. Voir plus >",
+      "modalDescription": "Description détaillée de Booki dans la modal.",
+      "githubLink": "https://frosteehee.github.io/projet-ohmyfood/"
+    },
+    "3": {
+      "title": "Sophie Bluel",
+      "description": "Site de l'architecte d'intérieur Sophie Bluel. Voir plus >",
+      "modalDescription": "Description détaillée de Booki dans la modal.",
+      "githubLink": "https://github.com/Frosteehee/Portfolio-architecte-sophie-bluel"
+    },
+    "4": {
+      "title": "Menu Maker",
+      "description": "Application web de création de menus de restaurants.  Voir plus >",
+      "modalDescription": "Description détaillée de Booki dans la modal."
+    },
+    "5": {
+      "title": "Kasa",
+      "description": "Location de vacances. Voir plus >",
+      "modalDescription": "Description détaillée de Booki dans la modal.",
+      "githubLink": "https://frosteehee.github.io/projet_react/"
+    },
+    "6": {
+      "title": "ArgentBank",
+      "description": "Banque. Voir plus >",
+      "modalDescription": "Description détaillée de Booki dans la modal.",
+      "githubLink": "https://github.com/Frosteehee/ArgentBankWebsite"
     }
+  },
+  
+  "skills": {
+    "skills": "Compétences"
+
+  },
+  "contact": {
+    "sendEmail": "Envoyez-moi un petit courriel",
+    "nameLabel": "Votre nom :",
+    "emailLabel": "Votre e-mail :",
+    "messageLabel": "Votre message :",
+    "sendButton": "Envoyer",
+    "modalContentLabel": "Modal de confirmation",
+    "modalTitle": "Merci pour votre message !",
+    "modalMessage": "Votre message a été envoyé avec succès.",
+    "modalCloseButton": "Fermer"
   }
-}
+
+  
+
+    
+      }
+      
+
+
   
   
-  
+
+
+

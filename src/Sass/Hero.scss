@@ -14,54 +14,58 @@
 
     @media screen and (max-width: 768px) {
         flex-direction: column;
-       
         margin: 0;
-        padding-bottom:40px
+        padding-bottom: 40px;
     }
 }
 
 .encadre-contraste {
     padding: 5rem;
     border-radius: $border-radius;
-    width: 60%;
-    overflow: hidden; 
+    width:40%;
+    overflow: hidden;
+
     @media screen and (max-width: 768px) {
         width: 250px;
-     padding:2rem;
-       
+        padding: 2rem;
     }
 
     h1 {
-      //  color: $text-color;
         font-size: $heading-font-size;
         margin-bottom: $margin-small;
         margin-top: -1rem;
         opacity: 0; /* Initial opacity for animation */
         transform: translateY(50px); /* Initial position for animation */
-        animation: fadeInUp 0.5s ease-out 0.1s forwards; /* Apply the animation */
+        animation: fadeInUp 1s ease-out forwards; /* Apply the animation */
+        transition: opacity 1s ease, transform 1s ease; /* Add transition */
     }
 
     p {
         color: $text-color;
-        font-size:20px;
+        font-size: 20px;
         line-height: $line-height;
         margin-bottom: $margin-medium;
+        opacity: 0; /* Initial opacity for animation */
+        transform: translateY(20px); /* Initial position for animation */
+        animation: fadeInUp 1s ease-out forwards; /* Apply the animation */
+        transition: opacity 1s ease, transform 1s ease; /* Add transition */
     }
 }
 
-.hero-content {
-    max-width: $max-content-width;
-    align-items: start;
-    width: 50%;
-
-    @media screen and (max-width: 768px) {
-      width: 250px;
+/* Keyframes for the fadeInUp animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
 /* Styles for the code block */
 .code-block {
-
     font-family: 'Courier New', monospace;
     padding: $padding-small;
     overflow: hidden;
@@ -71,7 +75,7 @@
     border-image-slice: $border-image-slice;
 
     @media screen and (max-width: 768px) {
-        margin-top:50px;
+        margin-top: 50px;
         width: 250px;
         height: 250px;
     }
@@ -88,25 +92,11 @@
     }
 }
 
-/* Keyframes for the fadeInUp animation */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 .currentStatus {
-  
     line-height: $line-height;
-   margin-bottom: $margin-medium;
-  margin-top: $margin-medium;
+    margin-bottom: $margin-medium;
+    margin-top: $margin-medium;
 }
-
 
 /* Ajout des styles pour les couleurs spécifiques */
 .text-pink-500 {

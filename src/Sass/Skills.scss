@@ -16,7 +16,7 @@
     font-size: 2.7rem;
     margin-bottom: 1rem;
     text-align: center;
-  //  animation: fadeInUp 2s ease;
+  animation: fadeInUp 2s ease;
     will-change: transform, opacity;
 }
 .skills-container {
@@ -24,7 +24,7 @@
   flex-wrap: wrap;
   justify-content: center;
   opacity: 1;
-}
+
 
 .skill {
   display: flex;
@@ -48,7 +48,6 @@
   &:nth-child(7) { transition-delay: 0.7s; }
   &:nth-child(8) { transition-delay: 0.8s; }
   &:nth-child(9) { transition-delay: 0.9s; }
-  &:nth-child(10) { transition-delay: 1s; }
 }
 
 .skill.visible {
@@ -64,6 +63,7 @@
 .skill-name {
   font-size: 1rem;
  // color: $text-color;
+}
 }
 
 /* Couleurs des compétences */

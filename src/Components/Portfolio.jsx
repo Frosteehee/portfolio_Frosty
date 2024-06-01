@@ -3,11 +3,13 @@ import '../Sass/Portfolio.scss';
 import projectData from '../projectData.json';
 import Carousel from './Carousel';
 import Modal from './Modal';
+import { useLanguage } from '../context/LanguageContext';
 
 const Portfolio = () => {
   const [selectedProjectId, setSelectedProjectId] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
   const portfolioRef = useRef(null);
+  const { translate } = useLanguage(); 
 
   const openModal = (projectId) => {
     setSelectedProjectId(projectId);
@@ -51,7 +53,7 @@ const Portfolio = () => {
 
   return (
     <section id="projects" className="portfolio" ref={portfolioRef} aria-labelledby="portfolio-heading">
-      <h2 id="portfolio-heading" className={`animate-text ${isVisible ? 'appear' : ''}`}>Mes projets</h2>
+      <h2 id="portfolio-heading" className={`animate-text ${isVisible ? 'appear' : ''}`}>{translate('portfolio.heading')}</h2>
       <Carousel projects={projectData} openModal={openModal} />
       {selectedProjectId && (
         <Modal

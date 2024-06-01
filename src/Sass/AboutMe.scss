@@ -1,11 +1,8 @@
 @import './Variables.scss';
+
 #about {
-   // background-color: $hero-background-color;
     color: $white-color;
-    padding-left: $padding-medium;
-    padding-right: $padding-medium;
-    padding-bottom: $padding-section;
-    padding-top: $padding-section;
+    padding: $padding-section $padding-medium;
 
     .content {
         display: flex;
@@ -14,19 +11,26 @@
         flex-wrap: wrap;
 
         .profile-picture {
-            width: 200px;
-            height: 200px;
+            width: 12.5rem; // 200px -> 12.5rem
+            height: 12.5rem;
             border-radius: 50%;
-            //background-color: $navbar-link-hover-color;
             margin-left: 15%;
             margin-bottom: $margin-medium;
             animation: fadeInLeft 1s ease;
+            background: url('path/to/profile-picture.jpg') no-repeat center center; // Ajouter le chemin vers l'image
+            background-size: cover;
+
+            @media (max-width: 767px) {
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
 
         .info {
             flex: 1;
             margin-left: 15%;
             margin-right: 10%;
+            padding: 0 1rem; // Added padding for better spacing on mobile
 
             .button-container {
                 width: 100%;
@@ -34,13 +38,19 @@
                 flex-wrap: wrap;
                 justify-content: center;
 
-             
+                button {
+                    margin: 0.5rem; // Added margin for better spacing between buttons on mobile
+                }
             }
         }
 
         .animate-text {
             font-size: $heading-font-size;
             margin-bottom: $margin-medium;
+
+            @media (max-width: 767px) {
+                font-size: 1.5rem; // Adjust font size for mobile
+            }
         }
 
         .animated-lines {
@@ -49,27 +59,29 @@
             margin-bottom: $margin-small;
             
             p {
-                font-size:25px;
-                line-height: 50px;
+                font-size: 1.5rem; 
+                line-height: 3rem; 
                 margin-bottom: $margin-small;
-                
-                
+//test modification version mobile
+                @media (max-width: 767px) {
+                    font-size: 1.25rem; 
+                    line-height: 2rem; 
+                    display: flex ;
+                    flex-direction: column;
+                    align-items: stretch;
+                }
             }
         }
     }
 
     @media (max-width: 767px) {
+        padding: $padding-small; // Reduce padding on smaller screens
+
         .content {
             flex-direction: column;
-          
-            .profile-picture {
-                margin-left: auto;
-                margin-right: auto;
-            }
 
             .info {
                 margin: 0;
-                padding: 0;
             }
         }
     }
@@ -86,28 +98,8 @@
     }
 }
 
-@keyframes animateText {
-    from {
-        background-size: 0% 100%;
-    }
-    to {
-        background-size: 100% 100%;
-    }
-}
-
 @keyframes animateLines {
     to {
         opacity: 1;
-    }
-}
-
-@keyframes appearText {
-    from {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0%);
     }
 }

@@ -1,12 +1,14 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import Modal from 'react-modal';
 import Button from './Button';
 import '../Sass/Contact.scss';
+import { useLanguage } from '../context/LanguageContext';
 
-Modal.setAppElement('#root'); // Set the root element for accessibility
+Modal.setAppElement('#root'); // Suggéré par React Modal pour éviter les erreurs d'accessibilité
 
 function Contact() {
+    const { translate } = useLanguage(); // Ajout pour la traduction 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
@@ -30,9 +32,9 @@ function Contact() {
 
     return (
         <section className="contact" id="contact">
-            <h2 className='animate-text animated-lines'>Envoyez moi un petit courriel</h2>
+            <h2 className='animate-text animated-lines'>{translate('contact.sendEmail')}</h2>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="name">Your name:</label>
+                <label htmlFor="name">{translate('contact.nameLabel')}</label>
                 <input
                     id="name"
                     type="text"
@@ -40,7 +42,7 @@ function Contact() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                 />
-                <label htmlFor="email">Your email:</label>
+                <label htmlFor="email">{translate('contact.emailLabel')}</label>
                 <input
                     id="email"
                     type="email"
@@ -48,7 +50,7 @@ function Contact() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
-                <label htmlFor="message">Your message:</label>
+                <label htmlFor="message">{translate('contact.messageLabel')}</label>
                 <textarea
                     id="message"
                     name="message"
@@ -72,19 +74,21 @@ function Contact() {
                     errors={state.errors}
                 />
 
-                <Button type="submit" styleType="primary" disabled={state.submitting}>Send</Button>
+                <Button type="submit" styleType="primary" disabled={state.submitting}>
+                    {translate('contact.sendButton')}
+                </Button>
             </form>
             
             <Modal
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
-                contentLabel="Confirmation Modal"
+                contentLabel={translate('contact.modalContentLabel')}
                 className="confirmation-modal"
                 overlayClassName="confirmation-overlay"
             >
-                <h2>Merci pour votre message !</h2>
-                <p>Votre message a été envoyé avec succès.</p>
-                <Button onClick={closeModal} styleType="primary">Fermer</Button>
+                <h2>{translate('contact.modalTitle')}</h2>
+                <p>{translate('contact.modalMessage')}</p>
+                <Button onClick={closeModal} styleType="primary">{translate('contact.modalCloseButton')}</Button>
             </Modal>
         </section>
     );

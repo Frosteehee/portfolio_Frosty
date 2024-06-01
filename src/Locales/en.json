@@ -1,7 +1,7 @@
 {
   "hero": {
     "name": "Marine Allavoine",
-    "description": "Front-End Dev on a mission to make the web more accessible."
+    "description": "Front-End Developer on a mission to make the web more accessible."
   },
   "navbar": {
     "home": "Home",
@@ -11,74 +11,75 @@
   },
   "about": {
     "about": "About",
-    "aboutContent": "Hi, I'm Marine! With a degree in Visual Arts and a background as a visual merchandiser, I decided to reinvent myself in web development and completed training as a FrontEnd developer. My goal? To put my expertise at the service of accessibility for everyone. My journey? An eclectic mix of art, commerce, and technology. I discovered my passion for digital accessibility, a quest that drives me every day. Welcome to my universe, where aesthetics and functionality come together to offer unique and inclusive web experiences.",
+    "aboutContent1": "Hi, I'm Marine! Graduated in Visual Arts and having a first career as a visual merchandiser, I decided to reinvent myself in web development and completed a Front-End developer training.",
+    "aboutContent2": "My goal is to use the skills I acquired during my journey to serve accessibility for all.",
+    "aboutContent3": "My journey? An eclectic mix of art, commerce, and technology. I discovered my passion for digital accessibility, a quest that motivates me every day.",
+    "aboutContent4": "Welcome to my world, where aesthetics and functionality meet to offer unique and inclusive web experiences.",
     "cvButton": "My CV",
     "githubButton": "GitHub"
   },
+  
+      "portfolio": {
+        "heading": "My Projects"
+      },
+    
+  
+  
+
   "projects": {
     "1": {
       "title": "Booki",
-      "description": "Landing page of the Booki website, an online vacation rental company, responsive. See more >",
-      "modalDescription": " but in english Description détaillée de Booki dans la modal.",
-      "images": [
-        "src/assets/images/Booki/Desktop.png",
-        "src/assets/images/Booki/Tablet.png"
-      ],
-      "githubLink": "https://github.com/your-username/portfolio-website"
+      "description": "Showcase page for Booki, an online vacation rental company. See more >",
+      "modalDescription": "Detailed description of Booki in the modal."
     },
     "2": {
       "title": "Oh My Food",
-      "description": "Web application for booking menus from gourmet restaurants.",
-      "images": [
-        "src/assets/images/OhMyFood/test_OMF_Home.png",
-        "path/to/image5.jpg",
-        "path/to/image6.jpg"
-      ],
-      "githubLink": "https://github.com/Frosteehee/projet-ohmyfood"
+      "description": "Web application for booking gourmet restaurant menus. See more >",
+      "modalDescription": "Detailed description of Booki in the modal.",
+      "githubLink": "https://frosteehee.github.io/projet-ohmyfood/"
     },
     "3": {
       "title": "Sophie Bluel",
-      "description": "Website of interior architect Sophie Bluel.  See more >",
-      "modalDescription": "Description détaillée de Booki dans la modal.",
-      "images": [
-        "path/to/image7.jpg",
-        "path/to/image8.jpg",
-        "path/to/image9.jpg"
-      ],
+      "description": "Website for interior architect Sophie Bluel. See more >",
+      "modalDescription": "Detailed description of Booki in the modal.",
       "githubLink": "https://github.com/Frosteehee/Portfolio-architecte-sophie-bluel"
     },
     "4": {
       "title": "Menu Maker",
-      "description": "Web application for creating menus for gourmet restaurants. See more >",
-      "modalDescription": "Description détaillée de Booki dans la modal.",
-      "images": [
-        "src/assets/images/Menu_Maker/Dashboard.png",
-        "src/assets/images/Menu_Maker/LogIn.png",
-        "path/to/image9.jpg"
-      ],
-      "githubLink": ""
+      "description": "Web application for creating restaurant menus. See more >",
+      "modalDescription": "Detailed description of Booki in the modal."
     },
     "5": {
       "title": "Kasa",
-      "description": "Vacation rental. See more >",
-      "modalDescription": "Description détaillée de Booki dans la modal.",
-      "images": [
-        "path/to/image7.jpg",
-        "path/to/image8.jpg",
-        "path/to/image9.jpg"
-      ],
-      "githubLink": "https://github.com/Frosteehee/Portfolio-architecte-sophie-bluel"
+      "description": "Vacation rentals. See more >",
+      "modalDescription": "Detailed description of Booki in the modal.",
+      "githubLink": "https://frosteehee.github.io/projet_react/"
     },
     "6": {
       "title": "ArgentBank",
       "description": "Bank. See more >",
-      "modalDescription": "Description détaillée de Booki dans la modal.",
-      "images": [
-        "path/to/image7.jpg",
-        "path/to/image8.jpg",
-        "path/to/image9.jpg"
-      ],
-      "githubLink": "https://github.com/Frosteehee/Portfolio-architecte-sophie-bluel"
+      "modalDescription": "Detailed description of Booki in the modal.",
+      "githubLink": "https://github.com/Frosteehee/ArgentBankWebsite"
     }
-  }
+  },
+  "contact": {
+    "sendEmail": "Let's get in touch!",
+    "nameLabel": "Your name:",
+    "emailLabel": "Your email:",
+    "messageLabel": "Your message:",
+    "sendButton": "Send",
+    "modalContentLabel": "Confirmation Modal",
+    "modalTitle": "Thank you for your message!",
+    "modalMessage": "Your message has been sent successfully.",
+    "modalCloseButton": "Close"
+  },
+
+  
+      "skills": {
+        "skills": "Skills"      
+      }
+    
+  
+  
+  
 }
