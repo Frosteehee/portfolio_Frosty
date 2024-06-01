@@ -18,7 +18,8 @@
   "projects": {
     "1": {
       "title": "Booki",
-      "description": "Landing page of the Booki website, an online vacation rental company, responsive.",
+      "description": "Landing page of the Booki website, an online vacation rental company, responsive. See more >",
+      "modalDescription": " but in english Description détaillée de Booki dans la modal.",
       "images": [
         "src/assets/images/Booki/Desktop.png",
         "src/assets/images/Booki/Tablet.png"
@@ -37,7 +38,8 @@
     },
     "3": {
       "title": "Sophie Bluel",
-      "description": "Website of interior architect Sophie Bluel.",
+      "description": "Website of interior architect Sophie Bluel.  See more >",
+      "modalDescription": "Description détaillée de Booki dans la modal.",
       "images": [
         "path/to/image7.jpg",
         "path/to/image8.jpg",
@@ -47,7 +49,8 @@
     },
     "4": {
       "title": "Menu Maker",
-      "description": "Web application for creating menus for gourmet restaurants.",
+      "description": "Web application for creating menus for gourmet restaurants. See more >",
+      "modalDescription": "Description détaillée de Booki dans la modal.",
       "images": [
         "src/assets/images/Menu_Maker/Dashboard.png",
         "src/assets/images/Menu_Maker/LogIn.png",
@@ -57,7 +60,8 @@
     },
     "5": {
       "title": "Kasa",
-      "description": "Vacation rental.",
+      "description": "Vacation rental. See more >",
+      "modalDescription": "Description détaillée de Booki dans la modal.",
       "images": [
         "path/to/image7.jpg",
         "path/to/image8.jpg",
@@ -67,7 +71,8 @@
     },
     "6": {
       "title": "ArgentBank",
-      "description": "Bank.",
+      "description": "Bank. See more >",
+      "modalDescription": "Description détaillée de Booki dans la modal.",
       "images": [
         "path/to/image7.jpg",
         "path/to/image8.jpg",

@@ -1,7 +1,7 @@
 /* Réinitialisation des styles */
 :root {
   /* Définition des variables pour la police et les couleurs */
-
+cursor: default;
   --text-color: rgba(255, 255, 255, 0.87);
 
 }
@@ -23,6 +23,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+input{
+  cursor:default;
+}
+button, .slide{
+  cursor:pointer;
+}
 
 
 /* Styles pour les boutons */
