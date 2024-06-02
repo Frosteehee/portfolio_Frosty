@@ -85,8 +85,15 @@ const Modal = ({ projectData, onClose }) => {
               <Button href={projectData.githubLink} styleType="primary" icon={<GitHubIcon />}>
                 GitHub
               </Button>
+               
+              <Button href={projectData.canvaLink} styleType="primary" >
+                Canva
+              </Button>
             </div>
+          
+          
           )}
+          
         </div>
       </div>
       {lightboxOpen && (
@@ -107,6 +114,7 @@ Modal.propTypes = {
     description: PropTypes.string.isRequired,
     modalDescription: PropTypes.string.isRequired, //  nouvelle propriété modalDescription test
     githubLink: PropTypes.string,
+    canvaLink: PropTypes.string,
     images: PropTypes.arrayOf(PropTypes.string).isRequired,
     skills: PropTypes.arrayOf(
       PropTypes.shape({
