@@ -38,8 +38,8 @@ function NavBar() {
       <div className="navbar-desktop">
         <ul role="menubar">
           <li role="none"><a role="menuitem" href="#home" onClick={() => scrollTo('home')}>{translate('navbar.home')}</a></li>
-         <li role="none"><a role="menuitem" href="#projects" onClick={() => scrollTo('projects')}>{translate('navbar.projects')}</a></li>
          <li role="none"><a role="menuitem" href="#aboutMe" onClick={() => scrollTo('about')}>{translate('navbar.about')}</a></li>
+         <li role="none"><a role="menuitem" href="#projects" onClick={() => scrollTo('projects')}>{translate('navbar.projects')}</a></li>
           <li role="none"><a role="menuitem" href="#contact" onClick={() => scrollTo('contact')}>{translate('navbar.contact')}</a></li>
         </ul>
       </div>
