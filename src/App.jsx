@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import ThemeSwitcher from "./Components/ThemeSwitcher";
@@ -15,10 +14,10 @@ const App = () => {
   return (
     <BrowserRouter basename= {basename}>
       <LanguageProvider>
-        <ThemeSwitcher />
+       
         <Header />
+        <ThemeSwitcher />
         <LanguageSwitcher />
-        <AnimatePresence>
           <Routes>
             <Route
               path="/"
@@ -34,7 +33,6 @@ const App = () => {
               element={<Error />}
             />
           </Routes>
-        </AnimatePresence>
         <ScrollToTopButton />
         <Footer />
       </LanguageProvider>

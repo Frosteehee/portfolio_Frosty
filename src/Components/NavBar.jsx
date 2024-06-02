@@ -6,6 +6,7 @@ import '../Sass/NavBar.scss';
 function NavBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { translate } = useLanguage();
+  const animationDuration = 300; // Définir la durée de l'animation en millisecondes
 
   useEffect(() => {
     let timeoutId;
@@ -61,10 +62,11 @@ function NavBar() {
           id="mobileMenu"
           isOpen={isMobileMenuOpen}
           onClose={() => setIsMobileMenuOpen(false)}
+          animationDuration={animationDuration} // Passer la valeur de animationDuration ici
         />
       )}
     </nav>
-  );
+  );  
 }
 
 export default NavBar;

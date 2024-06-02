@@ -3,14 +3,23 @@
 body {
   transition: background-color 0.3s, color 0.3s;
 }
+ 
+  .theme-switcher {
 
-.theme-switcher{
-  position: fixed;
-  top: 0;
-  right: 1rem;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-}
+    top: 0;
+  right: 3rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    z-index: 1;
+    position: absolute;
+
+    @media screen and (max-width: 768px) {
+      right: 1rem;
+      top:1rem;
+      
+    }
+  }
+
 /* Light Mode */
 body.light {
   background-color: $light-background-color;
@@ -162,14 +171,7 @@ body.light {
   } }
   
 
-  /* Light Buttons */
-  .theme-switcher {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-  }
+
 
   .button {
     background-image: linear-gradient(to right, $light-button-gradient);
@@ -327,14 +329,7 @@ body.dark {
   background-color: #0a0a0a;
   color: #f0f0f0;
 
-  /* Dark Buttons */
-  .theme-switcher {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-  }
+
 
   .button {
     background-image: linear-gradient(to right, $button-gradient);

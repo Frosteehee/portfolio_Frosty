@@ -27,35 +27,35 @@
     "1": {
       "title": "Booki",
       "description": "Page Vitrine du site Booki une entreprise de location de vacances en ligne. Voir plus >",
-      "modalDescription": "Description détaillée de Booki dans la modal."
+      "modalDescription": "L'Entreprise Booki, demande à réaliser une single page responsive mobile/tablette/Desktop. Uniquement en HTML et CSS"
     },
     "2": {
       "title": "Oh My Food",
       "description": "Application web de réservation de menus de restaurants gastronomiques. Voir plus >",
-      "modalDescription": "Description détaillée de Booki dans la modal.",
+      "modalDescription": "Oh My Food est un site de réservation de menu de grands restaurants, il est responsive et réalisé avec Sass, les bibliothèques ne sont pas autorisées.",
       "githubLink": "https://frosteehee.github.io/projet-ohmyfood/"
     },
     "3": {
       "title": "Sophie Bluel",
       "description": "Site de l'architecte d'intérieur Sophie Bluel. Voir plus >",
-      "modalDescription": "Description détaillée de Booki dans la modal.",
+      "modalDescription": "L'Architecte Sophie Bluel nous demande de retravailler son site, lui permettant d'ajouter ou supprimer des projets une fois connectée. C'est un projet mettant l'accent sur JavaScript et les API REST",
       "githubLink": "https://github.com/Frosteehee/Portfolio-architecte-sophie-bluel"
     },
     "4": {
       "title": "Menu Maker",
       "description": "Application web de création de menus de restaurants.  Voir plus >",
-      "modalDescription": "Description détaillée de Booki dans la modal."
+      "modalDescription": "Gestion de projet de la future application Menu Maker, qui permet aux restaurateurs de créer leurs menus. Utilisation de Notion, mise en place d'une veille informationnelle, Methodologie Agile."
     },
     "5": {
       "title": "Kasa",
-      "description": "Location de vacances. Voir plus >",
-      "modalDescription": "Description détaillée de Booki dans la modal.",
+      "description": "Site de location de vacances. Voir plus >",
+      "modalDescription": "Site Kasa, pour louer des logements de vacances. Réalisation avec React.",
       "githubLink": "https://frosteehee.github.io/projet_react/"
     },
     "6": {
       "title": "ArgentBank",
-      "description": "Banque. Voir plus >",
-      "modalDescription": "Description détaillée de Booki dans la modal.",
+      "description": "Application bancaire. Voir plus >",
+      "modalDescription": "Application bancaire, réalisée avec Redux, permettant la connexion des utilisateurs et l'accès à leurs données personnelles.",
       "githubLink": "https://github.com/Frosteehee/ArgentBankWebsite"
     }
   },

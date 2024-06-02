@@ -11,57 +11,59 @@
   },
   "about": {
     "about": "About",
-    "aboutContent1": "Hi, I'm Marine! Graduated in Visual Arts and having a first career as a visual merchandiser, I decided to reinvent myself in web development and completed a Front-End developer training.",
-    "aboutContent2": "My goal is to use the skills I acquired during my journey to serve accessibility for all.",
-    "aboutContent3": "My journey? An eclectic mix of art, commerce, and technology. I discovered my passion for digital accessibility, a quest that motivates me every day.",
-    "aboutContent4": "Welcome to my world, where aesthetics and functionality meet to offer unique and inclusive web experiences.",
+    "aboutContent1": "Hi, I'm Marine! With a background in Visual Arts and a previous career as a visual merchandiser, I decided to reinvent myself in web development and completed a Front-End developer training.",
+    "aboutContent2": "My goal is to use my skills acquired throughout my journey to serve accessibility for all.",
+    "aboutContent3": "My journey? An eclectic mix of art, commerce, and technology. I discovered my passion for digital accessibility, a quest that drives me every day.",
+    "aboutContent4": "Welcome to my world, where aesthetics and functionality come together to provide unique and inclusive web experiences.",
     "cvButton": "My CV",
     "githubButton": "GitHub"
   },
   
-      "portfolio": {
-        "heading": "My Projects"
-      },
-    
+  "portfolio": {
+    "heading": "My Projects"
+  },
   
-  
-
   "projects": {
     "1": {
       "title": "Booki",
-      "description": "Showcase page for Booki, an online vacation rental company. See more >",
-      "modalDescription": "Detailed description of Booki in the modal."
+      "description": "Landing page for Booki, an online vacation rental company. See more >",
+      "modalDescription": "Booki, the company, requested a responsive single page for mobile/tablet/desktop. Solely HTML and CSS were used."
     },
     "2": {
       "title": "Oh My Food",
-      "description": "Web application for booking gourmet restaurant menus. See more >",
-      "modalDescription": "Detailed description of Booki in the modal.",
+      "description": "Web application for booking menus from gourmet restaurants. See more >",
+      "modalDescription": "Oh My Food is a reservation site for menus of top restaurants. It is responsive and built with Sass; external libraries are not allowed.",
       "githubLink": "https://frosteehee.github.io/projet-ohmyfood/"
     },
     "3": {
       "title": "Sophie Bluel",
       "description": "Website for interior architect Sophie Bluel. See more >",
-      "modalDescription": "Detailed description of Booki in the modal.",
+      "modalDescription": "Interior architect Sophie Bluel asked us to redesign her site, allowing her to add or remove projects once logged in. This project focuses on JavaScript and REST APIs.",
       "githubLink": "https://github.com/Frosteehee/Portfolio-architecte-sophie-bluel"
     },
     "4": {
       "title": "Menu Maker",
       "description": "Web application for creating restaurant menus. See more >",
-      "modalDescription": "Detailed description of Booki in the modal."
+      "modalDescription": "Project management for the future Menu Maker application, enabling restaurateurs to create their menus. Notion was used, along with setting up informational monitoring and Agile methodology."
     },
     "5": {
       "title": "Kasa",
-      "description": "Vacation rentals. See more >",
-      "modalDescription": "Detailed description of Booki in the modal.",
+      "description": "Vacation rental website. See more >",
+      "modalDescription": "Kasa website for renting vacation accommodations. Developed using React.",
       "githubLink": "https://frosteehee.github.io/projet_react/"
     },
     "6": {
       "title": "ArgentBank",
-      "description": "Bank. See more >",
-      "modalDescription": "Detailed description of Booki in the modal.",
+      "description": "Banking application. See more >",
+      "modalDescription": "Banking application developed with Redux, allowing user login and access to their personal data.",
       "githubLink": "https://github.com/Frosteehee/ArgentBankWebsite"
     }
   },
+  
+  "skills": {
+    "skills": "Skills"
+  },
+  
   "contact": {
     "sendEmail": "Let's get in touch!",
     "nameLabel": "Your name:",
@@ -70,16 +72,7 @@
     "sendButton": "Send",
     "modalContentLabel": "Confirmation Modal",
     "modalTitle": "Thank you for your message!",
-    "modalMessage": "Your message has been sent successfully.",
+    "modalMessage": "Your message has been successfully sent.",
     "modalCloseButton": "Close"
-  },
-
-  
-      "skills": {
-        "skills": "Skills"      
-      }
-    
-  
-  
-  
+  }
 }
