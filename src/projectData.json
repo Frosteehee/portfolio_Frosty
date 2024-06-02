@@ -116,7 +116,7 @@
     "id": 6,
     "title": "ArgentBank",
     "description": "Banque.",
-    "modalDescription": "Description détaillée de Booki dans la modal.",
+    "modalDescription": "Description détaillée de Booki dans la modal. ",
     "images": [
      "./images/ArgentBank/coverCard.webp",
       "./images/ArgentBank/coverCard.webp",
